@@ -1,0 +1,58 @@
+
+body{
+    background-color: #D8C7FF;
+    
+}
+.shopname{
+    font-family: 'Creepster', cursive;   
+    text-align: center;
+    text-shadow: 3px 3px 0px #8b6cff;
+    color: whitesmoke;
+   
+}
+.shopname h1{
+    margin: 10px;
+    margin-bottom: 15px ;
+    display: inline-block; 
+    animation: shake 0.5s infinite;
+}
+.shopname p{
+    margin : 5px ;
+    
+    animation: shake 0.5s infinite;
+}
+@keyframes shake {
+    0%   { transform: translate(0px, 0px) rotate(0deg); }
+    25%  { transform: translate(2px, 2px) rotate(1deg); }
+    50%  { transform: translate(-2px, -2px) rotate(-1deg); }
+}
+@media screen and (max-width: 600px) {
+    .shopname h1 {
+        font-size: 50px;
+    }
+    body {
+        padding: 15px;
+    }
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .shopname h1 {
+        font-size: 85px;
+    }
+    body {
+        padding: 15px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .shopname h1 {
+        font-size: 130px;
+    }
+    .shopname p{
+        font-size: 65px;
+    }
+    body {
+        padding: 15px;
+    }
+}
