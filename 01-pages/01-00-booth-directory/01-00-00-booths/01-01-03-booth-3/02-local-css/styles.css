@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Yesteryear&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Cormorant Garamond",sans-serif;
+    color: #000;
+    background-color: #f2d9c3;
+}
+
+.header{
+    padding: 20px 40px;
+    background-color: #6c4e3e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 1000;       /* ให้ header อยู่เหนือสุด */
+    top: 0;
+}
+.nameshop{
+    display: flex;
+    font-size: 1.8rem;
+    font-size: 25pt;
+    font-weight: bolder;
+    color: #FAEADC;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+.menuhome li a{
+    text-decoration: none;
+    color: #FAEADC;
+    font-weight: 500;
+    font-size: 14pt;
+}
+.wordhome {
+    padding: 140px;
+    color: #FAEADC;
+    background-color: #f2d9c3;
+    font-size: xx-large;
+    font-style: italic;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: bgSlide 15s infinite;
+}
+
+/* keyframes สำหรับ 3 ภาพ */
+@keyframes bgSlide {
+    0%   { background-image: url('resource/bbchessecake.jpg'); }
+    33%  { background-image: url('resource/tiramisucake.jpg'); }
+    66%  { background-image: url('resource/bd18cake.jpg'); }
+    100% { background-image: url('resource/bbchessecake.jpg'); } /* กลับมาภาพแรก */
+}
+
+.about{
+    color: #5a3d2e;
+    text-align: center;
+    padding: 10px;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 20pt;
+}
+#about p{
+    text-align: center;
+    color: #8e5e58;
+}
+#video {
+  padding: 40px;
+  text-align: center;
+}
+#specialmenu{
+    background-color: #F2D9C3;
+}
+.specialmenu,.menu{
+    color: #5a3d2e;
+    text-align: center;
+    margin-top: 7px;
+    font-size: 20pt;
+    font-weight: 600;
+    padding: 10px;
+}
+.specialheaddescription,.menuheaddescription{
+    color: #8e5e58;
+    text-align: center;
+    padding: 6px;
+}
+#specialmenu,#menu{
+    text-align: center;
+}
+.product {
+  display: inline-block;
+  width: 265px;
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #FAEADC;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+h4{
+    color: #5a3d2e;
+}
+.menudescription{
+    color: #8e5e58;
+}
+
+.product img {
+  width: 100%;          
+  height: 180px;        
+  object-fit: cover;     /* ครอปรูปให้เต็มพื้นที่โดยไม่บิด */
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #6c4e3e;
+  font-weight: bold;
+}
+
+footer {
+  background: #5A3D2E;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact{
+    color: #FAEADC;
+    padding-bottom: 10px;
+}
+.contactdescription{
+    padding-bottom: 10px;
+}
+.contactbox{
+    color: #FAEADC;
+    font-weight: 900;
+}
+footer p,span,small{
+    color: #F2D9C3;
+}
+a{
+    text-decoration: none;
+    color: #F2D9C3
+}
