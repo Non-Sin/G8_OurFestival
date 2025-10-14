@@ -15,23 +15,62 @@
                 <div class="input-group">
                     <label><i class="fa-solid fa-building" style="color: #000000;"></i> ชื่อบริษัท/ห้างร้าน/กลุ่มบุคคล</label>
                     <div class="input-field">    
-                        <input type="text" placeholder="ชื่อบริษัท/ห้างร้าน">
+                        <input type="text" placeholder="ชื่อบริษัท/ห้างร้าน" required>
                     </div>
-                
+                </div>
+
+                 <div class="input-group">
+                    <label><i class="fa-solid fa-boxes-stacked"></i></i> ประเภทสินค้า</label>
+                    <div class="input-field">    
+                        <select>
+                            <option>
+                                ขนมหวาน
+                            </option>
+                            <option>
+                                ของเล่น
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-shop"></i> ที่อยู่ร้าน</label>
+                    <div class="input-field">    
+                        <textarea name="location" placeholder="ที่อยู่ร้าน"></textarea>
+                    </div>
+                    <div class="input-field">    
+                        <input type="text" placeholder="จังหวัด" required>
+                    </div>
+                    <div class="input-field">    
+                        <input type="text" placeholder="รหัสไปรษณีย์" required>
+                    </div>
+                    
+                </div>
+
                 <div class="input-group">
                     <label><i class="fa-solid fa-user" style="color: #000000;"></i> ชื่อผู้ติดต่อ</label>
                     <div class="input-field">
                         <input type="text" placeholder="ชื่อผู้ติดต่อ">
+                    </div>
                 </div>
 
-                <div class="input-group">
-                    <label><i class="fa-solid fa-envelope" style="color: #000000;"></i> E-mail</label>
+            <div class="input-group">
+                <label><i class="fa-solid fa-phone"></i></i> เบอร์โทรศัพท์</label>
+                <div class="input-field">
+                    <input type="email" placeholder="เบอร์โทรศัพท์">
+                </div>
+            </div>
+
+
+            <div class="input-group">
+                <label><i class="fa-solid fa-envelope" style="color: #000000;"></i> E-mail</label>
                 <div class="input-field">
                     <input type="email" placeholder="E-mail">
                 </div>
+            </div>
 
                 <div class="btn-field">
-                    <button type="button">Submit</button>
+                    <button type="submit">Submit</button>
                 </div>
             </form>
         </div>
