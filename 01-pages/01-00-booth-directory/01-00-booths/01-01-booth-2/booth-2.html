@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ร้านปาเป้า</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="brand">
+        <span class="brand__dot" aria-hidden="true"></span>
+        ร้านปาเป้า
+      </div>
+      
+      <button id="burger" class="burger" aria-label="เปิด/ปิดเมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="title">ร้านปาเป้า</h1>
+    <p class="lead">แต้มเต็มสู้ๆๆ</p>
+
+    <section class="grid products" aria-label="รายการสินค้า">
+      <!-- 1: ปาเป้าลูกโป่ง -->
+      <article class="card">
+        <figure class="media">
+          <img src="01-images/bolloon_darts.jpg" alt="ปาเป้าลูกโป่ง">
+        </figure>
+        <div class="body">
+          <h3 class="product__title">ปาเป้าลูกโป่ง</h3>
+          <p class="product__desc">ปาลูกดอกให้โดนลูกโป่ง ลุ้นรางวัลทันที สีสันสดใส เหมาะกับทุกวัย</p>
+          <div class="product__price">30 บาท/เกม</div>
+        </div>
+      </article>
+
+      <!-- 2: ปาเป้ากระดาน -->
+      <article class="card">
+        <figure class="media">
+          <img src="01-images/dartboard.jpg" alt="ปาเป้ากระดาน">
+        </figure>
+        <div class="body">
+          <h3 class="product__title">ปาเป้ากระดาน</h3>
+          <p class="product__desc">กระดานมาตรฐาน เป้าชัดเจน แต้มเต็มถ้าลงบูลส์อาย! เหมาะฝึกความแม่น</p>
+          <div class="product__price">40 บาท/เกม</div>
+        </div>
+      </article>
+
+      <!-- 3: ปาเป้าขวด -->
+      <article class="card">
+        <figure class="media">
+          <img src="01-images/bottle_darts.jpg" alt="ปาเป้าขวด">
+        </figure>
+        <div class="body">
+          <h3 class="product__title">ปาเป้าขวด</h3>
+          <p class="product__desc">ท้าความแม่นแบบคลาสสิก เล็งคอขวด/ฉลากให้โดนเป้า รับของที่ระลึก</p>
+          <div class="product__price">35 บาท/เกม</div>
+        </div>
+      </article>
+
+      <!-- 4: ปาเป้าลูกบอล -->
+      <article class="card">
+        <figure class="media">
+          <img src="01-images/ball_darts.jpg" alt="ปาเป้าลูกบอล">
+        </figure>
+        <div class="body">
+          <h3 class="product__title">ปาเป้าลูกบอล</h3>
+          <p class="product__desc">ใช้ลูกบอลตีนตะขอโยนใส่เป้าผ้า (Velcro) เล่นง่าย ปลอดภัยสำหรับเด็ก</p>
+          <div class="product__price">30 บาท/เกม</div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">ร้านปาเป้า</div>
+  </footer>
+
+  <script>
+    // เมนูมือถือ
+    const burger = document.getElementById('burger');
+    const nav = document.querySelector('.nav');
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', nav.classList.contains('open'));
+    });
+  </script>
+</body>
+</html>
