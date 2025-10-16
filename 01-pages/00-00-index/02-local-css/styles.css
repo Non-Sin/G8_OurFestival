@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #F4F0E1;
+}
+
+
+.header {
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-weight: 100px;
+  font-style: normal;
+  font-size: 120px;
+  color: #F4B9B8;
+  text-shadow: 3px 3px 0px #F7D4D4;
+}
+.header {
+  font-family: "BBH Sans Bogle", sans-serif;
+  font-weight: 200px;
+  font-style: normal;
+}
+.header {
+  font-family: "Rubik Glitch", system-ui;
+  font-weight: 200px;
+  font-style: normal;
+}
+
+
+.story {
+    font-family: "BBH Sans Bogle", sans-serif;
+    font-size: 20px;
+    color: #F4F0E1;
+    background-color: #F4B9B8;
+    height: 150px;
+    width: 700px;
+}
+
+
+.picture{
+    font-family: "BBH Sans Bogle", sans-serif;
+    font-size: 20px;
+    color: #F4F0E1;
+    background-color: #B4DCE3;
+    height: 150px;
+    width: 700px;
+}
+
+.booth-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 100px;
+    gap: 5px;
+
+}
+
+.booth{
+    display: flex;
+    flex-direction: column;
+}
+.booth1 {
+    text-decoration: none;
+    font-family: "BBH Sans Bogle", sans-serif;
+    color: #F4B9B8;
+    background-color: #F7D4D4;
+    padding: 100px;
+    font-size: 50px;
+    border-radius: 15px;
+    border: 4px solid;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.booth1:hover {
+    color: #B4DCE3;
+    background-color: #F4F0E1;
+
+}
+
+.name{
+    background-color: #B4DCE3;
+    width: 700px;
+    height: 300px;
+
+}
+
+.name-member {
+    font-family: "BBH Sans Bogle", sans-serif;
+    font-size: 20px;
+    color: #F7D4D4;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.footer {
+    background-color: #F7D4D4;
+    width: 700px;
+    height: 300px;
+
+}
+
+
+.footer p {
+    font-family: "BBH Sans Bogle", sans-serif;
+    font-size: 20px;
+    color: #F4F0E1;
+}
