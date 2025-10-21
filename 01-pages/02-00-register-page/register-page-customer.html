@@ -9,32 +9,35 @@
     <script src="https://kit.fontawesome.com/f5aa32d4bf.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    
     <div class="container-1">
         <div class="form-box-1">
-            <h1>Register Page <br><span class="Shop">Customer</span></h1>
+            <h1>Register Page<br><span class="Shop">Customer</span></h1>
             <form>
                 <div class="input-group-1">
-                    <label><i class="fa-solid fa-user" style="color: #000000;"></i> ชื่อผู้ติดต่อ</label>
+                    <label><i class="fa-solid fa-user" style="color: #000000;"></i> ชื่อ-นามสกุล</label>
                     <div class="input-field">
-                        <input type="text" placeholder="ชื่อ">
+                        <input type="text" name="firstname" placeholder="ชื่อ" required>
                     </div>
                     <div class="input-field">
-                        <input type="text" placeholder="นามสกุล">
+                        <input type="text" name="surname" placeholder="นามสกุล" required>
                     </div>
                 </div>
 
             <div class="input-group-1">
                 <label><i class="fa-solid fa-phone"></i></i> เบอร์โทรศัพท์</label>
                 <div class="input-field">
-                    <input type="email" placeholder="เบอร์โทรศัพท์">
+                    <input type="tel" name="telnum" placeholder="เบอร์โทรศัพท์" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
                 </div>
-            </div>
-
+             
 
             <div class="input-group-1">
                 <label><i class="fa-solid fa-envelope" style="color: #000000;"></i> E-mail</label>
                 <div class="input-field">
-                    <input type="email" placeholder="E-mail">
+                    <input class="email" type="email" placeholder="E-mail" pattern="^[^ ]+@[^ ]+\.[a-z]{2,3}$" required>
+                    <span>
+                        <i class="fa-solid fa-envelope email-icon"></i>
+                    </span>
                 </div>
             </div>
 
@@ -44,5 +47,8 @@
             </form>
         </div>
     </div>
+
+    <script src="03-local-js/my-script.js"></script>
+
 </body>
 </html>

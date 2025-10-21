@@ -6,6 +6,16 @@
 
 .container-1 {
     width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)), url(/01-pages/02-00-register-page/01-images/pngtree-vivid-abstract-texture-a-burst-of-colorful-background-picture-image_15292555.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+.container-3 {
+    width: 100%;
     height: 250vh;
     background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)), url(/01-pages/02-00-register-page/01-images/pngtree-vivid-abstract-texture-a-burst-of-colorful-background-picture-image_15292555.jpg);
     background-position: center;
@@ -20,11 +30,6 @@
     background-position: center;
     background-size: cover;
     position: relative;
-}
-
-.select-box {
-    display: grid;
-    
 }
 
 .user {
@@ -44,7 +49,7 @@
     max-width: 450px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 60%;
     transform: translate(-50%,-60%);
     background: #fff;
     padding: 50px 60px 70px;
@@ -65,8 +70,21 @@
 }
 
 
+.form-box-3 {
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-60%);
+    background: #fff;
+    padding: 50px 60px 70px;
+    text-align: center;
+}
+
+
 .form-box-2 h2 {
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 20px;
     margin-bottom: 30px;
 }
@@ -77,6 +95,27 @@
     position: relative;
     color: rgb(10, 97, 173);
 }
+
+.form-box-3 h1 {
+    font-size: 30px;
+    margin-bottom: 60px;
+    position: relative;
+    color: rgb(10, 97, 173);
+}
+
+
+.form-box-3 h1::after {
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: rgb(69, 148, 218);
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 .form-box-1 h1::after {
     content: '';
@@ -125,4 +164,11 @@ input, textarea, select{
 .link-user {
     text-decoration-line: none;
     color: black;
+}
+
+
+.email-icon {
+    padding-right: 50px;
+    font-size: 25px;
+    color: #c0c0c0;
 }
