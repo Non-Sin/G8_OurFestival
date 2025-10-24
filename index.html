@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/01-pages/00-00-index/02-local-css/styles.css">
+    <link rel="stylesheet" href="01-pages/00-00-index/02-local-css/styles.css">
     <title>HOMEPAGE</title>
 </head>
 <body>
@@ -11,23 +11,49 @@
         <span class="header-name">G8_Ourfestival</span>
         <nav class="nav-container">
             <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">BOOTHDIRECTORY</a></li>
-                <li><a href="#">REGISTER</a></li>
-                <li><a href="#">FEEDBACK</a></li>
+                <li><a href="/G8_OurFestival/index.html">HOME</a></li>
+                <li><a href="/G8_OurFestival/01-pages/01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
+                <li><a href="/G8_OurFestival/01-pages/02-00-register-page/register-page.html">REGISTER</a></li>
+                <li><a href="/G8_OurFestival/01-pages/03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
-    
-    <div class="box-story">
-        <span class="story-name"></span>
-        <div class="story-container">
+    <center>
+    <div class="slider">
+        <div class="sliders">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            
+            <div class="slide first">
+                <img src="/G8_OurFestival/01-pages/00-00-index/01-images/1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="/G8_OurFestival/01-pages/00-00-index/01-images/2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="/G8_OurFestival/01-pages/00-00-index/01-images/3.png" alt="">
+            </div>
+            <div class="slide">
+            <img src="/G8_OurFestival/01-pages/00-00-index/01-images/4.jpg" alt="">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+        </div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
         </div>
     </div>
-    
-    <center>
-    
 
     <div class="member">
         <div class="member-container">

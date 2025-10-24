@@ -8,6 +8,7 @@
 
 body {
     background-color: #FFFFFF;
+    
 }
 
 .header {
@@ -22,7 +23,7 @@ body {
     z-index: 10;
 }
 
-.header-name{
+.header-name {
     padding-left: 30px;
     font-family: "Bungee", sans-serif;
     font-weight: 400;
@@ -33,35 +34,92 @@ body {
 }
 
 
-.nav-container{
+.nav-container {
     font-family: "Share Tech", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
 }
-.nav-container a{
+.nav-container a {
     color: #e60000;
     padding: 5px;
     border-radius: 10px;
     
 }
-.nav-container a:hover{
+.nav-container a:hover {
     color: #ffffff;
     background-color: #e60000;
-    box-shadow: #e75b5b 1px 2px 4px 2px;
+    box-shadow: #eb7878 1px 2px 4px 2px;
     transition: 0.2s;
 }
 
-ul{
+ul {
     padding: 30px;
     list-style: none;
     display: flex;
     gap: 30px;
 }
 
+.slider {
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.sliders {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+.sliders input {
+     display: none;
+}
+.slide { 
+    width: 20%;
+    transition: 2s;
+}
+.slide img {
+    width: 800px;
+    height: 500px;
+}
+.navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+
+}
+.manual-btn {
+    border: 2px solid #e60000;
+    padding: 5px; 
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+
+}
+.manual-btn:host {
+    background: #e60000;
+}
+#radiol:checked ~ .first {
+    margin-left: 0;
+}
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
 
 
-.member-container{
+
+.member-container {
     background-color: #e60000;
     width: 700px;
     height: auto;
@@ -72,7 +130,7 @@ ul{
     padding: 20px;
     margin-top: 20px;
 }
-.member-container p{
+.member-container p {
     color: #FFFFFF;
     font-family: "Share Tech", sans-serif;
     font-weight: 400;
@@ -82,7 +140,7 @@ ul{
 
 }
 
-.footer-bottom{
+.footer-bottom {
     background-color: #e60000;
     padding: 10px;
     text-align: center;
