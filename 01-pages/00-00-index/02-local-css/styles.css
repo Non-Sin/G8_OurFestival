@@ -101,7 +101,7 @@ ul {
     margin-right: 40px;
 
 }
-.manual-btn:host {
+.manual-btn:hover {
     background: #e60000;
 }
 #radiol:checked ~ .first {
