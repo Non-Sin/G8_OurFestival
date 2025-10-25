@@ -1,69 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>booth4</title>
-
-
+    <title>Booth4</title>
+    <link rel="stylesheet" href="02-local-css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-
-    <header class="main-header">
-        <h1>Our Festival 2025  </h1>
-        <nav>
-            <ul>
-                <li><a href="#homepage">home</a></li>
-                <li><a href="#boothdirectory">boothdirectory</a></li>
-                <li><a href="#registration">registration</a></li>
-                <li><a href="#feedback"> feedback</a></li>
-            </ul>
+    <!--หัว-->
+    <header class="promo-header">
+        <h1>บูธร้านค้าที่ 4</h1>
+        <nav class="tabs">
+             <button class="tab-link active" data-tab="all">ดูทั้งหมด</button>
+             <button class="tab-link" data-tab="food">รายการอาหาร</button>
+             <button class="tab-link" data-tab="drinks">เครื่องดื่ม</button>
         </nav>
     </header>
 
+    <!--กลาง-->
     <main class="content-area">
-        <section class="booth-intro">
-            <h2>ร้านอาหารและเครื่องดื่ม</h2>
-            <p>มีเมนูให้เลือกที่หลากหลาย มาร่วมอิ่มอร่อยและสนุกไปกับงานแฟร์นี้กันเถอะ</p>
-            </section>
+        <div class="menu-grid"> 
+            <!--ปอปคอน-->
+            <div class="booth-card" data-category="food">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+                    <p class="booth-title">ปอปคอร์น </p>
+                    <p class="booth-desc"> ปอปคอร์นคาราเมล</p>
+                </div>
+                <div class="booth-shelf">
+                    <img src="01-images/popcorn.jpg" alt="popcorn bucket">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span>65 บาท</span>
+                </div>
+            </div>
 
-        <section class="menu-items">
-            <h3>รายการอาหาร</h3>
-            <div class="menu-grid">
-                <div class="menu-card" data-price="65">
-                    <img src="images " alt="popcorn bucket">
-                    <h4>ปอปคอนหันสา</h4>
-                    <p> ปอปคอนคาราเมล</p>
-                    <p class="price">65 บ.</p>
+            <!--ข้าว-->
+            <div class="booth-card" data-category="food">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-drumstick-bite"></i></div>
+                    <p class="booth-title">ข้าวมันไก่สิงคโปร์</p>
+                    <p class="booth-desc">ข้าวไก่ทอดกรอบซอสเทอริยากิ</p>
                 </div>
-            <div class="menu-card" data-price="80">
-                    <img src="images " alt="Fried Chicken">
-                    <h4>ข้าวไก่ทอดสิงโต</h4>
-                    <p>ข้าวไก่ทอดกรอบซอสเทอริยากิ  </p>
-                    <p class="price">80 บาท</p>
+                <div class="booth-shelf">
+                    <img src="01-images/rice.avif" alt="Fried Chicken">
                 </div>
+                <div class="booth-price-banner">
+                    <span>80 บาท</span>
                 </div>
+            </div>
 
-            <h3>เครื่องดื่ม น้ำหวานเย็นชื่นใจ</h3>
-            <div class="menu-grid">
-                <div class="menu-card" data-price="55">
-                    <img src="images " alt="Blue Soda">
-                    <h4>น้ำบลูฮาวาย</h4>
-                    <p>น้ำบลูฮาวายโซดาซ่าส์ สีฟ้าสีม่วงสดใส</p>
-                    <p class="price">55 บาท</p>
+            <!--น้ำซ่า-->
+            <div class="booth-card" data-category="drinks">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-martini-glass-citrus"></i></div>
+                    <p class="booth-title">น้ำบลูฮาวาย</p>
+                    <p class="booth-desc">น้ำบลูฮาวายโซดาซ่าส์ สีฟ้าสีม่วงสดใส</p>
                 </div>
-                <div class="menu-card" data-price="50">
-                    <img src="images " alt="น้ำปั่น">
-                    <h4>นมหมีปั่น</h4>
-                    <p>นมหมีปั่นโกโก้ มัทฉะ ชาไทย</p>
-                    <p class="price">50 บาท</p>
+                <div class="booth-shelf">
+                    <img src="01-images/blue.jpeg" alt="Blue Soda">
                 </div>
+                <div class="booth-price-banner"> 
+                    <span>55 บาท</span>
                 </div>
-        </section>
-        </main>
+            </div>
 
+            <!--น้ำหวาน-->
+            <div class="booth-card" data-category="drinks">
+                <div class="booth-awning"></div>
+                <div class="booth-body"> 
+                    <div class="booth-icon"><i class="fa-solid fa-blender"></i></div>
+                    <p class="booth-title">นมหมีปั่น</p>
+                    <p class="booth-desc">นมหมีปั่นโกโก้ มัทฉะ ชาไทย</p>
+                </div>
+                <div class="booth-shelf">
+                    <img src="01-images/bear.webp" alt="milk">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span>50 บาท</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!--ท้ายล่าง-->
     <footer class="main-footer">
         <p>ติดต่อ: Booth4 call 02021506  </p>
     </footer>
+
+    <script src="03-local-js/my-script.js"></script>
  </body>
 </html>
