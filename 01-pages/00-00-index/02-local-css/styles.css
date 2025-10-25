@@ -158,15 +158,11 @@ ul {
   transition: color 0.3s ease;
 }
 
-.footer-bottom li:hover {
-  color: yellow;
-}
 
 .HBRFC {
   display: flex;
   justify-content: center;
   gap: 20px;
-  
 }
 
 .grid-container {
@@ -183,4 +179,11 @@ ul {
   justify-content: space-around; 
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
 
+a:hover {
+    color: yellowgreen;
+}
