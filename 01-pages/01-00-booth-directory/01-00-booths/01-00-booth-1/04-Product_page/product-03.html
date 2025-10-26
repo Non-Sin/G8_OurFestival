@@ -1,57 +1,102 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>BIG BOY FRANKIE</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../02-local-css/styles.css">
+<head>
+    <meta charset="UTF-8">
+    <title>BIG BOY FRANKIE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../02-local-css/styles.css">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet">
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
 
-    <body>
+<body>
+    <header class="header">
+        <span class="header-name">G8_Ourfestival</span>
+        <nav class="nav-container">
+            <ul>
+                <li><a href="/G8_OurFestival/index.html">HOME</a></li>
+                <li><a href="/G8_OurFestival/01-pages/01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a>
+                </li>
+                <li><a href="/G8_OurFestival/01-pages/02-00-register-page/register-page.html">REGISTER</a></li>
+                <li><a href="/G8_OurFestival/01-pages/03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="product-page">
+        <div class="product-image">
+            <img src="../01-images/FROSTY CANDY.webp" alt="FROSTY CANDY">
+        </div>
 
-        <div class="product-page">
-            <div class="product-image">
-                <img src="../01-images/FROSTY CANDY.webp" alt="FROSTY CANDY">
+        <div class="product-info">
+            <div class="bypopmart">
+                <p>By <span cloer="black"><b>POP MART </b></span></p>
+
             </div>
 
-            <div class="product-info">
-                <div class="bypopmart">
-                    <p>By <span cloer="black"><b>POP MART </b></span></p>
+            <h1><b> Monster Tears </b> <b>FROSTY CANDY</b></h1>
+            <div class="product-bottom">
+                <p class="price">฿499</p>
+            </div>
+            <tb class="dot">
+                <li>By POP MART x Crybaby</li>
+                <li>Size: Height 10.5cm</li>
+                <li>Material: PVC/ABS</li>
 
+            </tb>
+            <div class="quantity">
+                <label for="qty">จำนวน:</label>
+                <div class="qty-box">
+                    <button class="qty-btn" id="decrease">−</button>
+                    <input type="number" id="qty" value="1" min="1">
+                    <button class="qty-btn" id="increase">+</button>
                 </div>
+            </div>
 
-                <h1><b> Monster Tears </b> <b>FROSTY CANDY</b></h1>
-                <div class="product-bottom">
-                    <p class="price">฿499</p>
+            <button class="buy" id="buyBtn">ซื้อสินค้า</button>
+
+        </div>
+
+    </div>
+    <script
+        src="/G8_OurFestival/01-pages/01-00-booth-directory/01-00-booths/01-00-booth-1/03-local-js/my-script.js"></script>
+    <footer class="footer-bottom" id="contact">
+        <div class="grid-container">
+            <div class="grid-item">
+                <div>
+                    <h1>CARNIVAL</h1><br>
+                    <p>
+                        เว็บไซต์นี้ถูกสร้างขึ้นภายใต้แนวคิด “Carnival of Joy”
+                        เพื่อถ่ายทอดความรื่นเริงและพลังแห่งความสุขให้กับทุกคนที่ก้าวเข้ามาเยี่ยมชม
+                        ซึ่งเปรียบเสมือนประตูสู่โลกแห่งสีสันและเสียงหัวเราะ
+                        ที่ซึ่งผู้คนได้ร่วมเฉลิมฉลองไปกับบรรยากาศแห่งความสนุกสนานราวกับอยู่ท่ามกลางงาน carnival จริงๆ
+                        การออกแบบเน้นความสดใสและมีชีวิตชีวา ด้วยการผสมผสานสีแดง เหลือง
+                        และน้ำเงินเข้ากับลวดลายธงสามเหลี่ยม รถม้าหมุน และแสงไฟระยิบระยับ
+                        เพื่อสร้างความรู้สึกตื่นเต้นและอบอุ่นในเวลาเดียวกัน
+                    </p><br>
+                    <hr style="border: none; height: 2px; background-color: black;">
                 </div>
-                <ul class="dot">
-                    <li>By POP MART x Crybaby</li>
-                    <li>Size: Height 10.5cm</li>
-                    <li>Material: PVC/ABS</li>
-
-                </ul>
-                <div class="quantity">
-                    <label for="qty">จำนวน:</label>
-                    <div class="qty-box">
-                        <button class="qty-btn" id="decrease">−</button>
-                        <input type="number" id="qty" value="1" min="1">
-                        <button class="qty-btn" id="increase">+</button>
-                    </div>
+                <div class="HBRFC">
+                    <ul>
+                        <li><a href="/G8_OurFestival/index.html">HOME</a></li>
+                        <li><a href="/01-pages/01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
+                        <li><a href="/G8_OurFestival/02-00-register-page/register-page.html">REGISTER</a></li>
+                        <li><a href="/G8_OurFestival/03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
                 </div>
-
-                <button class="buy" id="buyBtn">ซื้อสินค้า</button>
-
+                <div>
+                    <span>Copyright @ 2025 G8_OurFestival. All right reserved</span>
+                </div>
             </div>
 
         </div>
-        <script src="/G8_OurFestival/01-pages/01-00-booth-directory/01-00-booths/01-00-booth-1/03-local-js/my-script.js"></script>
-    </body>
+    </footer>
+</body>
 
-    </html>
+</html>

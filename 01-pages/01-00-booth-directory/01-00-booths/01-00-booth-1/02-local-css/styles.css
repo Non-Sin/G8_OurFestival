@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
 body {
     background-color: #FFE3E3;
 
@@ -185,7 +193,7 @@ body {
     margin: 0;
 
 }
-
+/*ราคา*/
 .price {
     margin: 0;
     font-size: 25px;
@@ -198,14 +206,14 @@ body {
 .dot {
     color: #777676;
 }
-
+/*ปุ่มกดซื้อ*/
 .buy {
     border-radius: 20px;
     border: 0px;
     position: relative;
     z-index: 10;
     cursor: pointer;
-    margin-top: 140px;
+    margin-top: 40px;
     background-color: #cdc9c9;
     padding: 10px 30px;
     font-size: 15px;
@@ -215,7 +223,7 @@ body {
     transform: scale(1.005);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
-
+/*ปุ่มเพิ่มจำนวน*/
 .quantity {
     display: flex;
     align-items: center;
@@ -264,4 +272,97 @@ body {
 #qty::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+/*header*/
+.header {
+    display: flex;
+    background-color: #FFFFFF;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+}
+
+.header-name {
+    padding-left: 30px;
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: #e60000;
+    text-shadow: #e75b5b 1px 2px 3px 4px;
+}
+.nav-container {
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+.nav-container a {
+    color: #e60000;
+    padding: 5px;
+    border-radius: 10px;
+    
+}
+.nav-container a:hover {
+    color: #ffffff;
+    background-color: #e60000;
+    box-shadow: #eb7878 1px 2px 4px 2px;
+    transition: 0.2s;
+}
+ul {
+    padding: 30px;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+/*footer*/
+.footer-bottom {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e43333;
+    padding: 10px;
+    text-align: center;
+    margin-top : 50px;
+    height: 300px;
+    color: #fcf8f8; 
+}
+
+.footer-bottom li {
+  cursor: pointer;
+  font-weight: 500;
+  margin: 8px 0;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.HBRFC {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.grid-item {
+  
+  justify-content: space-around; 
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: yellowgreen;
 }
