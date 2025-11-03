@@ -25,19 +25,25 @@
                  <div class="input-group-1" name="type">
                     <label><i class="fa-solid fa-boxes-stacked"></i></i> ประเภทสินค้า</label>
                     <div class="input-field">    
-                        <select>
+                        <select id="topic" onchange="checkOtherOption()">
                             <option value="" disabled selected>--- กรุณาประเภทสินค้า ---</option>
-                            <option>
+                            <option value="sweet">
                                 ขนมหวาน
                             </option>
-                            <option>
+                            <option value="toy">
                                 ของเล่น
                             </option>
-                            <option>
+                            <option value="other">
                                 อื่นๆ
                             </option>
                         </select>
                     </div>
+        <div id="other-input-wrapper">
+            <div class="input-field">
+            <input type="text" placeholder="ประเภทสินค้า" pattern="^[\u0E00-\u0E7F]+$" id="other-topic" name="other_topic">
+            </div>
+        </div>
+     
                 </div>
 
                 <div class="input-group-1">
@@ -177,6 +183,7 @@
 
 <script src="03-local-js/Formscript.js"></script>
 <script src="03-local-js/my-script.js"></script>
+<script src="03-local-js/Form2.js"></script>
 
 
 </body>
