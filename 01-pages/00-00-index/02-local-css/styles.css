@@ -182,7 +182,7 @@ a {
     color: white;
     text-decoration: none;
 }
-a:hover {
+.HBRFC a:hover {
     color: #e60000;
     background-color: #fcf8f8;
     border-radius: 3px;
