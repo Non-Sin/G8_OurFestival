@@ -189,3 +189,71 @@ a{
 .btn:hover {
   background-color: #8E6E58; /* สีเข้มขึ้นตอน hover */
 }
+
+
+.qty_demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.qty_demo button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: #c8a48a;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.qty_demo button:hover {
+  background: #8E6E58;
+}
+
+.qty_demo .qty {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5a3d2e;
+}
+
+.buy-btn {
+  margin-top: 10px;
+  background-color: #C8A48A;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background-color: #8E6E58;
+}
+
+/* หัวข้อ Flavor */
+.flavor-title {
+  margin-top: 10px;
+  font-size: 13pt;
+  font-weight: 600;
+  color: #5a3d2e;
+  border-bottom: 2px solid #c8a48a;
+  padding-bottom: 4px;
+}
+
+/* ชื่อรสชาติ + จำนวน */
+.flavor-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.flavor-name {
+  color: #4e1f06;
+  font-size: 12pt;
+}
