@@ -55,10 +55,10 @@ ul{
 
 /* keyframes สำหรับ 3 ภาพ */
 @keyframes bgSlide {
-    0%   { background-image: url('../01-images/bbchessecake.jpg'); }
-    33%  { background-image: url('../01-images/tiramisucake.jpg'); }
-    66%  { background-image: url('../01-images/bd18cake.jpg'); }
-    100% { background-image: url('../01-images/bbchessecake.jpg'); } /* กลับมาภาพแรก */
+    0%   { background-image: url('./resources/bbchessecake.jpg'); }
+    33%  { background-image: url('./resources/tiramisucake.jpg'); }
+    66%  { background-image: url('./resources/bd18cake.jpg'); }
+    100% { background-image: url('./resources/bbchessecake.jpg'); } /* กลับมาภาพแรก */
 }
 
 .about{
@@ -113,7 +113,6 @@ h4{
 .menudescription{
     color: #8e5e58;
 }
-
 .product img {
   width: 100%;          
   height: 180px;        
@@ -121,12 +120,35 @@ h4{
   border-radius: 5px;
   margin-bottom: 10px;
 }
-
 .price {
   color: #6c4e3e;
   font-weight: bold;
 }
-
+.product_category{
+  display: flex;
+  align-items: center;
+  width: 500px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #FAEADC;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.product_category img {
+  width: 55%;          
+  height: 180px;        
+  object-fit: cover;     /* ครอปรูปให้เต็มพื้นที่โดยไม่บิด */
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.product_text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+}
 footer {
   background: #5A3D2E;
   padding: 20px;
@@ -150,4 +172,20 @@ footer p,span,small{
 a{
     text-decoration: none;
     color: #F2D9C3
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 20px;
+  background-color: #C8A48A; /* สีน้ำตาล */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #8E6E58; /* สีเข้มขึ้นตอน hover */
 }
