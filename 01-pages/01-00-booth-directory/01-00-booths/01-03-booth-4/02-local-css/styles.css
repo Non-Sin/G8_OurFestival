@@ -1,13 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* พื้นหลัง */
 body {
     font-family: 'Kanit', sans-serif;
-    background-color: #FFF7F5;  
+    background-color: #FFE3E3;  
     margin: 0;
     padding: 0;
     color: #333;
 }
 
 /* หัว */
+.header {
+    display: flex;
+    background-color: #FFFACD;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+}
+
+.header-name {
+    padding-left: 30px;
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: #e60000;
+    text-shadow: #e75b5b 1px 2px 3px 4px;
+}
+
+
+.nav-container {
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.nav-container a {
+    color: #e60000;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.nav-container a:hover {
+    color: #ffffff;
+    background-color: #e60000;
+    box-shadow: #eb7878 1px 2px 4px 2px;
+    transition: 0.2s;
+}
+
+ul {
+    padding: 30px;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 0 !important;
+}
+
+
 .promo-header {
     text-align: center;
     padding: 25px 15px;

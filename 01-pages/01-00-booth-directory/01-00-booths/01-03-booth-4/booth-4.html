@@ -7,13 +7,29 @@
     <link rel="stylesheet" href="02-local-css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=IBM+Plex+Sans+Thai+Looped&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
+ 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <!--หัว-->
+    <header class="header">
+        <span class="header-name">G8_Ourfestival</span>
+        <nav class="nav-container">
+            <ul>
+                <li><a href="/G8_OurFestival/index.html">HOME</a></li>
+                <li><a href="/G8_OurFestival/01-pages/01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
+                <li><a href="/G8_OurFestival/01-pages/02-00-register-page/register-page.html">REGISTER</a></li>
+                <li><a href="/G8_OurFestival/01-pages/03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
     <header class="promo-header">
-        <h1>บูธร้านค้าที่ 4</h1>
+        <h1>ร้านอาหารคาวหวาน</h1>
         <nav class="tabs">
              <button class="tab-link active" data-tab="all">ดูทั้งหมด</button>
              <button class="tab-link" data-tab="food">รายการอาหาร</button>
@@ -56,6 +72,22 @@
                 </div>
             </div>
 
+            <!--ก๋วยเตี๋ยว-->
+            <div class="booth-card" data-category="food">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-bowl-food"></i></div>
+                    <p class="booth-title">ก๋วยเตี๋ยวเรือ</p>
+                    <p class="booth-desc">ก๋วยเตี๋ยวเรือรสจัดจ้านน้ำซุปเข้มข้น</p>
+                </div>
+                <div class="booth-shelf">
+                    <img src="01-images/noodle.webp" alt="Noodle">
+                </div>
+                <div class="booth-price-banner">
+                    <span>89 บาท</span>
+                </div>
+            </div>
+
             <!--น้ำซ่า-->
             <div class="booth-card" data-category="drinks">
                 <div class="booth-awning"></div>
@@ -87,6 +119,23 @@
                     <span>50 บาท</span>
                 </div>
             </div>
+
+            <!--น้ำขม-->
+            <div class="booth-card" data-category="drinks">
+                <div class="booth-awning"></div>
+                <div class="booth-body"> 
+                    <div class="booth-icon"><i class="fa-solid fa-mug-saucer"></i></div>
+                    <p class="booth-title">มัคคิอาโต้</p>
+                    <p class="booth-desc">คาราเมลมัคคิอาโต้แพนนาคอตตา</p>
+                </div>
+                <div class="booth-shelf">
+                    <img src="01-images/mucchiato.jpg" alt="tea">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span>65 บาท</span>
+                </div>
+            </div>
+
 
         </div>
     </main>
