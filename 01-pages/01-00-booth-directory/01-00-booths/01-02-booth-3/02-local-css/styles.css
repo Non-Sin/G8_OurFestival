@@ -234,3 +234,26 @@ a{
 .buy-btn:hover {
   background-color: #8E6E58;
 }
+
+/* หัวข้อ Flavor */
+.flavor-title {
+  margin-top: 10px;
+  font-size: 13pt;
+  font-weight: 600;
+  color: #5a3d2e;
+  border-bottom: 2px solid #c8a48a;
+  padding-bottom: 4px;
+}
+
+/* ชื่อรสชาติ + จำนวน */
+.flavor-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.flavor-name {
+  color: #4e1f06;
+  font-size: 12pt;
+}
