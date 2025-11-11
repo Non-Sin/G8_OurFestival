@@ -1,109 +1,325 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage Mistersweetpp</title>
-    <link rel="stylesheet" href="../01-02-booth-3/02-local-css/styles.css">
+    <title>Booth3</title>
+    <link rel="stylesheet" href="./02-local-css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <header class="header">
-        <span class="nameshop">Mistersweetpp</span>
-        <nav class="menuhome">
+        <span class="header-name">G8_Ourfestival</span>
+        <nav class="nav-container">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="/G8_OurFestival/index.html">HOME</a></li>
+                <li><a href="/G8_OurFestival/01-pages/01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
+                <li><a href="/G8_OurFestival/01-pages/02-00-register-page/register-page.html">REGISTER</a></li>
+                <li><a href="/G8_OurFestival/01-pages/03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
-<!-- คำบนรูปหน้าhome -->
-        <nav class="wordhome" id="home">
-            <div>Freshly Baked</div>
-            <div>with Love</div>
-            <div>Every Week</div>
+
+    <!--หัว-->
+    <header class="promo-header">
+        <h1>Mistersweetpp</h1>
+        <nav class="tabs">
+             <button class="tab-link active" data-tab="all">ดูทั้งหมด</button>
+             <button class="tab-link" data-tab="cheesepie">ชีสพาย</button>
+             <button class="tab-link" data-tab="cookie">คุ้กกี้</button>
+             <button class="tab-link" data-tab="brownie">บราวนี่</button>
+             <button class="tab-link" data-tab="cake">เค้กและมัฟฟิน</button>
         </nav>
-<!-- ส่วนabout -->
- <section id="about">
-    <div class="textabout">
-        <h3 class="about">About Us</h3>
-            <p>Welcome to Mistersweetpp! We're a tiny home bakery that whips up sweet treats every weekend</p>
-            <p>and delivers them to school on Mondays. What started as a fun hobby—baking</p>
-            <p>and sharing goodies on social media—quickly turned into a little bakery adventure,</p>
-            <p>thanks to friends cheering us on. Sweetness awaits! 🍪✨</p>
+    </header>
+
+    <!--กลาง-->
+    <main class="content-area">
+        <div class="menu-grid"> 
+            <!--สตอเบอร์รี่ชีสพาย-->
+            <div class="booth-card" data-category="cheesepie">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-cheese"></i></div> 
+                    <p class="booth-title">Strawberry Chessepie</p>
+                    <p class="booth-desc"> ชีสพายเนื้อเนียนละมุน หอมมัน ราดด้วยสตรอว์เบอร์รี่สดหวานอมเปรี้ยว 🍓 
+                        <p class="booth-desc">มี 2 ขนาด คือ 4 และ 7 ออนซ์</p>
+                    </p>                
+                </div>
+                <div class="booth-shelf">
+                    <img src="./01-images/strawberry chessepie.jpg" alt="strawberry chessepie">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span> 39 บาท และ 59 บาท</span>
+                </div>
+                <a href="./04-Product_page/page1.html">
+                    <div class="overlay">ดูสินค้า</div>
+                </a>
+            </div>
+            <!--บลูเบอร์รี่ชีสพาย-->
+            <div class="booth-card" data-category="cheesepie">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-cheese"></i></div>
+                    <p class="booth-title">Blueberry Cheesespie</p>
+                    <p class="booth-desc"> ชีสพายเนื้อเนียนนุ่ม ละมุนลิ้น ท็อปด้วยบลูเบอร์รี่สดหวานอมเปรี้ยว 🫐 
+                        <p class="booth-desc">มี 2 ขนาด คือ 4 และ 7 ออนซ์</p>
+                    </p>                
+                </div>
+                <div class="booth-shelf">
+                    <img src="./01-images/blueberry cheesespie.jpg" alt="blueberry cheesespie">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span> 39 บาท และ 59 บาท</span>
+                </div>
+                <a href="./04-Product_page/page2.html">
+                    <div class="overlay">ดูสินค้า</div>
+                </a>
+            </div>
+            <!--เจลลี่องุ่นชีสพาย-->
+            <div class="booth-card" data-category="cheesepie">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-cheese"></i></div>
+                    <p class="booth-title">Jelly Grape Cheesepie</p>
+                    <p class="booth-desc"> ชีสพายเนื้อนุ่มละมุน หอมมัน เสิร์ฟพร้อมเจลลี่องุ่นซัลทาน่าหวานอมเปรี้ยว 🍇
+                        <p class="booth-desc">มี 1 ขนาด คือ ครึ่งปอนด์</p>
+                    </p>                
+                </div>
+                <div class="booth-shelf">
+                    <img src="./01-images/grape chessespie.jpg" alt="Jelly Grape Cheesepie">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span>99 บาท</span>
+                </div>
+                <a href="04-Product_page/product-02.html">
+                    <div class="overlay">ดูสินค้า</div>
+                </a>
+            </div>
+            <!--คุกกี้ออริจินัล-->
+            <div class="booth-card" data-category="cookie">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+                    <p class="booth-title">Original Cookies</p>
+                    <p class="booth-desc"> คุกกี้สูตรคลาสสิก กรอบนอกนุ่มใน หอมกลิ่นอบใหม่ในทุกคำ
+                        <p class="booth-desc">มี 2 แบบ คือ ปกติ และ มาร์ชเมลโล่</p>
+                    </p>                
+                </div>
+                <div class="booth-shelf">
+                    <img src="./01-images/originalcookie.jpg" alt="Original Cookies">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span> 30 บาท และ 35 บาท</span>
+                </div>
+                <a href="04-Product_page/product-02.html">
+                    <div class="overlay">ดูสินค้า</div>
+                </a>
+            </div>
+            <!--คุกกี้ช็อกโกแลต-->
+            <div class="booth-card" data-category="cookie">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+                    <p class="booth-title">Chocolate Cookies</p>
+                    <p class="booth-desc"> คุกกี้ช็อกโกแลตรสเข้ม กรอบนอกนุ่มใน 🍫 
+                        <p class="booth-desc">มี 2 แบบ คือ ปกติ และ มาร์ชเมลโล่</p>
+                    </p>                
+                </div>
+                <div class="booth-shelf">
+                    <img src="./01-images/chocolatecookie.jpg" alt="Chocolate Cookies">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span> 35 บาท และ 40 บาท</span>
+                </div>
+                <a href="04-Product_page/product-02.html">
+                    <div class="overlay">ดูสินค้า</div>
+                </a>
+            </div>
+            <!--คุกกี้เรดเวลเว็ต-->
+            <div class="booth-card" data-category="cookie">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+                    <p class="booth-title">Red Velvet Cookies</p>
+                    <p class="booth-desc"> คุกกี้เรดเวลเว็ตเนื้อนุ่ม สีสวยสด ผสมชิ้นไวท์ช็อกโกแลตหวานละมุน
+                        <p class="booth-desc">มี 2 แบบ คือ ปกติ และ มาร์ชเมลโล่</p>
+                    </p>                
+                </div>
+                <div class="booth-shelf">
+                    <img src="./01-images/redvelvetcookie.jpg" alt="Red Velvet Cookies">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span> 35 บาท และ 40 บาท</span>
+                </div>
+                <a href="04-Product_page/product-02.html">
+                    <div class="overlay">ดูสินค้า</div>
+                </a>
+            </div>
+            <!--คุกกี้ทีรามิสุ-->
+            <div class="booth-card" data-category="cookie">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+                    <p class="booth-title">Tiramisu Cookies</p>
+                    <p class="booth-desc"> คุกกี้กรอบสอดท้อปด้วยมาสคาร์โปเน่ ละมุนกลิ่นกาแฟหอม ☕</p>                
+                </div>
+                <div class="booth-shelf">
+                    <img src="./01-images/tiramisucookie.jpg" alt="Tiramisu Cookies">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span> 55 บาท</span>
+                </div>
+                <a href="04-Product_page/product-02.html">
+                    <div class="overlay">ดูสินค้า</div>
+                </a>
+            </div>
+            <!--คุกกี้เนื้อหนึบ-->
+            <div class="booth-card" data-category="cookie">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+                    <p class="booth-title">Chewy Cookies</p>
+                    <p class="booth-desc"> คุกกี้เนื้อนุ่มหนึบ หวานกำลังดี กรอบบางด้านนอกข้างในเนื้อหนึบ 🍪</p>                
+                </div>
+                <div class="booth-shelf">
+                    <img src="./01-images/chewycookie.jpg" alt="Chewy Cookies">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span> 45 บาท</span>
+                </div>
+                <a href="04-Product_page/product-02.html">
+                    <div class="overlay">ดูสินค้า</div>
+                </a>
+            </div>
+            <!--บราวนี่ซีเรียล-->
+            <div class="booth-card" data-category="brownie">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-candy-cane"></i></div> 
+                    <p class="booth-title">Brownie Cereal</p>
+                    <p class="booth-desc"> บราวนี่อบกรอบ เคี้ยวเพลิน รสช็อกโกแลตเข้มเต็มคำ จะกินเล่นเป็นของว่างหรือทานคู่กับนมก็อร่อยลงตัว 🥣
+                        <p class="booth-desc">มี 1 ขนาด คือ 8 ออนซ์</p>
+                    </p>                
+                </div>
+                <div class="booth-shelf">
+                    <img src="./01-images/cereal.jpg" alt="Brownie Cereal">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span> 35 บาท</span>
+                </div>
+                <a href="04-Product_page/product-02.html">
+                    <div class="overlay">ดูสินค้า</div>
+                </a>
+            </div>
+            <!--ไวท์ช็อกโกแลตบราวนี่-->
+            <div class="booth-card" data-category="brownie">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-candy-cane"></i></div>
+                    <p class="booth-title">Whtie Chocolate Brownie</p>
+                    <p class="booth-desc"> บราวนี่เนื้อนุ่มหนึบ อัดแน่นด้วยรสหวานละมุนของไวท์ช็อกโกแลต 🤍</p>                
+                </div>
+                <div class="booth-shelf">
+                    <img src="./01-images/wcbrownie.jpg" alt="Whtie Chocolate Brownie">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span> 35 บาท</span>
+                </div>
+                <a href="04-Product_page/product-02.html">
+                    <div class="overlay">ดูสินค้า</div>
+                </a>
+            </div>
+            <!--มาสคาร์โปเน่เค้กกับน้ำผึ้ง-->
+            <div class="booth-card" data-category="cake">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-cake-candles"></i></div> 
+                    <p class="booth-title">Mascarponecake With honey</p>
+                    <p class="booth-desc"> เค้กชิฟฟ่อนฟูเบา ราดครีมมาสคาร์โปเน่และน้ำผึ้ง 🍯</p>                
+                </div>
+                <div class="booth-shelf">
+                    <img src="./01-images/mascarponecake.jpg" alt="Mascarponecake With honey">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span> 50 บาท</span>
+                </div>
+                <a href="04-Product_page/product-02.html">
+                    <div class="overlay">ดูสินค้า</div>
+                </a>
+            </div>
+            <!--มัฟฟิน-->
+            <div class="booth-card" data-category="cake">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                    <p class="booth-title">Muffin</p>
+                    <p class="booth-desc"> มัฟฟินเนื้อแน่น ทุกคำเต็มไปด้วยกลิ่นของผลไม้สดหรือช็อกโกแลต
+                        <p class="booth-desc">มี 3 รสชาติให้เลือก</p>
+                        <p class="booth-desc">บลูเบอร์รี่หวานอมเปรี้ยว 🫐</p>
+                        <p class="booth-desc">สตรอว์เบอร์รี่ฉ่ำสด 🍓</p>
+                        <p class="booth-desc">ช็อกโกแลตรสเข้ม 🍫</p>
+                    </p>                
+                </div>
+                <div class="booth-shelf">
+                    <img src="./01-images/muffin.jpg" alt="Muffin">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span> 50 บาท</span>
+                </div>
+                <a href="04-Product_page/product-02.html">
+                    <div class="overlay">ดูสินค้า</div>
+                </a>
+            </div>
+            <!--นามะช็อกโกแลตเค้ก-->
+            <div class="booth-card" data-category="cake">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                    <p class="booth-title">Nama Chocolate Cake</p>
+                    <p class="booth-desc"> ฐานแครกเกอร์กรอบ ท็อปด้วยนามะช็อกโกแลตเนื้อนุ่มละมุน ท้อปด้วยวิปครีม
+                        <p class="booth-desc">มี 2 ขนาด คือ 4 และ 7 ออนซ์</p>
+                    </p>                
+                </div>
+                <div class="booth-shelf">
+                    <img src="./01-images/namachocolate.jpg" alt="Nama Chocolate Cake">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span> 39 บาท และ 59 บาท</span>
+                </div>
+                <a href="04-Product_page/product-02.html">
+                    <div class="overlay">ดูสินค้า</div>
+                </a>
+            </div>
+            <!--นามะชาเขียวเค้ก-->
+            <div class="booth-card" data-category="cake">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                    <p class="booth-title">Nama Green Tea Cake</p>
+                    <p class="booth-desc"> ฐานกรอบ ราดด้วยนามะชาเขียวเนื้อนุ่มเข้มข้น ท็อปด้วยวิปครีม
+                        <p class="booth-desc">มี 2 ขนาด คือ 4 และ 7 ออนซ์</p>
+                    </p>                
+                </div>
+                <div class="booth-shelf">
+                    <img src="./01-images/nama green tea.jpg" alt="Nama Green Tea Cake">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span> 39 บาท และ 59 บาท</span>
+                </div>
+                <a href="04-Product_page/product-02.html">
+                    <div class="overlay">ดูสินค้า</div>
+                </a>
+            </div>
         </div>
+    </main>
 
- <!-- ส่วนspecialmenu -->
-    <section id="specialmenu">
-        <h3 class="specialmenu">Special Menu</h3>
-        <p class="specialheaddescription">✨ Special Menu — available for a limited time only! Sweet, fun, and full of flavors you can’t find on our regular menu. Don’t miss it! 💕</p>
-        <div class="product">
-            <img src="./01-images/tiramisucookie.jpg" alt="tiramisu cookie">
-          <h4>Tiramisu Cookies</h4>
-          <p class="menudescription">Rich coffee flavor with soft mascarpone cream. ☕️</p>
-          <p class="price">Price: 55 Baht</p>
-          </div>
-        
-          <div class="product">
-            <img src="./01-images/wcbrownie.jpg" alt="white chocolate brownie">
-          <h4>Whtie Chocolate Brownie</h4>
-          <p class="menudescription">Milky aroma with a rich white chocolate taste. 🤍</p>
-          <p class="price">Price: 35 Baht</p>
-          </div>
-
-          <div>
-            <a href="./04-Product_page/specialmenu.html" class="btn">View Full Menu</a>
-          </div>
-
-    </section>
-
- <!-- ส่วนmenu -->
-    <section id="menu">
-        <h3 class="menu">Menu</h3>
-        <p class="menuheaddescription">njoy the moment with our featured flavors, soft, sweet, and always comforting. ✨🍯</p>
-        <div class="product">
-            <img src="./01-images/originalcookie.jpg" alt="original cookie">
-          <h4>Original Cookies</h4>
-          <p class="menudescription">Crispy outside, soft inside, with a gentle classic sweetness. 🍪</p>
-          <p class="price">Price: Regular 30 Baht</p>
-          <p class="price">Price: Marshmallow 35 Baht</p>
-          </div>
-        
-          <div class="product">
-            <img src="./01-images/chocolatecookie.jpg" alt="chocolate cookie">
-          <h4>Chocolate Cookies</h4>
-          <p class="menudescription">Rich chocolate that melts in your mouth, perfectly balanced. 🍫</p>
-          <p class="price">Price: Regular 35 Baht</p>
-          <p class="price">Price: Marshmallow 40 Baht</p>
-          </div>
-        
-          <div class="product">
-            <img src="./01-images/redvelvetcookie.jpg" alt="redvelvet cookie">
-          <h4>Red Velvet Cookies</h4>
-          <p class="menudescription">Soft red velvet with smooth, sweet white chocolate. ❤️</p>
-          <p class="price">Price: Regular 35 Baht</p>
-          <p class="price">Price: Marshmallow 40 Baht</p>
-          </div>
-
-          <div class="product">
-            <img src="./01-images/cereal.jpg" alt="brownie cereal">
-          <h4>Brownie Cereal</h4>
-          <p class="menudescription">Crispy baked brownies, perfect as a cereal, with full-bodied chocolate flavor in every bite. 🍫🥣</p>
-          <p class="price">Price: 8 oz 35 Baht</p>
-          </div>
-
-          <div>
-            <a href="../01-02-booth-3/04-Product_page/menu.html" class="btn">View Full Menu</a>
-          </div>
-
-    </section>
-   
-</header>
- <!-- ส่วนfooter -->
-<footer id="contact"> 
+    <!--ท้ายล่าง-->
+    <footer class="main-footer" id="contact">
     <h2 class="contact">Contact</h2>
-    <p class="contactdescription">We don’t have a physical store, but we’re always just a message away! Place your order or ask us anything through the channels below.</p>
     <div>
         <span class="contactbox">📞 Phone :</span>
         <span>0808363763</span>
@@ -111,15 +327,14 @@
 
     <div>
         <span class="contactbox">Instagram:</span>
-        <span><a href="https://www.instagram.com/mistersweetpp?utm_source=ig_web_button_share_sheet&igsh=MWFtaWM2NWJ2aGNxdA==">Mistersweetpp</a></span>
+        <span>Mistersweetpp</span>
     </div>
     <div>
         <span class="contactbox">💬 LINE:</span>
         <span>0803074589</span>
     </div>
     <small>&copy; 2025 My Shop</small>
-</footer>
 
-</body>
+    <script src="./03-local-js/my-script.js"></script>
+ </body>
 </html>
-
