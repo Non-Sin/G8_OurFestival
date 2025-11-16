@@ -198,16 +198,193 @@ ul {
     font-weight: 700;
 }
 
-/* ท้ายล่าง */
-.main-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f8c582;
-    color: white;
-    margin-top: 30px;
-}
+ 
+ 
 
 /* ซ่อนการ์ด */
 .booth-card.hide {
     display: none;
+}
+
+.footer-bottom {
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #e43333;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 6rem;
+    color: #fcf8f8;
+}
+
+
+/* footer */
+.footer-cont {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+  color: #fcf8f8;          /* สีเดียวกับตัวอักษร footer */
+  text-decoration: none;   /* ตัดเส้นใต้ */
+}
+
+.footer-bottom li {
+  cursor: pointer;
+  font-weight: 500;
+  margin: 8px 0;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.menu-footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.box-cont {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.box-item {
+  justify-content: space-around; 
+}
+a {
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-decoration: none !important;
+}
+.menu-footer a:hover {
+    color: #e60000 !important;
+    background-color: #fcf8f8 !important;
+    border-radius: 3px;
+    padding: 2px;
+    box-shadow: #eb7878 1px 2px 2px 2px;
+}
+
+/*หน้าดูสินค้า*/
+.product-page {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.product-image img {
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.product-info h1 {
+    font-size: 40px;
+    color: #000;
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: 'Poppins', cursive;
+}
+
+.bypopmart p {
+    margin: 0;
+    margin-bottom: 15px;
+    color: #777676;
+}
+
+.product-bottom {
+    margin: 0;
+
+}
+/*ราคา*/
+.price {
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 25px;
+
+}
+
+.dot {
+    color: #777676;
+}
+/*ปุ่มกดซื้อ*/
+.buy {
+    border-radius: 20px;
+    border: 0px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    margin-top: 40px;
+    background-color: #cdc9c9;
+    padding: 10px 30px;
+    font-size: 15px;
+}
+
+.buy:hover {
+    transform: scale(1.005);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+/*ปุ่มเพิ่มจำนวน*/
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.qty-box {
+  display: flex;
+  align-items: center;
+ 
+  background-color: #ffe6e6;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.qty-btn {
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.qty-btn:hover {
+  background-color: #f2f2f2;
+}
+
+#qty {
+  width: 50px;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  padding: 6px;
+  /*-moz-appearance: textfield;*/
+}
+
+
+#qty::-webkit-inner-spin-button,
+#qty::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

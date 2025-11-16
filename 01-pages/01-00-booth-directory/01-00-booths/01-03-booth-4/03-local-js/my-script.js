@@ -30,3 +30,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+//เสริมหน้าเลือกสินค้า
+document.addEventListener("DOMContentLoaded", function() {
+    // หา input ทั้งหมดที่ type number
+    const qtyInputs = document.querySelectorAll('input[type="number"]');
+
+    qtyInputs.forEach(input => {
+        input.value = 0; // เริ่มต้น 0
+
+        const parent = input.parentElement;
+
+        const btnIncrease = parent.querySelector('button#increase');
+        const btnDecrease = parent.querySelector('button#decrease');
+
+        if (!btnIncrease || !btnDecrease) return;
+
+        btnIncrease.addEventListener("click", () => {
+            input.value = parseInt(input.value) + 1;
+        });
+
+        btnDecrease.addEventListener("click", () => {
+            if (parseInt(input.value) > 0) {
+                input.value = parseInt(input.value) - 1;
+            }
+        });
+    });
+});ห
