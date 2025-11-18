@@ -1,93 +1,172 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ร้านปาเป้า</title>
-  <link rel="stylesheet" href="02-local-css/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booth2</title>
+    <link rel="stylesheet" href="02-local-css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=IBM+Plex+Sans+Thai+Looped&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container header__inner">
-      <div class="brand">
-        <span class="brand__dot" aria-hidden="true"></span>
-        ร้านปาเป้า
-      </div>
-      
-      <button id="burger" class="burger" aria-label="เปิด/ปิดเมนู">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+    <!--หัว-->
+    <header class="header">
+        <span class="header-name">G8_Ourfestival</span>
+        <nav class="nav-container">
+            <ul>
+                <li><a href="/G8_OurFestival/index.html">HOME</a></li>
+                <li><a href="/G8_OurFestival/01-pages/01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
+                <li><a href="/G8_OurFestival/01-pages/02-00-register-page/register-page.html">REGISTER</a></li>
+                <li><a href="/G8_OurFestival/01-pages/03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main class="container">
-    <h1 class="title">ร้านปาเป้า</h1>
-    <p class="lead">แต้มเต็มสู้ๆๆ</p>
 
-    <section class="grid products" aria-label="รายการสินค้า">
-      <!-- 1: ปาเป้าลูกโป่ง -->
-      <article class="card">
-        <figure class="media">
-          <img src="01-images/bolloon_darts.jpg" alt="ปาเป้าลูกโป่ง">
-        </figure>
-        <div class="body">
-          <h3 class="product__title">ปาเป้าลูกโป่ง</h3>
-          <p class="product__desc">ปาลูกดอกให้โดนลูกโป่ง ลุ้นรางวัลทันที สีสันสดใส เหมาะกับทุกวัย</p>
-          <div class="product__price">30 บาท/เกม</div>
+    <header class="promo-header">
+        <h1>ร้านปาเป้า</h1>
+        <nav class="tabs">
+             <button class="tab-link active" data-tab="all">ดูทั้งหมด</button>
+             <button class="tab-link" data-tab="food">ปาเป้า</button>
+             <button class="tab-link" data-tab="drinks">อุปกรณ์ของตกแต่ง</button>
+        </nav>
+    </header>
+
+    <!--กลาง-->
+    <main class="content-area">
+        <div class="menu-grid"> 
+            <!--ปอปคอน-->
+            <div class="booth-card" data-category="food">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-circle"></i></div>
+                    <p class="booth-title">ปาเป้าลูกโป่ง</p>
+                    <p class="booth-desc"> ปาเป้าลูกโป่ง (Balloon Darts Stall)</p>
+                </div>
+                <div class="booth-shelf">
+                    <img src="01-images/Balloon.jpg" alt="Balloon Darts">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span>3 ลูกดอก 30 บาท</span>
+                </div>
+            </div>
+
+            <!--ข้าว-->
+            <div class="booth-card" data-category="food">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-bottle-water"></i></div>
+                    <p class="booth-title">ปาเป้าขวด</p>
+                    <p class="booth-desc">ปาเป้าขวด (Bottle Darts Stall)</p>
+                </div>
+                <div class="booth-shelf">
+                    <img src="01-images/Bottle.jpg" alt="Bottle Darts">
+                </div>
+                <div class="booth-price-banner">
+                    <span>3 ลูกดอก 40 บาท</span>
+                </div>
+            </div>
+
+            <!--ก๋วยเตี๋ยว-->
+            <div class="booth-card" data-category="food">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-baseball-ball"></i></div>
+                    <p class="booth-title">ปาเป้าลูกบอล</p>
+                    <p class="booth-desc">ปาเป้าลูกบอล (Ball Toss / Dart Ball Stall)</p>
+                </div>
+                <div class="booth-shelf">
+                    <img src="01-images/ball.jpg" alt="Ball Toss">
+                </div>
+                <div class="booth-price-banner">
+                    <span>3 ลูกดอก 50 บาท</span>
+                </div>
+            </div>
+
+            <!--น้ำซ่า-->
+            <div class="booth-card" data-category="food">
+                <div class="booth-awning"></div>
+                <div class="booth-body">
+                    <div class="booth-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <p class="booth-title">ปาเป้ากระดาน / กระดาษ</p>
+                    <p class="booth-desc">ปาเป้ากระดาน / กระดาษ (Paper / Board Darts Stall)</p>
+                </div>
+                <div class="booth-shelf">
+                    <img src="01-images/Board.jpg" alt="Paper / Board Darts">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span>3 ลูกดอก 20 บาท</span>
+                </div>
+            </div>
+
+            <!--น้ำหวาน-->
+            <div class="booth-card" data-category="food">
+                <div class="booth-awning"></div>
+                <div class="booth-body"> 
+                    <div class="booth-icon"><i class="fa-solid fa-gift"></i></div>
+                    <p class="booth-title">ปาเป้าแจกของรางวัล</p>
+                    <p class="booth-desc">ปาเป้าแจกของรางวัล (Prize Darts Booth)</p>
+                </div>
+                <div class="booth-shelf">
+                    <img src="01-images/Prize.jpg" alt="Prize Darts">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span>3 ลูกดอก 100 บาท</span>
+                </div>
+            </div>
+
+            <!--น้ำขม-->
+            <div class="booth-card" data-category="drinks">
+                <div class="booth-awning"></div>
+                <div class="booth-body"> 
+                    <div class="booth-icon"><i class="fa-solid fa-flag"></i></div>
+                    <p class="booth-title">ขายอุปกรณ์ตกแต่งบูธ</p>
+                    <p class="booth-desc">ขายอุปกรณ์ตกแต่งบูธ (Carnival Decoration)</p>
+                </div>
+                <div class="booth-shelf">
+                    <img src="01-images/Carnival.jpg" alt="Carnival Decoration">
+                </div>
+                <div class="booth-price-banner"> 
+                    <span>ชิ้นละ 100 บาท</span>
+                </div>
+            </div>
+
+
         </div>
-      </article>
+    </main>
 
-      <!-- 2: ปาเป้ากระดาน -->
-      <article class="card">
-        <figure class="media">
-          <img src="01-images/dartboard.jpg" alt="ปาเป้ากระดาน">
-        </figure>
-        <div class="body">
-          <h3 class="product__title">ปาเป้ากระดาน</h3>
-          <p class="product__desc">กระดานมาตรฐาน เป้าชัดเจน แต้มเต็มถ้าลงบูลส์อาย! เหมาะฝึกความแม่น</p>
-          <div class="product__price">40 บาท/เกม</div>
-        </div>
-      </article>
+    <!--ท้ายล่าง-->
+    <footer class="main-footer">
+        <p>ติดต่อ: Booth2 call 02021509  </p>
+    </footer>
 
-      <!-- 3: ปาเป้าขวด -->
-      <article class="card">
-        <figure class="media">
-          <img src="01-images/bottle_darts.jpg" alt="ปาเป้าขวด">
-        </figure>
-        <div class="body">
-          <h3 class="product__title">ปาเป้าขวด</h3>
-          <p class="product__desc">ท้าความแม่นแบบคลาสสิก เล็งคอขวด/ฉลากให้โดนเป้า รับของที่ระลึก</p>
-          <div class="product__price">35 บาท/เกม</div>
-        </div>
-      </article>
+    <script src="03-local-js/my-script.js"></script>
+    
 
-      <!-- 4: ปาเป้าลูกบอล -->
-      <article class="card">
-        <figure class="media">
-          <img src="01-images/ball_darts.jpg" alt="ปาเป้าลูกบอล">
-        </figure>
-        <div class="body">
-          <h3 class="product__title">ปาเป้าลูกบอล</h3>
-          <p class="product__desc">ใช้ลูกบอลตีนตะขอโยนใส่เป้าผ้า (Velcro) เล่นง่าย ปลอดภัยสำหรับเด็ก</p>
-          <div class="product__price">30 บาท/เกม</div>
-        </div>
-      </article>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer__inner">ร้านปาเป้า</div>
-  </footer>
+    <script>
+  // ให้รูปเป็นปุ่มคลิก
+  document.querySelectorAll('.booth-card .booth-shelf img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+      const card  = img.closest('.booth-card');
+      const title = card.querySelector('.booth-title')?.textContent.trim() || '';
+      const desc  = card.querySelector('.booth-desc')?.textContent.trim()  || '';
+      const src   = img.getAttribute('src') || '';
 
-  <script>
-    // เมนูมือถือ
-    const burger = document.getElementById('burger');
-    const nav = document.querySelector('.nav');
-    burger.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      burger.setAttribute('aria-expanded', nav.classList.contains('open'));
+      const q = new URLSearchParams({
+        title, desc, img: src
+      }).toString();
+
+      location.href = `product.html?${q}`;
     });
-  </script>
-</body>
+  });
+</script>
+
+ </body>
 </html>
