@@ -7,13 +7,13 @@
 }
 
 body {
-    background-color: #FFFFFF;
+    background-color: #FFE3E3 !important;
     
 }
 
 .header {
     display: flex;
-    background-color: #FFFACD;
+    background-color: white;
     position: sticky;
     justify-content: space-between;
     align-items: center;
@@ -384,8 +384,8 @@ nav {
 }
 
 .footer-bottom a {
-  color: #fcf8f8;          /* สีเดียวกับตัวอักษร footer */
-  text-decoration: none;   /* ตัดเส้นใต้ */
+  color: #fcf8f8;
+  text-decoration: none;
 }
 
 .footer-bottom li {
