@@ -15,6 +15,21 @@ body {
     color: #333;
 }
 
+.shopname {
+    padding: 140px 0 140px 45px; 
+    color: #ffffff;
+    background-color: #FFE3E3;
+    font-size: 60px;
+    font-style: italic;
+
+    background-image: url('../01-images/bbchessecake.jpg');
+    background-size: 800px 600px; /* กำหนดขนาดล็อกของภาพ */
+    background-repeat: no-repeat;
+    background-position: center;  /* ภาพอยู่ตำแหน่งเดิม */
+}
+
+
+
 /* หัว */
 .header {
     display: flex;
@@ -76,12 +91,13 @@ ul {
 .promo-header h1 {
     font-size: 2.5rem;
     color: #E63946;  
-    margin: 0 0 20px 0;
+    margin: 0 0 0 0;
 }
 
 .tabs {
     display: flex;
     justify-content: center;
+    margin: 20px 0px 0px 0px;
     gap: 10px;
 }
 
