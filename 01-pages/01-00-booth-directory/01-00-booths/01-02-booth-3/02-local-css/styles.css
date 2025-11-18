@@ -163,7 +163,6 @@ ul {
 }
 
 .booth-title {
-    color: #000;
     font-size: 1.3rem;
     font-weight: 700;
     margin: 0;
@@ -183,7 +182,7 @@ ul {
 
 .booth-shelf img {
     width: 100%;
-    height: 270px;  
+    height: 180px;  
     object-fit: cover;  
     border-radius: 5px;
     border: 3px solid white;
@@ -199,170 +198,76 @@ ul {
     font-weight: 700;
 }
 
-/* ท้ายล่าง */
-.main-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f8c582;
-    color: white;
-    margin-top: 30px;
-}
+ 
+ 
 
 /* ซ่อนการ์ด */
 .booth-card.hide {
     display: none;
 }
 
-.overlay {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: black;
+.footer-bottom {
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #e43333;
+    padding: 2rem 1rem;
     text-align: center;
-    padding: 15px 0;
-    transition: opacity 0.3s ease;
-
-    background-color: #FFF1D6;
-    color: rgb(4, 4, 4);
-    text-align: center;
-    padding: 12px;
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-
-a{
-    text-decoration: none;
+    margin-top: 6rem;
+    color: #fcf8f8;
 }
 
 
-
-.shopname {
-    font-family: 'Creepster', cursive;
-    text-align: center;
-    text-shadow: 3px 3px 0px #FF9BAA;
-    color: rgb(159, 248, 227);
-    margin-bottom: 100px;
+/* footer */
+.footer-cont {
+    margin-bottom: 0;
 }
 
-.shopname h1 {
-    margin: 10px;
-    margin-bottom: 15px;
-    display: inline-block;
-    animation: shake 0.5s infinite;
+.footer-bottom a {
+  color: #fcf8f8;          /* สีเดียวกับตัวอักษร footer */
+  text-decoration: none;   /* ตัดเส้นใต้ */
 }
 
-.shopname p {
-    margin: 5px;
-    animation: shake 0.5s infinite;
+.footer-bottom li {
+  cursor: pointer;
+  font-weight: 500;
+  margin: 8px 0;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.menu-footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-@keyframes shake {
-    0% {
-        transform: translate(0px, 0px) rotate(0deg);
-    }
-
-    25% {
-        transform: translate(2px, 2px) rotate(1deg);
-    }
-
-    50% {
-        transform: translate(-2px, -2px) rotate(-1deg);
-    }
+.box-cont {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.box-item {
+  justify-content: space-around; 
+}
+a {
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-decoration: none !important;
+}
+.menu-footer a:hover {
+    color: #e60000 !important;
+    background-color: #fcf8f8 !important;
+    border-radius: 3px;
+    padding: 2px;
+    box-shadow: #eb7878 1px 2px 2px 2px;
 }
 
-@media screen and (max-width: 600px) {
-    .shopname h1 {
-        font-size: 70px;
-    }
-
-    .shopname p {
-        font-size: 25px;
-    }
-
-    body {
-        padding: 15px;
-    }
-}
-
-
-@media screen and (min-width: 601px) and (max-width: 1024px) {
-    .shopname h1 {
-        font-size: 100px;
-    }
-
-    .shopname p {
-        font-size: 45px;
-    }
-
-    body {
-        padding: 15px;
-    }
-}
-
-@media screen and (min-width: 1025px) {
-    .shopname h1 {
-        font-size: 130px;
-    }
-
-    .shopname p {
-        font-size: 65px;
-    }
-
-    body {
-        padding: 15px;
-    }
-}
-
-.shop-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 50px;
-    gap: 5px;
-
-}
-
-.shop {
-
-    /*background-color: #FF9BAA; /*#FFE3E3*/
-    width: 350px;
-    height: auto;
-    display: flex;
-    padding-bottom: 70px;
-    flex-direction: column;
-    /* เรียงแนวตั้ง */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);*/
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.shop p {
-    margin-left: 20px;
-    margin-top: 10px;
-    color: black;
-}
-
-.shop img {
-    width: 100%;
-    height: 280px;
-    border-radius: 15px;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-.shop:hover {
-    transform: scale(1.005);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-
-.shop:hover .overlay {
-    opacity: 1;
-}
-
+/*หน้าดูสินค้า*/
 .product-page {
     display: flex;
     align-items: flex-start;
@@ -390,10 +295,9 @@ a{
     color: #000;
     margin: 0;
     margin-bottom: 10px;
-    font-family: 'Kanit', sans-serif, Poppins;
 }
 
-.bymistersweetpp p {
+.bypopmart p {
     margin: 0;
     margin-bottom: 15px;
     color: #777676;
@@ -418,7 +322,6 @@ a{
 }
 /*ปุ่มกดซื้อ*/
 .buy {
-    font-family: 'Kanit', sans-serif, Poppins;
     border-radius: 20px;
     border: 0px;
     position: relative;
@@ -439,7 +342,7 @@ a{
     display: flex;
     align-items: center;
     gap: 15px;
-    font-family: 'Kanit', sans-serif, Poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     margin-top: 10px;
 }
@@ -475,6 +378,7 @@ a{
   border: none;
   background-color: transparent;
   padding: 6px;
+  /*-moz-appearance: textfield;*/
 }
 
 
@@ -482,89 +386,6 @@ a{
 #qty::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-/*header*/
-.header {
-    display: flex;
-    background-color: #FFFFFF;
-    position: sticky;
-    justify-content: space-between;
-    align-items: center;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: 10;
-}
-
-.header-name {
-    padding-left: 30px;
-    font-family: "Bungee", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 30px;
-    color: #e60000;
-    text-shadow: #e75b5b 1px 2px 3px 4px;
-}
-.nav-container {
-    font-family: "Share Tech", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-}
-.nav-container a {
-    color: #e60000;
-    padding: 5px;
-    border-radius: 10px;
-    
-}
-.nav-container a:hover {
-    color: #ffffff;
-    background-color: #e60000;
-    box-shadow: #eb7878 1px 2px 4px 2px;
-    transition: 0.2s;
-}
-ul {
-    padding: 30px;
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-/*footer*/
-.footer-bottom {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #e43333;
-    padding: 10px;
-    text-align: center;
-    margin-top : 50px;
-    height: 300px;
-    color: #fcf8f8; 
-}
-
-.footer-bottom li {
-  cursor: pointer;
-  font-weight: 500;
-  margin: 8px 0;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-.HBRFC {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  text-align: center;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-.grid-item {
-  justify-content: space-around; 
 }
 
 .btn {
