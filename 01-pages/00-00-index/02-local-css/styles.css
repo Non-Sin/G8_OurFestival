@@ -255,7 +255,7 @@ ul {
 .booth-container .booth-title{
     position: absolute;
     margin-left: 35%;
-    margin-top: -2%;
+    margin-top: -3%;
     z-index: 7;
     margin-bottom: 50px; /* ระยะห่างจาก card */
     text-align: center;
@@ -263,8 +263,13 @@ ul {
     font-weight: 400;
     font-style: normal;
     font-size: 25px;
-    color: #000000;
+    color: #e60000;
+    text-shadow: 2px 2px 8px #eb7878, 2px 2px 4px #e75b5b;
 }
+.booth-container .booth-title:hover{
+    transform: scale(1.01);
+}
+
 .booth-container .booth-card {
     display: flex;
     gap: 20px;
@@ -292,7 +297,7 @@ ul {
     font-weight: 200;
     font-style: normal;
     font-size: 30px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .booth-container .booth-card .booth .booth-text {
     text-align: left;
@@ -317,13 +322,13 @@ ul {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 400px;
+    height: 100%;
 }
 .booth-img #img2 {
     background-image: url(/G8_OurFestival/01-pages/01-00-booth-directory/01-00-booths/01-01-booth-2/01-images/Balloon.jpg);
     background-position: center;
     width: 100%;
-    height: 400px;
+    height: 100%;
 }
 .booth-img #img3 {
     background-image: url(/G8_OurFestival/01-pages/01-00-booth-directory/01-00-booths/01-02-booth-3/01-images/strawberry\ chessepie.jpg);
@@ -331,7 +336,7 @@ ul {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 400px;
+    height: 100%;
 }
 .booth-img #img4 {
     background-image: url(/G8_OurFestival/01-pages/01-00-booth-directory/01-00-booths/01-03-booth-4/01-images/noodle.webp);
@@ -339,7 +344,7 @@ ul {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 400px;
+    height: 100%;
 }
 .booth-container .booth-card .booth a {
     margin-top: 80px;
@@ -360,7 +365,7 @@ ul {
 /*------------------------member------------------------------*/
 .member-container {
     background-color: #ffffff;
-    width: auto;
+    width: calc(100% - 100px); /* ความกว้างของ container ลบขอบซ้ายขวา 50px + 50px */
     height: auto;
     display: flex;
     align-items: flex-start;
@@ -386,15 +391,14 @@ ul {
     font-style: normal;
     font-size: 30px;
     text-align: left;
-    padding-left: 100px;
+    
 }
 .member-container table td:nth-child(2) p,
 .member-container table th:nth-child(2) p {
     font-family: "Mitr", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #000000; 
-    font-size: 30px;                  
+    color: #000000;                   
 }
 .member-container table {
     width: 100%;               /* ให้ตารางกินเต็ม container */
@@ -494,24 +498,144 @@ a {
     .img-container .button-holder{
         left: 45%;
     }
-    .booth-container{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
     .booth-container .booth-title{
         position: absolute;
         margin-left: 35%;
         margin-top: -2%;
         font-size: 15px; 
     }
+    .booth-container .booth-card .booth {
+        height: 700px;
+    }
     .booth-container .booth-card .booth .booth-img{
-        height: 400px;
+        height: 300px;
+        margin-top: 20px ;
     }
     .booth-container .booth-card .booth .booth-name{
         font-size: 22px;
+        margin-top: 20px;
     }
     .booth-container .booth-card .booth .booth-text{
         font-size: 25px;
+        margin-top: 20px;
+    }
+    .member-name {
+        font-size: 30px;
+    }
+    .member-container p {
+        font-size: 20px;
+    }
+    .member-container table td:nth-child(2) p,
+    .member-container table th:nth-child(2) p{
+        font-size: 20px;
     }
 }
+/******************************************************/
+
+/*************************1024*************************/
+@media only screen and (max-width:1024px){
+    .img-container .text h1{
+        font-size: 4em;
+    }
+    .img-container .text h3{
+        font-size: 2em;
+    }
+    .text{
+        margin-left: 10%;
+    }
+    .about-container .about-text p{
+        font-size: 15px ;
+    }
+    .img-container .button-holder{
+        left: 45%;
+    }
+    .booth-container .booth-title{
+        position: absolute;
+        margin-left: 30%;
+        margin-top: -3%;
+        font-size: 15px; 
+    }
+    .booth-container .booth-card .booth {
+        height: 600px;
+    }
+    .booth-container .booth-card .booth .booth-img{
+        height: 300px;
+        margin-top: 20px ;
+    }
+    .booth-container .booth-card .booth .booth-name{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .booth-container .booth-card .booth .booth-text{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .member-name {
+        font-size: 30px;
+    }
+    .member-container p {
+        font-size: 20px;
+    }
+    .member-container table td:nth-child(2) p,
+    .member-container table th:nth-child(2) p{
+        font-size: 20px;
+    }
+}
+/******************************************************/
+/*************************900*************************/
+@media only screen and (max-width:900px){
+    .nav-container ul{
+        display: none !important;
+        
+    }
+    .img-container .text h1{
+        font-size: 4em;
+    }
+    .img-container .text h3{
+        font-size: 2em;
+    }
+    .text{
+        margin-left: 10%;
+    }
+    .about-container .about-text h1{
+        font-size: 20px ;
+    }
+    .about-container .about-text p{
+        font-size: 14px ;
+    }
+    .img-container .button-holder{
+        left: 45%;
+    }
+    .booth-container .booth-title{
+        position: absolute;
+        margin-left: 30%;
+        margin-top: -3%;
+        font-size: 15px; 
+    }
+    .booth-container .booth-card .booth {
+        height: 500px;
+    }
+    .booth-container .booth-card .booth .booth-img{
+        height: 200px;
+        margin-top: 20px ;
+    }
+    .booth-container .booth-card .booth .booth-name{
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    .booth-container .booth-card .booth .booth-text{
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .member-name {
+        font-size: 25px;
+    }
+    .member-container p {
+        font-size: 16px;
+    }
+    .member-container table td:nth-child(2) p,
+    .member-container table th:nth-child(2) p{
+        font-size: 16px;
+    }
+}
+/******************************************************/
