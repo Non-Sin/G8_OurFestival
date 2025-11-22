@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+body {
+
+    background-image: url(/G8_OurFestival/11-resources/01-images/12345.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #ffe6e6;
+
+}
+/*product*/
+/* ตัด flex ทิ้งให้ Bootstrap ทำงานเอง */
+
+
+/* ขนาดรูปให้เหมือนต้นฉบับ */
+.product-img {
+    width: 500px;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: contain;
+}
+
+/*ห้าของ ipad*/
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .product-img {
+        width: 100%;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+
+
+    .container {
+        padding-bottom: 30px;
+    }
+}
+
+
+
+.product-text {
+    max-width: 480px;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    
+}
+
+/* หัวข้อสินค้า */
+.product-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* ราคา */
+.price {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* รายละเอียดรายการ */
+.product-details {
+    padding-left: 20px;
+    color: #777;
+    list-style-type: disc;
+    margin-top: 15px;
+}
+
+.product-details li {
+    margin-bottom: 4px;
+}
+
+/*
+.product-section {
+    background: url("bg.jpg") no-repeat center center/cover;
+    min-height: 100vh;;
+    padding-bottom: 150px;
+}
+
+*/
+.product-info {
+    margin-top: 0;
+    padding-top: 0;
+
+}
+
+.product-info h1 {
+    font-size: 40px;
+    color: #000;
+    margin: 5px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', cursive;
+}
+
+.bypopmart p {
+    margin: 0;
+    margin-bottom: 15px;
+    color: #777676;
+}
+
+.product-bottom {
+    margin: 0;
+
+}
+
+/*ราคา*/
+.price {
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 25px;
+
+}
+
+.dot {
+    color: #777676;
+}
+
+
+
+/*ปุ่มเพิ่มจำนวน*/
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.qty-box {
+    display: flex;
+    align-items: center;
+
+    background-color: #ffe6e6;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.qty-btn {
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.qty-btn:hover {
+    background-color: #f2f2f2;
+}
+
+#qty {
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    padding: 6px;
+    -moz-appearance: textfield;
+}
+
+
+#qty::-webkit-inner-spin-button,
+#qty::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/*****************************************************/
+/*header*/
+.header {
+    display: flex;
+    background-color: #FFFACD;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    padding: 15px 25px;
+    z-index: 10;
+}
+
+/* LOGO */
+.header-name {
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: #e60000;
+    text-shadow: #e75b5b 1px 2px 3px 4px;
+}
+
+/* NAV */
+.nav-container {
+    font-family: "Share Tech", sans-serif;
+    font-size: 20px;
+}
+
+/* เมนูแนวนอน (Desktop) */
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container a {
+    color: #e60000;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.nav-container a:hover {
+    color: #ffffff;
+    background-color: #e60000;
+    box-shadow: #eb7878 1px 2px 4px 2px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+/*****************************************************
+   HAMBURGER (MOBILE)
+*****************************************************/
+.hamburger {
+    display: none;
+    font-size: 32px;
+    color: #e60000;
+    cursor: pointer;
+}
+
+/*****************************************************
+   MOBILE RESPONSIVE
+*****************************************************/
+@media (max-width: 768px) {
+    .nav-container ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #FFFACD;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        padding: 20px 0;
+        text-align: center;
+        display: none; /* ซ่อนเมนู */
+        border-bottom: 2px solid #e3e3e3;
+    }
+
+    .nav-container ul.active {
+        display: flex; /* เปิดเมื่อกด hamburger */
+    }
+
+    .hamburger {
+        display: block; /* แสดงเฉพาะ mobile */
+    }
+}
+.menu-toggle {
+    display: none;
+    cursor: pointer !important;
+    font-size: 32px;
+    color: #e60000;
+    padding: 8px 12px;
+    line-height: 1;
+}
+
+/* แสดงเฉพาะหน้าจอ <= 900px */
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: block !important;
+    }
+
+    .nav-container ul {
+        display: none !important;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+        background: #FFFACD;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 9999;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav-container ul.active {
+        display: flex !important;
+    }
+}
+
+/**************************************************/
+/*footer*/
+.footer-bottom {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e43333;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    color: #fcf8f8;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-bottom h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.footer-bottom p {
+    margin: 5px 0 15px 0;
+}
+
+.footer-bottom hr {
+    border: none;
+    height: 2px;
+    background-color: black;
+    margin: 15px auto;
+    width: 80%;
+}
+
+.HBRFC {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.HBRFC a {
+    color: #fcf8f8;
+    text-decoration: none;
+}
+
+.HBRFC a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom span {
+    display: block;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+
+    .footer-bottom p,
+    .footer-bottom h1,
+    .footer-bottom span {
+        font-size: 0.8rem;
+    }
+
+    .HBRFC {
+        gap: 8px;
+    }
+}
+
+
+.HBRFC li {
+    list-style: none;
+}
+
+.HBRFC li a {
+    color: #fcf8f8;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+    text-align: center;
+    /* จัดตัวหนังสือตรงกลาง */
+}
+
+.HBRFC li a:hover {
+    color: #ffffff;
+    background-color: #e60000;
+    border-radius: 5px;
+}
+
+
+.footer-bottom span {
+
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Media Query โทสัพ */
+@media (max-width: 768px) {
+    .HBRFC {
+        gap: 8px;
+        /* ลดช่องว่าง */
+    }
+
+    .footer-bottom span {
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.grid-item {
+    justify-content: space-around;
+}
+/********************************************************************/
+a {
+    color: black;
+    text-decoration: none;
+}
+.buy {
+    border-radius: 20px;
+    border: 0px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    margin-top: 40px;
+    background-color: #cdc9c9;
+    padding: 10px 150px;
+    font-size: 15px;
+}
+
+.buy:hover {
+    transform: scale(1.005);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
