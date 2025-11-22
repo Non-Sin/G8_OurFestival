@@ -639,3 +639,60 @@ a {
     }
 }
 /******************************************************/
+/*************************768*************************/
+@media only screen and (max-width:768px){
+    .nav-container ul{
+        display: none !important;
+        
+    }
+    .img-container .text h1{
+        font-size: 4em;
+    }
+    .img-container .text h3{
+        font-size: 2em;
+    }
+    .text{
+        margin-left: 10%;
+    }
+    .about-container .about-text h1{
+        font-size: 20px ;
+    }
+    .about-container .about-text p{
+        font-size: 13.5px ;
+    }
+    .img-container .button-holder{
+        left: 45%;
+    }
+    .booth-container .booth-title{
+        position: absolute;
+        margin-left: 30%;
+        margin-top: -3%;
+        font-size: 15px; 
+    }
+    .booth-container .booth-card .booth {
+        height: 500px;
+    }
+    .booth-container .booth-card .booth .booth-img{
+        height: 200px;
+        margin-top: 20px ;
+    }
+    .booth-container .booth-card .booth .booth-name{
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    .booth-container .booth-card .booth .booth-text{
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .member-name {
+        font-size: 25px;
+    }
+    .member-container p {
+        font-size: 16px;
+    }
+    .member-container table td:nth-child(2) p,
+    .member-container table th:nth-child(2) p{
+        font-size: 16px;
+    }
+}
+/******************************************************/

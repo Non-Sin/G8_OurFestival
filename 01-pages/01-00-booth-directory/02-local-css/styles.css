@@ -299,29 +299,35 @@ nav {
     border-radius: 5px;
 } */
 
+.booth-name {
+    padding-top: 0.5rem;
+    text-align: center;
+}
+
 .desc-name {
     margin-bottom: 1rem;
     font-size: 10px;
     color: lightslategrey;
-}
-
-.discount {
-    color: red;
-    font-weight: bold;
-}
-
-.reference {
-    color: navy;
-    display: flex;
-    justify-content: right;
-    font-size: 13px;
-    margin: 0;
+    text-align: center;
 }
 
 .products-desc {
     font-size: 14px;
     margin-bottom: 1rem;
 }
+
+/* .discount {
+    color: red;
+    font-weight: bold;
+} */
+
+/* .reference {
+    color: navy;
+    display: flex;
+    justify-content: right;
+    font-size: 13px;
+    margin: 0;
+} */
 
 /* .footer-top {
     margin-top: 2rem;
