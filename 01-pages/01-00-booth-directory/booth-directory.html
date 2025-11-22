@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Shop</title>
+    <title>Booth Directory</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=IBM+Plex+Sans+Thai+Looped&display=swap" rel="stylesheet">
@@ -14,17 +14,34 @@
 <body>
 
     <header class="header">
-        <span class="header-name">G8_Ourfestival</span>
-        <nav class="nav-container">
-            <ul>
-                <li><a href="/index.html">HOME</a></li>
-                <li><a href="/01-pages/01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
-                <li><a href="/01-pages/02-00-register-page/register-page-customer.html">REGISTER</a></li>
-                <li><a href="/01-pages/03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
+    <span class="header-name">G8_Ourfestival</span>
+
+    <!-- Desktop Menu -->
+    <nav class="nav-container">
+        <ul>
+            <li><a href="/G8_OurFestival/index.html">Home</a></li>
+            <li><a href="/01-pages/01-00-booth-directory/booth-directory.html">BoothDirectory</a></li>
+            <li><a href="/G8_OurFestival/02-00-register-page/register-page.html">Register</a></li>
+            <li><a href="/G8_OurFestival/03-00-feedback-page/feedback-page.html">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-menu-container">
+        <button class="mobile-menu-btn">
+            Menu <span class="arrow">▼</span>
+        </button>
+
+        <ul class="mobile-menu">
+            <li><a href="/G8_OurFestival/index.html">Home</a></li>
+            <li><a href="/01-pages/01-00-booth-directory/booth-directory.html">BoothDirectory</a></li>
+            <li><a href="/G8_OurFestival/02-00-register-page/register-page.html">Register</a></li>
+            <li><a href="/G8_OurFestival/03-00-feedback-page/feedback-page.html">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</header>
 
     <section class="products">
         <div class="container">
@@ -199,6 +216,16 @@
         z[myIndex4 - 1].style.display = "block";
         setTimeout(carousel4, 3000);
     }
+
+    const btn = document.querySelector(".mobile-menu-btn");
+    const menu = document.querySelector(".mobile-menu");
+    const arrow = document.querySelector(".mobile-menu-btn .arrow");
+
+    btn.addEventListener("click", () => {
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+        arrow.classList.toggle("rotate");
+    });
+
     </script>
 
 </body>

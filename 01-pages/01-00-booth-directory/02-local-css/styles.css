@@ -449,3 +449,93 @@ a {
     padding: 2px;
     box-shadow: #eb7878 1px 2px 2px 2px;
 }
+
+.mobile-menu-container {
+    display: none;
+}
+
+
+/* ---------------- Responsive Mobile ---------------- */
+@media (max-width: 768px) {
+
+    /* ซ่อน nav เดิมบนมือถือ */
+    .nav-container {
+        display: none;
+    }
+
+    /* ปรับ header ให้เรียงบน-ล่าง */
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+        gap: 10px;
+    }
+
+    /* โลโก้ */
+    .header-name {
+        font-size: 30px;  /* ใหญ่ขึ้นจากเดิม 24px */
+        padding-left: 0;
+    }
+
+    /* แสดงเมนูมือถือ */
+    .mobile-menu-container {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* ปุ่มกดเปิดเมนู */
+    .mobile-menu-btn {
+        background-color: #e60000;
+        color: white;
+        font-family: "Share Tech", sans-serif;
+        border: none;
+        padding: 10px 14px;
+        font-size: 14px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    /* ลูกศรในปุ่มกด */
+    .mobile-menu-btn .arrow {
+        display: inline-block;
+        transition: transform 0.2s ease;
+    }
+
+    .arrow.rotate {
+        transform: rotate(180deg);
+    }
+
+    /* กล่องเมนู dropdown */
+    .mobile-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+        background: white;
+        border-radius: 10px;
+        margin-top: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    .mobile-menu li {
+        border-bottom: 1px solid #eee;
+    }
+
+    .mobile-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-menu li a {
+        display: block;
+        padding: 12px;
+        color: #e60000;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .mobile-menu li a:hover {
+        background-color: #ffefef;
+    }
+}

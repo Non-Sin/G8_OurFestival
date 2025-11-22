@@ -4,18 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="01-pages/00-00-index/02-local-css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title>HOMEPAGE</title>
 </head>
 <body>
     <header class="header">
-        <span class="header-name">G8_Ourfestival</span> 
+        <span class="header-name">G8_Ourfestival</span>
         
         <nav class="nav-container">
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-menu">
+            <ul>
                 <li><a href="/G8_OurFestival/index.html">HOME</a></li>
                 <li><a href="/G8_OurFestival/01-pages/01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
                 <li><a href="/G8_OurFestival/01-pages/02-00-register-page/register-page.html">REGISTER</a></li>
@@ -170,7 +166,7 @@
             <div class="grid-item">
                 <div>
                     <h1>CARNIVAL</h1><br>
-                    <p>
+                    <p class="">
                         เว็บไซต์นี้ถูกสร้างขึ้นภายใต้แนวคิด “Carnival of Joy” เพื่อถ่ายทอดความรื่นเริงและพลังแห่งความสุขให้กับทุกคนที่ก้าวเข้ามาเยี่ยมชม ซึ่งเปรียบเสมือนประตูสู่โลกแห่งสีสันและเสียงหัวเราะ ที่ซึ่งผู้คนได้ร่วมเฉลิมฉลองไปกับบรรยากาศแห่งความสนุกสนานราวกับอยู่ท่ามกลางงาน carnival จริงๆ       การออกแบบเน้นความสดใสและมีชีวิตชีวา ด้วยการผสมผสานสีแดง เหลือง และน้ำเงินเข้ากับลวดลายธงสามเหลี่ยม รถม้าหมุน และแสงไฟระยิบระยับ เพื่อสร้างความรู้สึกตื่นเต้นและอบอุ่นในเวลาเดียวกัน 
                     </p><br><hr style="border: none; height: 2px; background-color: rgb(255, 255, 255);">
                 </div>
@@ -190,24 +186,5 @@
 
         </div>
     </footer>
-    <script>
-    const menuToggle = document.getElementById('mobile-menu');
-    const navMenu = document.querySelector('.nav-menu');
-
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            
-            const icon = menuToggle.querySelector('i');
-            if (navMenu.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    }
-</script>
 </body>
 </html>
