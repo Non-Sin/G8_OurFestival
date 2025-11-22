@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>BIG BOY FRANKIE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- <link rel="stylesheet" href="../02-local-css/styles.css"> -->
+    <!-- <link rel="stylesheet" href="../02-local-css/styles.css"> -->
     <link rel="stylesheet" href="../02-local-css/stylessforproduct.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,37 +56,46 @@
                     <li>Material: PVC/ABS</li>
                 </ul>
 
-
+                <div class="quantity">
+                    <label for="qty">จำนวน:</label>
+                    <div class="qty-box">
+                        <button class="qty-btn" id="decrease">−</button>
+                        <input type="number" id="qty" value="0" min="0">
+                        <button class="qty-btn" id="increase">+</button>
+                    </div>
+                </div>
+                <button class="buy" id="buyBtn">ซื้อสินค้า</button>
             </div>
 
         </div>
     </div>
+    <a href="../booth-1.html" class="btn">
+        << ย้อนกลับ </a>
 
+            <script
+                src="/G8_OurFestival/01-pages/01-00-booth-directory/01-00-booths/01-00-booth-1/03-local-js/my-script.js"></script>
 
-    <script
-        src="/G8_OurFestival/01-pages/01-00-booth-directory/01-00-booths/01-00-booth-1/03-local-js/my-script.js"></script>
-
-    <footer class="footer-bottom" id="contact">
-        <div class="grid-container">
-            <div class="grid-item">
-                <h1>CONTACT</h1><br>
-                <p>
-                    Call : 0991186788
-                    Line : goldstar099
-                    Gmail : goldstart.2112@gmail.com
-                </p>
-                <hr>
-                <ul class="HBRFC">
-                    <li><a href="/G8_OurFestival/index.html">HOME</a></li>
-                    <li><a href="/01-pages/01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
-                    <li><a href="/G8_OurFestival/02-00-register-page/register-page.html">REGISTER</a></li>
-                    <li><a href="/G8_OurFestival/03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-                <span>Copyright @ 2025 G8_OurFestival. All right reserved</span>
-            </div>
-        </div>
-    </footer>
+            <footer class="footer-bottom" id="contact">
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <h1>CONTACT</h1><br>
+                        <p>
+                            Call : 0991186788
+                            Line : goldstar099
+                            Gmail : goldstart.2112@gmail.com
+                        </p>
+                        <hr>
+                        <ul class="HBRFC">
+                            <li><a href="/G8_OurFestival/index.html">HOME</a></li>
+                            <li><a href="/01-pages/01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
+                            <li><a href="/G8_OurFestival/02-00-register-page/register-page.html">REGISTER</a></li>
+                            <li><a href="/G8_OurFestival/03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                        </ul>
+                        <span>Copyright @ 2025 G8_OurFestival. All right reserved</span>
+                    </div>
+                </div>
+            </footer>
 
 
 </body>
