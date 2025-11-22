@@ -582,12 +582,16 @@ a {
     }
 }
 /******************************************************/
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: #e60000;
+    cursor: pointer;
+    padding: 10px;
+}
 /*************************900*************************/
 @media only screen and (max-width:900px){
-    .nav-container ul{
-        display: none !important;
-        
-    }
+    
     .img-container .text h1{
         font-size: 4em;
     }
@@ -637,14 +641,41 @@ a {
     .member-container table th:nth-child(2) p{
         font-size: 16px;
     }
+    /*  */
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-container ul.nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #FFFACD;
+        padding: 20px 0;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+        z-index: 999;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-container ul.nav-menu li { width: 100%; }
+    .nav-container ul.nav-menu li a {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .nav-container ul.nav-menu.active {
+        display: flex;
+    }
 }
 /******************************************************/
 /*************************768*************************/
 @media only screen and (max-width:768px){
-    .nav-container ul{
-        display: none !important;
-        
-    }
+
     .img-container .text h1{
         font-size: 4em;
     }
@@ -665,7 +696,62 @@ a {
     }
     .booth-container .booth-title{
         position: absolute;
-        margin-left: 30%;
+        margin-left: 24.5%;
+        margin-top: -3%;
+        font-size: 15px; 
+    }
+    .booth-container .booth-card .booth {
+        height: 500px;
+    }
+    .booth-container .booth-card .booth .booth-img{
+        height: 200px;
+        margin-top: 20px ;
+    }
+    .booth-container .booth-card .booth .booth-name{
+        font-size: 13px;
+        margin-top: 20px;
+    }
+    .booth-container .booth-card .booth .booth-text{
+        font-size: 16px;
+        margin-top:1px;
+        width: 60%;
+    }
+    .member-name {
+        font-size: 25px;
+    }
+    .member-container p {
+        font-size: 16px;
+    }
+    .member-container table td:nth-child(2) p,
+    .member-container table th:nth-child(2) p{
+        font-size: 16px;
+    }
+}
+/******************************************************/
+/*************************600*************************/
+@media only screen and (max-width:600px){
+    .img-container .text h1{
+        font-size: 3em;
+        
+    }
+    .img-container .text h3{
+        font-size: 2em;
+    }
+    .text{
+        margin-left: 10%;
+    }
+    .about-container .about-text h1{
+        font-size: 20px ;
+    }
+    .about-container .about-text p{
+        font-size: 11.2px ;
+    }
+    .img-container .button-holder{
+        left: 45%;
+    }
+    .booth-container .booth-title{
+        position: absolute;
+        margin-left: 15%;
         margin-top: -3%;
         font-size: 15px; 
     }
