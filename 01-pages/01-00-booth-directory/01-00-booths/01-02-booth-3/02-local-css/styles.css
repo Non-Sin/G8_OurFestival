@@ -431,3 +431,111 @@ a {
     color: white;
     margin-top: 30px;
 }
+
+
+
+/*footer*/
+.footer-bottom {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e43333;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    color: #fcf8f8;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-bottom h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.footer-bottom p {
+    margin: 5px 0 15px 0;
+}
+
+.footer-bottom hr {
+    border: none;
+    height: 2px;
+    background-color: black;
+    margin: 15px auto;
+    width: 80%;
+}
+
+.HBRFC {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.HBRFC a {
+    color: #fcf8f8;
+    text-decoration: none;
+}
+
+.HBRFC a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom span {
+    display: block;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+
+    .footer-bottom p,
+    .footer-bottom h1,
+    .footer-bottom span {
+        font-size: 0.8rem;
+    }
+
+    .HBRFC {
+        gap: 8px;
+    }
+}
+
+
+.HBRFC li {
+    list-style: none;
+}
+
+.HBRFC li a {
+    color: #fcf8f8;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+    text-align: center;
+    /* จัดตัวหนังสือตรงกลาง */
+}
+
+
+
+
+.footer-bottom span {
+
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Media Query โทสัพ */
+@media (max-width: 768px) {
+    .HBRFC {
+        gap: 8px;
+        /* ลดช่องว่าง */
+    }
+
+    .footer-bottom span {
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+}
