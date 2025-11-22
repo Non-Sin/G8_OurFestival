@@ -24,8 +24,8 @@ body {
     font-size: 60px;
     font-style: italic;
 
-    background-image: url('../01-images/bbchessecake.jpg');
-    background-size: 800px 600px; /* กำหนดขนาดล็อกของภาพ */
+    background-image: url('../01-images/bbandhbd.jpg');
+    background-size: 1500px ; /* กำหนดขนาดล็อกของภาพ */
     background-repeat: no-repeat;
     background-position: center;  /* ภาพอยู่ตำแหน่งเดิม */
 }

@@ -561,3 +561,39 @@ a {
     text-decoration: none;
 }
 
+/* ===== menu-toggle: ซ่อนบน desktop, แสดงบน mobile + cursor ===== */
+.menu-toggle {
+    display: none;
+    cursor: pointer !important;
+    font-size: 32px;
+    color: #e60000;
+    padding: 8px 12px;
+    line-height: 1;
+}
+
+/* แสดงเฉพาะหน้าจอ <= 900px */
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: block !important;
+    }
+
+    .nav-container ul {
+        display: none !important;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+        background: #FFFACD;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 9999;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav-container ul.active {
+        display: flex !important;
+    }
+}
+
+

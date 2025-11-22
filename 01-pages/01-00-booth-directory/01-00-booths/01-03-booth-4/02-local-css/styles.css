@@ -319,12 +319,13 @@ a {
     padding: 50px;
 }
 
-.product-image img {
+ 
+ .product-image img {
     width: 500px;
     height: 500px;
     border-radius: 20px;
     object-fit: cover;
-}
+} 
 
 .product-info {
     display: flex;

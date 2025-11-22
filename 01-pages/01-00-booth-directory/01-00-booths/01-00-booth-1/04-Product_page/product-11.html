@@ -20,8 +20,10 @@
 <body>
     <header class="header">
         <span class="header-name">G8_Ourfestival</span>
+
         <nav class="nav-container">
-            <ul>
+            <span class="menu-toggle">&#9776;</span>
+            <ul class="nav-menu">
                 <li><a href="/G8_OurFestival/index.html">HOME</a></li>
                 <li><a href="/G8_OurFestival/01-pages/01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a>
                 </li>
@@ -31,6 +33,12 @@
             </ul>
         </nav>
     </header>
+    <script>
+        const toggle = document.querySelector("header .menu-toggle");
+        const menu = document.querySelector("header .nav-menu");
+
+        toggle.addEventListener("click", () => menu.classList.toggle("active"));
+    </script>
     <div class="container my-5">
         <div class="row align-items-start">
 

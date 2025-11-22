@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Itim&family=Mitr:wght@700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,9 +11,10 @@
 body {
     background: url(/G8_OurFestival/11-resources/01-images/12345.png);
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
 }
+
 /*------------------------header-------------------------------*/
 .header {
     display: flex;
@@ -24,6 +26,8 @@ body {
     width: 100%;
     height: 60px;
     z-index: 10;
+    flex-wrap: wrap;
+    padding: 10px 20px;
 }
 
 .header-name {
@@ -44,12 +48,14 @@ body {
     font-size: 20px;
     margin-right: 10px;
 }
+
 .nav-container a {
     color: #e60000;
     padding: 5px;
     border-radius: 10px;
-    
+
 }
+
 .nav-container a:hover {
     color: #ffffff;
     background-color: #e60000;
@@ -57,18 +63,22 @@ body {
     transition: 0.2s;
 }
 
-ul {
+.header .nav-container ul {
     padding: 30px;
     list-style: none;
     display: flex;
     gap: 30px;
 }
+
+
+
 /*-----------------------------------------------------------*/
 
 /*-------------------------picture----------------------------------*/
 .img-container {
     position: relative;
 }
+
 .img-container .text {
     font-family: "Bungee", sans-serif;
     font-weight: 400;
@@ -81,45 +91,50 @@ ul {
     z-index: 8;
     font-weight: bold;
 }
-.img-container .text h1{
+
+.img-container .text h1 {
     font-size: 5em;
     color: rgba(255, 0, 0, 0.4);
-    text-shadow: 1px 2px 6px #efefef, 1px 0 0 rgba(136, 136, 136 ,0.7);
+    text-shadow: 1px 2px 6px #efefef, 1px 0 0 rgba(136, 136, 136, 0.7);
     transform: rotate(-20deg) skew(20deg);
 }
+
 .text h1::before {
     content: attr(data-title);
     position: absolute;
     left: 0;
     color: #fff;
     overflow: hidden;
-    transform: translate(25px , 0) skew(-39deg);
+    transform: translate(25px, 0) skew(-39deg);
     text-shadow: none;
 }
-.img-container .text h3{
+
+.img-container .text h3 {
     font-size: 3em;
     color: rgba(255, 0, 0, 0.4);
-    text-shadow: 1px 2px 6px #efefef, 1px 0 0 rgba(136, 136, 136 ,0.7);
+    text-shadow: 1px 2px 6px #efefef, 1px 0 0 rgba(136, 136, 136, 0.7);
     transform: rotate(-20deg) skew(20deg) translateX(30px);
     margin-top: 0;
 }
+
 .text h3::before {
     content: attr(data-heading);
     position: absolute;
     left: 0;
     color: #fff;
     overflow: hidden;
-    transform: translate(15px , 0) skew(-39deg);
+    transform: translate(15px, 0) skew(-39deg);
     text-shadow: none;
 }
 
-.img-container .wrapper{
+.img-container .wrapper {
     width: 100%;
     height: 75vh;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
     filter: blur(5px);
     overflow: hidden;
 }
+
 .img-container .wrapper-holder {
     display: grid;
     grid-template-columns: repeat(4, 100%);
@@ -127,24 +142,29 @@ ul {
     width: 100%;
     animation: slider 30s ease-in-out infinite alternate;
 }
+
 .img-container #slider-img-1 {
     background-image: url(/G8_OurFestival/01-pages/00-00-index/01-images/1.png);
     background-position: center;
 }
+
 .img-container #slider-img-2 {
     background-image: url(/G8_OurFestival/01-pages/00-00-index/01-images/2.png);
     background-position: center;
 }
+
 .img-container #slider-img-3 {
     background-image: url(/G8_OurFestival/01-pages/00-00-index/01-images/3.png);
     background-position: center;
 }
+
 .img-container #slider-img-4 {
     background-image: url(/G8_OurFestival/01-pages/00-00-index/01-images/4.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
 .img-container .button-holder .button {
     background-color: white;
     width: 15px;
@@ -153,44 +173,86 @@ ul {
     display: inline-block;
     margin: .3rem;
 }
+
 .img-container .button-holder {
     position: absolute;
     left: 50%;
     bottom: 0%;
 }
+
 .botton:hover {
-    
+
     box-shadow: 5px 5px 5px rgb(225, 55, 55);
 }
+
 @keyframes slider {
-    0%{transform: translateX(0%);}
-    10%{transform: translateX(-100%);}
-    20%{transform: translateX(-100%);}
-    30%{transform: translateX(-200%);}
-    40%{transform: translateX(-200%);}
-    50%{transform: translateX(-200%);}
-    60%{transform: translateX(-300%);}
-    70%{transform: translateX(-300%);}
-    80%{transform: translateX(-300%);}
-    90%{transform: translateX(0%);}
-    100%{transform: translateX(0%);}
+    0% {
+        transform: translateX(0%);
+    }
+
+    10% {
+        transform: translateX(-100%);
+    }
+
+    20% {
+        transform: translateX(-100%);
+    }
+
+    30% {
+        transform: translateX(-200%);
+    }
+
+    40% {
+        transform: translateX(-200%);
+    }
+
+    50% {
+        transform: translateX(-200%);
+    }
+
+    60% {
+        transform: translateX(-300%);
+    }
+
+    70% {
+        transform: translateX(-300%);
+    }
+
+    80% {
+        transform: translateX(-300%);
+    }
+
+    90% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
 }
+
 /*-----------------------------------------------------------*/
 
 /*-------------------------About---------------------------------*/
 .about-container {
     background-color: #ffffff;
-    width: calc(100% - 100px); /* ความกว้างของ container ลบขอบซ้ายขวา 50px + 50px */
+    width: calc(100% - 100px);
+    /* ความกว้างของ container ลบขอบซ้ายขวา 50px + 50px */
     height: 600px;
-    margin: 100px 50px 0px 50px; /* ห่างขอบซ้ายและขวา 50px */
-    display: flex;            /* ใช้ Flexbox เพื่อจัดตำแหน่ง */
-    align-items: flex-start;      /* จัดแนวกลางแนวตั้ง */
-    justify-content: space-between; /* จัดให้กล่องสีฟ้าอยู่ทางซ้าย */
+    margin: 100px 50px 0px 50px;
+    /* ห่างขอบซ้ายและขวา 50px */
+    display: flex;
+    /* ใช้ Flexbox เพื่อจัดตำแหน่ง */
+    align-items: flex-start;
+    /* จัดแนวกลางแนวตั้ง */
+    justify-content: space-between;
+    /* จัดให้กล่องสีฟ้าอยู่ทางซ้าย */
     gap: 5px;
     padding: 0;
     border-radius: 2px;
 
 }
+
 .about-container .about-text {
     background-color: #ffffff;
     width: 48%;
@@ -198,6 +260,7 @@ ul {
     margin-left: 20px;
     margin-top: 20px;
 }
+
 .about-container .about-text h1 {
     margin-top: 20px;
     font-family: "Bungee", sans-serif;
@@ -208,6 +271,7 @@ ul {
     text-align: left;
     margin-left: 20px;
 }
+
 .about-container .about-text p {
     margin-top: 20px;
     font-family: "Bungee", sans-serif;
@@ -219,19 +283,25 @@ ul {
     margin-left: 20px;
     margin-right: 20px;
 }
+
 .about-container .about-img {
     background-color: #ffffff;
     width: 48%;
     height: 600px;
     margin-right: 20px;
-    margin-top: -20px;        /* ขยับ .about-img ขึ้นไปด้านบน 20px */
-    left: 50%;                 /* จัดให้ .about-img อยู่ด้านขวาของ .about-text */
-    padding: 10px;           /* <<< เพิ่มระยะห่างจากกรอบ */
-    box-sizing: border-box;  /* <<< เพื่อให้ padding ไม่ทำให้กล่องขยาย */
+    margin-top: -20px;
+    /* ขยับ .about-img ขึ้นไปด้านบน 20px */
+    left: 50%;
+    /* จัดให้ .about-img อยู่ด้านขวาของ .about-text */
+    padding: 10px;
+    /* <<< เพิ่มระยะห่างจากกรอบ */
+    box-sizing: border-box;
+    /* <<< เพื่อให้ padding ไม่ทำให้กล่องขยาย */
     border-radius: 2px;
 
 }
-.about-container  #about-img-5 {
+
+.about-container #about-img-5 {
     background-image: url(/G8_OurFestival/01-pages/00-00-index/01-images/5.png);
     background-position: center;
     height: 100%;
@@ -243,21 +313,24 @@ ul {
 
 /*-------------------------booth-----------------------------*/
 .booth-container {
-    width: calc(100% - 100px); /* ความกว้างของ container ลบขอบซ้ายขวา 50px + 50px */
+    width: calc(100% - 100px);
+    /* ความกว้างของ container ลบขอบซ้ายขวา 50px + 50px */
     height: auto;
     display: flex;
-    flex-direction: column;   /* จัดเรียงลูกในแนวตั้ง */
+    flex-direction: column;
+    /* จัดเรียงลูกในแนวตั้ง */
     align-items: flex-start;
     margin: 100px 50px 0 50px;
     position: relative;
 }
 
-.booth-container .booth-title{
+.booth-container .booth-title {
     position: absolute;
     margin-left: 35%;
     margin-top: -3%;
     z-index: 7;
-    margin-bottom: 50px; /* ระยะห่างจาก card */
+    margin-bottom: 50px;
+    /* ระยะห่างจาก card */
     text-align: center;
     font-family: "Bungee", sans-serif;
     font-weight: 400;
@@ -266,7 +339,8 @@ ul {
     color: #e60000;
     text-shadow: 2px 2px 8px #eb7878, 2px 2px 4px #e75b5b;
 }
-.booth-container .booth-title:hover{
+
+.booth-container .booth-title:hover {
     transform: scale(1.01);
 }
 
@@ -275,6 +349,7 @@ ul {
     gap: 20px;
     width: 100%;
 }
+
 .booth-container .booth-card .booth {
     flex: 1;
     height: 800px;
@@ -288,10 +363,13 @@ ul {
     flex-direction: column;
     align-items: center;
 }
+
 .booth-container .booth-card .booth:hover {
-    transform: scale(1.04); /* ขยายขึ้น 4% */
- }
-.booth-container .booth-card .booth .booth-name{
+    transform: scale(1.04);
+    /* ขยายขึ้น 4% */
+}
+
+.booth-container .booth-card .booth .booth-name {
     color: #e75b5b;
     font-family: "Mitr", sans-serif;
     font-weight: 200;
@@ -299,6 +377,7 @@ ul {
     font-size: 30px;
     margin-top: 20px;
 }
+
 .booth-container .booth-card .booth .booth-text {
     text-align: left;
     font-family: "Share Tech", sans-serif;
@@ -309,13 +388,15 @@ ul {
     margin-top: 20px;
     width: calc(100% - 100px);
 }
+
 .booth-container .booth-card .booth .booth-img {
     background-color: #eb7878;
-    width: calc(100% - 60px);    
+    width: calc(100% - 60px);
     height: 400px;
-    margin-top: 20px ;
+    margin-top: 20px;
     border-radius: 6px;
 }
+
 .booth-img #img1 {
     background-image: url(/G8_OurFestival/01-pages/01-00-booth-directory/01-00-booths/01-00-booth-1/01-images/LADY\ MUMMY.webp);
     background-position: center;
@@ -324,12 +405,14 @@ ul {
     width: 100%;
     height: 100%;
 }
+
 .booth-img #img2 {
     background-image: url(/G8_OurFestival/01-pages/01-00-booth-directory/01-00-booths/01-01-booth-2/01-images/Balloon.jpg);
     background-position: center;
     width: 100%;
     height: 100%;
 }
+
 .booth-img #img3 {
     background-image: url(/G8_OurFestival/01-pages/01-00-booth-directory/01-00-booths/01-02-booth-3/01-images/strawberry\ chessepie.jpg);
     background-position: center;
@@ -338,6 +421,7 @@ ul {
     width: 100%;
     height: 100%;
 }
+
 .booth-img #img4 {
     background-image: url(/G8_OurFestival/01-pages/01-00-booth-directory/01-00-booths/01-03-booth-4/01-images/noodle.webp);
     background-position: center;
@@ -346,15 +430,18 @@ ul {
     width: 100%;
     height: 100%;
 }
+
 .booth-container .booth-card .booth a {
     margin-top: 80px;
     color: #ffffff;
     font-family: "Share Tech", sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 30px;    
-    margin-top: auto;       /* ดันลงล่างสุดของกล่อง */
-    margin-bottom: 20px;    /* เว้นขอบล่างนิดนึง */
+    font-size: 30px;
+    margin-top: auto;
+    /* ดันลงล่างสุดของกล่อง */
+    margin-bottom: 20px;
+    /* เว้นขอบล่างนิดนึง */
     background-color: #e75b5b;
     padding: 10px;
     border-radius: 10px;
@@ -365,7 +452,8 @@ ul {
 /*------------------------member------------------------------*/
 .member-container {
     background-color: #ffffff;
-    width: calc(100% - 100px); /* ความกว้างของ container ลบขอบซ้ายขวา 50px + 50px */
+    width: calc(100% - 100px);
+    /* ความกว้างของ container ลบขอบซ้ายขวา 50px + 50px */
     height: auto;
     display: flex;
     align-items: flex-start;
@@ -374,6 +462,7 @@ ul {
     border-radius: 2px;
 
 }
+
 .member-name {
     color: #000000;
     font-family: "Bungee", sans-serif;
@@ -382,8 +471,9 @@ ul {
     font-size: 40px;
     text-align: center;
     white-space: nowrap;
-    
+
 }
+
 .member-container p {
     color: #000000;
     font-family: "Bungee", sans-serif;
@@ -391,196 +481,297 @@ ul {
     font-style: normal;
     font-size: 30px;
     text-align: left;
-    
+
 }
+
 .member-container table td:nth-child(2) p,
 .member-container table th:nth-child(2) p {
     font-family: "Mitr", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #000000;                   
+    color: #000000;
 }
+
 .member-container table {
-    width: 100%;               /* ให้ตารางกินเต็ม container */
-    border-collapse: separate; /* ไม่รวมเส้นขอบ */
-    border-spacing: 15px 5px; /* ระยะห่างคอลัมน์ 15px, ระยะห่างแถว 5px */
+    width: 100%;
+    /* ให้ตารางกินเต็ม container */
+    border-collapse: separate;
+    /* ไม่รวมเส้นขอบ */
+    border-spacing: 15px 5px;
+    /* ระยะห่างคอลัมน์ 15px, ระยะห่างแถว 5px */
 }
 
 .member-container table td {
-    padding: 10px;            /* เพิ่ม padding ภายในเซลล์ */
-    text-align: center;       /* จัดข้อความตรงกลาง */
-    vertical-align: middle;   /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    padding: 10px;
+    /* เพิ่ม padding ภายในเซลล์ */
+    text-align: center;
+    /* จัดข้อความตรงกลาง */
+    vertical-align: middle;
+    /* จัดให้อยู่กึ่งกลางแนวตั้ง */
 }
 
 .member-container table th {
-    text-align: center;       /* จัดหัวตารางตรงกลาง */
+    text-align: center;
+    /* จัดหัวตารางตรงกลาง */
     padding: 40px 0;
 }
+
 /*-----------------------------------------------------------*/
 
 
 /*------------------------footer------------------------------*/
 .footer-bottom {
-    font-family: "Share Tech", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #e43333;
-    padding: 2rem 1rem;
-    text-align: center;
-    margin-top: 6rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
     color: #fcf8f8;
-}
-.footer-cont {
-    margin-bottom: 0;
-}
-
-.footer-bottom a {
-  color: #fcf8f8;          /* สีเดียวกับตัวอักษร footer */
-  text-decoration: none;   /* ตัดเส้นใต้ */
+    text-align: center;
+    margin-top: 50px;
 }
 
-.footer-bottom li {
-  cursor: pointer;
-  font-weight: 500;
-  margin: 8px 0;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-.menu-footer {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+.footer-bottom h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-.box-cont {
-  display: grid;
-  grid-template-columns: 1fr;
-  text-align: center;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+.footer-bottom p {
+    margin: 5px 0 15px 0;
 }
-.box-item {
-  justify-content: space-around; 
+
+.footer-bottom hr {
+    border: none;
+    height: 2px;
+    background-color: black;
+    margin: 15px auto;
+    width: 80%;
 }
-a {
-    font-family: "Share Tech", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    text-decoration: none !important;
+
+.HBRFC {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
 }
-.menu-footer a:hover {
-    color: #e60000 !important;
-    background-color: #fcf8f8 !important;
-    border-radius: 3px;
-    padding: 2px;
-    box-shadow: #eb7878 1px 2px 2px 2px;
+
+.HBRFC a {
+    color: #fcf8f8;
+    text-decoration: none;
+}
+
+.HBRFC a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom span {
+    display: block;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+
+    .footer-bottom p,
+    .footer-bottom h1,
+    .footer-bottom span {
+        font-size: 0.8rem;
+    }
+
+    .HBRFC {
+        gap: 8px;
+    }
+}
+
+
+.HBRFC li {
+    list-style: none;
+}
+
+.HBRFC li a {
+    color: #fcf8f8;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+    text-align: center;
+    /* จัดตัวหนังสือตรงกลาง */
+}
+
+.HBRFC li a:hover {
+    color: #ffffff;
+    background-color: #e60000;
+    border-radius: 5px;
+}
+
+
+.footer-bottom span {
+
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Media Query โทสัพ */
+@media (max-width: 768px) {
+    .HBRFC {
+        gap: 8px;
+        /* ลดช่องว่าง */
+    }
+
+    .footer-bottom span {
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.grid-item {
+    justify-content: space-around;
 }
 /*-----------------------------------------------------------*/
 
 /*---------------------Responsive-------------------------*/
 
 /*************************1200*************************/
-@media only screen and (max-width:1200px){
-    .img-container .text h1{
+@media only screen and (max-width:1200px) {
+    .img-container .text h1 {
         font-size: 4em;
     }
-    .img-container .text h3{
+
+    .img-container .text h3 {
         font-size: 2em;
     }
-    .text{
+
+    .text {
         margin-left: 10%;
     }
-    .about-container .about-text p{
-        font-size: 15px ;
+
+    .about-container .about-text p {
+        font-size: 15px;
     }
-    .img-container .button-holder{
+
+    .img-container .button-holder {
         left: 45%;
     }
-    .booth-container .booth-title{
+
+    .booth-container .booth-title {
         position: absolute;
         margin-left: 35%;
         margin-top: -2%;
-        font-size: 15px; 
+        font-size: 15px;
     }
+
     .booth-container .booth-card .booth {
         height: 700px;
     }
-    .booth-container .booth-card .booth .booth-img{
+
+    .booth-container .booth-card .booth .booth-img {
         height: 300px;
-        margin-top: 20px ;
+        margin-top: 20px;
     }
-    .booth-container .booth-card .booth .booth-name{
+
+    .booth-container .booth-card .booth .booth-name {
         font-size: 22px;
         margin-top: 20px;
     }
-    .booth-container .booth-card .booth .booth-text{
+
+    .booth-container .booth-card .booth .booth-text {
         font-size: 25px;
         margin-top: 20px;
     }
+
     .member-name {
         font-size: 30px;
     }
+
     .member-container p {
         font-size: 20px;
     }
+
     .member-container table td:nth-child(2) p,
-    .member-container table th:nth-child(2) p{
+    .member-container table th:nth-child(2) p {
         font-size: 20px;
     }
 }
+
 /******************************************************/
 
 /*************************1024*************************/
-@media only screen and (max-width:1024px){
-    .img-container .text h1{
+@media only screen and (max-width:1024px) {
+    .img-container .text h1 {
         font-size: 4em;
     }
-    .img-container .text h3{
+
+    .img-container .text h3 {
         font-size: 2em;
     }
-    .text{
+
+    .text {
         margin-left: 10%;
     }
-    .about-container .about-text p{
-        font-size: 15px ;
+
+    .about-container .about-text p {
+        font-size: 15px;
     }
-    .img-container .button-holder{
+
+    .img-container .button-holder {
         left: 45%;
     }
-    .booth-container .booth-title{
+
+    .booth-container .booth-title {
         position: absolute;
         margin-left: 30%;
         margin-top: -3%;
-        font-size: 15px; 
+        font-size: 15px;
     }
+
     .booth-container .booth-card .booth {
         height: 600px;
     }
-    .booth-container .booth-card .booth .booth-img{
+
+    .booth-container .booth-card .booth .booth-img {
         height: 300px;
-        margin-top: 20px ;
+        margin-top: 20px;
     }
-    .booth-container .booth-card .booth .booth-name{
+
+    .booth-container .booth-card .booth .booth-name {
         font-size: 18px;
         margin-top: 20px;
     }
-    .booth-container .booth-card .booth .booth-text{
+
+    .booth-container .booth-card .booth .booth-text {
         font-size: 20px;
         margin-top: 20px;
     }
+
     .member-name {
         font-size: 30px;
     }
+
     .member-container p {
         font-size: 20px;
     }
+
     .member-container table td:nth-child(2) p,
-    .member-container table th:nth-child(2) p{
+    .member-container table th:nth-child(2) p {
         font-size: 20px;
     }
 }
+
 /******************************************************/
 .menu-toggle {
     display: none;
@@ -589,62 +780,75 @@ a {
     cursor: pointer;
     padding: 10px;
 }
+
 /*************************900*************************/
-@media only screen and (max-width:900px){
-    
-    .img-container .text h1{
+@media only screen and (max-width:900px) {
+
+    .img-container .text h1 {
         font-size: 4em;
     }
-    .img-container .text h3{
+
+    .img-container .text h3 {
         font-size: 2em;
     }
-    .text{
+
+    .text {
         margin-left: 10%;
     }
-    .about-container .about-text h1{
-        font-size: 20px ;
+
+    .about-container .about-text h1 {
+        font-size: 20px;
     }
-    .about-container .about-text p{
-        font-size: 14px ;
+
+    .about-container .about-text p {
+        font-size: 14px;
     }
-    .img-container .button-holder{
+
+    .img-container .button-holder {
         left: 45%;
     }
-    .booth-container .booth-title{
+
+    .booth-container .booth-title {
         position: absolute;
         margin-left: 30%;
         margin-top: -3%;
-        font-size: 15px; 
+        font-size: 15px;
     }
+
     .booth-container .booth-card .booth {
         height: 500px;
     }
-    .booth-container .booth-card .booth .booth-img{
+
+    .booth-container .booth-card .booth .booth-img {
         height: 200px;
-        margin-top: 20px ;
+        margin-top: 20px;
     }
-    .booth-container .booth-card .booth .booth-name{
+
+    .booth-container .booth-card .booth .booth-name {
         font-size: 14px;
         margin-top: 20px;
     }
-    .booth-container .booth-card .booth .booth-text{
+
+    .booth-container .booth-card .booth .booth-text {
         font-size: 16px;
         margin-top: 20px;
     }
+
     .member-name {
         font-size: 25px;
     }
+
     .member-container p {
         font-size: 16px;
     }
+
     .member-container table td:nth-child(2) p,
-    .member-container table th:nth-child(2) p{
+    .member-container table th:nth-child(2) p {
         font-size: 16px;
     }
+
     /*  */
-    .menu-toggle {
-        display: block;
-    }
+
 
     .nav-container ul.nav-menu {
         display: none;
@@ -655,13 +859,16 @@ a {
         width: 100%;
         background-color: #FFFACD;
         padding: 20px 0;
-        box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
         z-index: 999;
         gap: 15px;
         text-align: center;
     }
 
-    .nav-container ul.nav-menu li { width: 100%; }
+    .nav-container ul.nav-menu li {
+        width: 100%;
+    }
+
     .nav-container ul.nav-menu li a {
         display: block;
         width: 80%;
@@ -672,113 +879,269 @@ a {
         display: flex;
     }
 }
+
 /******************************************************/
 /*************************768*************************/
-@media only screen and (max-width:768px){
+@media only screen and (max-width:768px) {
 
-    .img-container .text h1{
+    .img-container .text h1 {
         font-size: 4em;
     }
-    .img-container .text h3{
+
+    .img-container .text h3 {
         font-size: 2em;
     }
-    .text{
+
+    .text {
         margin-left: 10%;
     }
-    .about-container .about-text h1{
-        font-size: 20px ;
+
+    .about-container .about-text h1 {
+        font-size: 20px;
     }
-    .about-container .about-text p{
-        font-size: 13.5px ;
+
+    .about-container .about-text p {
+        font-size: 13.5px;
     }
-    .img-container .button-holder{
+
+    .img-container .button-holder {
         left: 45%;
     }
-    .booth-container .booth-title{
+
+    .booth-container .booth-title {
         position: absolute;
         margin-left: 24.5%;
         margin-top: -3%;
-        font-size: 15px; 
+        font-size: 15px;
     }
+
     .booth-container .booth-card .booth {
         height: 500px;
     }
-    .booth-container .booth-card .booth .booth-img{
+
+    .booth-container .booth-card .booth .booth-img {
         height: 200px;
-        margin-top: 20px ;
+        margin-top: 20px;
     }
-    .booth-container .booth-card .booth .booth-name{
+
+    .booth-container .booth-card .booth .booth-name {
         font-size: 13px;
         margin-top: 20px;
     }
-    .booth-container .booth-card .booth .booth-text{
+
+    .booth-container .booth-card .booth .booth-text {
         font-size: 16px;
-        margin-top:1px;
+        margin-top: 1px;
         width: 60%;
     }
+
     .member-name {
         font-size: 25px;
     }
+
     .member-container p {
         font-size: 16px;
     }
+
     .member-container table td:nth-child(2) p,
-    .member-container table th:nth-child(2) p{
+    .member-container table th:nth-child(2) p {
         font-size: 16px;
     }
 }
+
 /******************************************************/
 /*************************600*************************/
-@media only screen and (max-width:600px){
-    .img-container .text h1{
+@media only screen and (max-width:600px) {
+    .img-container .text h1 {
         font-size: 3em;
-        
+
     }
-    .img-container .text h3{
+
+    .img-container .text h3 {
         font-size: 2em;
     }
-    .text{
+
+    .text {
         margin-left: 10%;
     }
-    .about-container .about-text h1{
-        font-size: 20px ;
+
+    .about-container .about-text h1 {
+        font-size: 20px;
     }
-    .about-container .about-text p{
-        font-size: 11.2px ;
+
+    .about-container .about-text p {
+        font-size: 11.2px;
     }
-    .img-container .button-holder{
+
+    .img-container .button-holder {
         left: 45%;
     }
-    .booth-container .booth-title{
+
+    .booth-container .booth-title {
         position: absolute;
         margin-left: 15%;
         margin-top: -3%;
-        font-size: 15px; 
+        font-size: 15px;
     }
+
     .booth-container .booth-card .booth {
         height: 500px;
     }
-    .booth-container .booth-card .booth .booth-img{
+
+    .booth-container .booth-card .booth .booth-img {
         height: 200px;
-        margin-top: 20px ;
+        margin-top: 20px;
     }
-    .booth-container .booth-card .booth .booth-name{
+
+    .booth-container .booth-card .booth .booth-name {
         font-size: 14px;
         margin-top: 20px;
     }
-    .booth-container .booth-card .booth .booth-text{
+
+    .booth-container .booth-card .booth .booth-text {
         font-size: 16px;
         margin-top: 20px;
     }
+
     .member-name {
         font-size: 25px;
     }
+
     .member-container p {
         font-size: 16px;
     }
+
     .member-container table td:nth-child(2) p,
-    .member-container table th:nth-child(2) p{
+    .member-container table th:nth-child(2) p {
         font-size: 16px;
     }
 }
+
 /******************************************************/
+/* ----------- FIX REAL RESPONSIVE LAYOUT ----------- */
+
+/* ============= ABOUT ============= */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        height: auto;
+        margin-top: 60px;
+    }
+
+    .about-container .about-text,
+    .about-container .about-img {
+        width: 100%;
+        margin: 10px auto;
+        height: auto;
+    }
+}
+
+/* ============= BOOTH ============= */
+@media (max-width: 900px) {
+    .booth-container .booth-card {
+        flex-direction: column;
+    }
+
+    .booth-container .booth-card .booth {
+        width: 100%;
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    .booth-container .booth-card .booth .booth-img {
+        height: 260px;
+    }
+}
+
+/* ============= MEMBER ============= */
+@media (max-width: 768px) {
+    .member-container {
+        overflow-x: auto;
+        display: block;
+    }
+
+    .member-container table {
+        min-width: 600px;
+    }
+}
+
+/* ============= HEADER (แก้ nav ทับกัน) ============= */
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .header-name {
+        font-size: 22px;
+        margin-left: 20px;
+    }
+}
+
+/* ============= SLIDER TEXT ไม่ล้น ============= */
+@media (max-width: 600px) {
+    .img-container .text {
+        top: 50%;
+        left: 40%;
+    }
+
+    .img-container .text h1 {
+        font-size: 2.5em;
+    }
+
+    .img-container .text h3 {
+        font-size: 1.5em;
+    }
+}
+
+/* =============== DEFAULT (Desktop) =============== */
+.nav-container ul {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+
+    /* ซ่อน menu เดสก์ท็อป */
+    .nav-container ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* ปุ่ม hamburger */
+    .menu-toggle {
+        display: block !important;
+        font-size: 32px;
+        margin-right: 20px;
+        color: #e60000;
+        cursor: pointer;
+    }
+
+    /* เมื่อกด เปิดเมนู */
+    .nav-container ul.active {
+        display: flex !important;
+        background: #FFFACD;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px 0;
+        gap: 20px;
+        width: 100%;
+        z-index: 9999;
+        text-align: center;
+    }
+
+    /* ลิงก์แต่ละอันในมือถือ */
+    .nav-container ul li {
+        width: 100%;
+    }
+
+    .nav-container ul li a {
+        font-size: 20px;
+        padding: 10px 0;
+        display: block;
+    }
+}
