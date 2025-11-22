@@ -13,6 +13,8 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    background-image: url('/11-resources/01-images/12345.png');
+    background-size: cover;
 }
 
 /* หัว */
@@ -105,6 +107,46 @@ ul {
     color: white;
 }
 
+/*topimg*/
+.topimg {
+    position: relative;
+}
+
+.topimg img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 90px;
+}
+
+.topimg-text {
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    z-index: 2;
+}
+
+.x,
+.y {
+    position: relative;
+    color: rgb(255, 255, 255);
+    z-index: 3;
+    font-style: italic;
+
+}
+
+.x {
+    font-size: 65px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.y {
+    font-size: 50px;
+}
+
+
 /* กลาง */
 .menu-grid {
     display: grid;
@@ -163,6 +205,7 @@ ul {
 }
 
 .booth-title {
+    color: #000000;
     font-size: 1.3rem;
     font-weight: 700;
     margin: 0;
@@ -387,4 +430,237 @@ a {
 #qty::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+
+    .header {
+        padding: 10px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-name {
+        font-size: 22px;
+    }
+
+    .nav-container ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .nav-container a {
+        font-size: 16px;
+    }
+
+    .promo-header h1 {
+        font-size: 40px;
+    }
+
+    .tabs button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .booth-card .booth-title {
+        font-size: 18px;
+    }
+
+    .booth-card .booth-desc {
+        font-size: 15px;
+    }
+
+    footer h1 {
+        font-size: 22px;
+    }
+
+    footer span {
+        font-size: 14px;
+    }
+}
+
+/* Tablet  601–1024px */
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .header {
+        padding: 15px 30px;
+    }
+
+    .header-name {
+        font-size: 26px;
+    }
+
+    .nav-container a {
+        font-size: 18px;
+    }
+
+    .promo-header h1 {
+        font-size: 55px;
+    }
+
+    .tabs button {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
+        gap: 20px;
+    }
+}
+
+/* Desktop ≥ 1025px*/
+
+@media screen and (min-width: 1025px) {
+    .promo-header h1 {
+        font-size: 70px;
+    }
+
+    .tabs button {
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 8px 24px;
+  margin: 20px;
+  background-color: #FFE3E3; 
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+/*footer*/
+.footer-bottom {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e43333;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    color: #fcf8f8;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-bottom h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.footer-bottom p {
+    margin: 5px 0 15px 0;
+}
+
+.footer-bottom hr {
+    border: none;
+    height: 2px;
+    background-color: black;
+    margin: 15px auto;
+    width: 80%;
+}
+
+.HBRFC {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.HBRFC a {
+    color: #fcf8f8;
+    text-decoration: none;
+}
+
+.HBRFC a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom span {
+    display: block;
+    margin-top: 15px;
+}
+
+/* --- Tablet (จอ 768px ลงมา) --- */
+@media (max-width: 768px) {
+    .product-page {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .product-image img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .product-info {
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+}
+
+/* --- Mobile (จอ 480px ลงมา) --- */
+@media (max-width: 480px) {
+    .product-page {
+        padding: 10px;
+    }
+
+    .product-image img {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    .buy {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .qty-box {
+        justify-content: center;
+    }
+
+    .footer-bottom h1 {
+        font-size: 18px;
+    }
+
+    .footer-bottom ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    .footer-bottom span, 
+    .footer-bottom li {
+        font-size: 14px;
+    }
 }
