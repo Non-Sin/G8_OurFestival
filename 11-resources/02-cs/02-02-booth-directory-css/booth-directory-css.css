@@ -12,9 +12,7 @@
 } */
 
 body {
-
-    background-image: url(/11-resources/01-images/12345.png);
-    
+    background-image: url(../../01-images/Background.png);
     /* Prevents image from repeating */
     background-repeat: no-repeat;
     background-size: cover; 

@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;    
-    background-image: url('../01-images/bg.png');
+    background-image: url(../../01-images/Background.png);
     /*background-image: url('/11-resources/01-images/12345.png');*/
     background-size: cover;
 }

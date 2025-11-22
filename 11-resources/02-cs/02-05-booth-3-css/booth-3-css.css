@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-image: url('/11-resources/01-images/12345.png');
+    background-image: url('/G8_OurFestival/11-resources/01-images/12345.png');
     background-size: cover;
 }
 
@@ -24,7 +24,7 @@ body {
     font-size: 60px;
     font-style: italic;
 
-    background-image: url('/11-resources/01-images/booth-3-Img/bbandhbd.jpg');
+    background-image: url('../../01-images/booth-3-Img/bbandhbd.jpg');
     background-size: 1500px ; /* กำหนดขนาดล็อกของภาพ */
     background-repeat: no-repeat;
     background-position: center;  /* ภาพอยู่ตำแหน่งเดิม */
