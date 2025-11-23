@@ -1,0 +1,60 @@
+/* styles.css */
+body{
+    background-image: url(../../../11-resources/01-images/12345.png);    
+    background-attachment: fixed;
+    background-position: center center; 
+    background-size: cover;     
+    background-repeat: no-repeat;
+    font-family: "Share Tech", sans-serif !important;
+}
+
+/* card center + rounded */
+.feedback-card {
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Stars style */
+.stars {
+    gap: 8px;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.star {
+    font-size: 40px;
+    cursor: pointer;
+    color: #ccc; /* สีเทาตอนยังไม่เลือก */
+    transition: color 0.2s;
+}
+
+.star.gold {
+    color: gold; /* สีตอนเลือก */
+}
+
+
+/* hover effect */
+.star:hover,
+.star:focus {
+    transform: translateY(-4px);
+    outline: none;
+}
+
+/* smaller screen adjustments */
+@media (max-width: 480px) {
+    .stars { font-size: 34px; gap:6px; }
+}
+
+.input-field {
+    background: #e2e1e1;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* ลบ margin-bottom ออกจากตรงนี้ เพื่อให้ error message ชิดกับ input */
+}
+
+
+
+
