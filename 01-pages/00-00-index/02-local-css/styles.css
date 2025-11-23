@@ -642,6 +642,15 @@ body {
 .grid-item {
     justify-content: space-around;
 }
+.footer-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
 /*-----------------------------------------------------------*/
 
 /*---------------------Responsive-------------------------*/
