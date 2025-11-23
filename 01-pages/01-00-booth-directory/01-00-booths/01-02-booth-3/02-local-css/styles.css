@@ -297,40 +297,6 @@ ul {
     display: none;
 }
 
-.footer-bottom {
-    font-family: "Share Tech", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color: #e43333;
-    padding: 2rem 1rem;
-    text-align: center;
-    margin-top: 6rem;
-    color: #fcf8f8;
-}
-
-/* footer */
-.footer-cont {
-    margin-bottom: 0;
-}
-
-.footer-bottom a {
-  color: #fcf8f8;          /* สีเดียวกับตัวอักษร footer */
-  text-decoration: none;   /* ตัดเส้นใต้ */
-}
-
-.footer-bottom li {
-  cursor: pointer;
-  font-weight: 500;
-  margin: 8px 0;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-.menu-footer {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
 .box-cont {
   display: grid;
   grid-template-columns: 1fr;
@@ -348,13 +314,6 @@ a {
     font-style: normal;
     color: white;
     text-decoration: none !important;
-}
-.menu-footer a:hover {
-    color: #e60000 !important;
-    background-color: #fcf8f8 !important;
-    border-radius: 3px;
-    padding: 2px;
-    box-shadow: #eb7878 1px 2px 2px 2px;
 }
 
 /*หน้าดูสินค้า*/
@@ -507,7 +466,7 @@ a {
 
 /*footer*/
 .footer-bottom {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Share Tech", sans-serif;
     background-color: #e43333;
     width: 100%;
     box-sizing: border-box;
@@ -522,8 +481,14 @@ a {
     margin-bottom: 20px;
 }
 
-.footer-bottom p {
-    margin: 5px 0 15px 0;
+.footer-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
 }
 
 .footer-bottom hr {
@@ -546,11 +511,13 @@ a {
 
 .HBRFC a {
     color: #fcf8f8;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .HBRFC a:hover {
-    text-decoration: underline;
+    color: #e60000;
+    background-color: #ffffff;
+    box-shadow: #eb7878 1px 2px 4px 2px;
 }
 
 .footer-bottom span {
@@ -560,14 +527,18 @@ a {
 
 @media (max-width: 768px) {
 
-    .footer-bottom p,
-    .footer-bottom h1,
+    .footer-bottom h1 {
+        font-size: 1.2rem;
+    }
+
+    .footer-contact,
     .footer-bottom span {
         font-size: 0.8rem;
     }
 
     .HBRFC {
         gap: 8px;
+        font-size: 1rem;
     }
 }
 
