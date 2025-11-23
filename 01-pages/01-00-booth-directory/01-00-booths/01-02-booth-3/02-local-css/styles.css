@@ -39,38 +39,117 @@ body {
     align-items: center;
     top: 0;
     width: 100%;
-    height: auto;
+    padding: 15px 25px;
     z-index: 10;
 }
 
+/* LOGO */
 .header-name {
-    padding-left: 30px;
     font-family: "Bungee", sans-serif;
     font-weight: 400;
-    font-style: normal;
-    font-size: 30px;
+    font-size: 28px;
     color: #e60000;
     text-shadow: #e75b5b 1px 2px 3px 4px;
 }
 
+/* NAV */
 .nav-container {
     font-family: "Share Tech", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     font-size: 20px;
+}
+
+/* เมนูแนวนอน (Desktop) */
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-container a {
     color: #e60000;
-    padding: 5px;
+    padding: 5px 10px;
     border-radius: 10px;
     text-decoration: none;
 }
+
 .nav-container a:hover {
     color: #ffffff;
     background-color: #e60000;
     box-shadow: #eb7878 1px 2px 4px 2px;
     transition: 0.2s;
+    text-decoration: none;
+}
+
+/*****************************************************
+   HAMBURGER (MOBILE)
+*****************************************************/
+.hamburger {
+    display: none;
+    font-size: 32px;
+    color: #e60000;
+    cursor: pointer;
+}
+
+/*****************************************************
+   MOBILE RESPONSIVE
+*****************************************************/
+@media (max-width: 768px) {
+    .nav-container ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #FFFACD;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        padding: 20px 0;
+        text-align: center;
+        display: none; /* ซ่อนเมนู */
+        border-bottom: 2px solid #e3e3e3;
+    }
+
+    .nav-container ul.active {
+        display: flex; /* เปิดเมื่อกด hamburger */
+    }
+
+    .hamburger {
+        display: block; /* แสดงเฉพาะ mobile */
+    }
+}
+.menu-toggle {
+    display: none;
+    cursor: pointer !important;
+    font-size: 32px;
+    color: #e60000;
+    padding: 8px 12px;
+    line-height: 1;
+}
+
+/* แสดงเฉพาะหน้าจอ <= 900px */
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: block !important;
+    }
+
+    .nav-container ul {
+        display: none !important;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+        background: #FFFACD;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 9999;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav-container ul.active {
+        display: flex !important;
+    }
 }
 
 ul {
