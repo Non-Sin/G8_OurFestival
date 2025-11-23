@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Mitr:wght@700&display=swap');
+
 
 
 * {
@@ -10,7 +10,6 @@
 }
 
 body{
-    background-image: url(../../01-images/Background.png);
     background-position: center center; 
     background-size: cover;     
     background-repeat: no-repeat;
