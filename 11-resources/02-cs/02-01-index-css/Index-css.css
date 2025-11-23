@@ -667,7 +667,7 @@ body {
     cursor: not-allowed;
 }
 
-.btn-gradient {
+.regit {
   background: linear-gradient(45deg, #ff6b6b, #f06595); /* ไล่เฉดสี */
   border: none;
   color: white;
@@ -684,7 +684,7 @@ body {
   margin-top: 30px;
 }
 
-.btn-gradient:hover {
+.regit:hover {
   transform: translateY(-3px); /* ลอยขึ้นเมื่อชี้ */
   box-shadow: 0 6px 20px rgba(240, 101, 149, 0.6);
 }
