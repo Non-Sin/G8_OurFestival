@@ -1,26 +1,39 @@
 <?php
-// get_users.php
-header('Content-Type: application/json');
+// get_user.php
+header('Content-Type: application/json; charset=utf-8');
 
-$conn = new mysqli("localhost", "root", "", "carnival_db");
-$conn->set_charset("utf8");
+try {
+    $db = new SQLite3('carnival.db');
+    
+    $db->exec("CREATE TABLE IF NOT EXISTS participants (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        firstname TEXT,
+        surname TEXT,
+        tel TEXT,
+        email TEXT,
+        age INTEGER,
+        gender TEXT,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    )");
 
-if ($conn->connect_error) {
-    echo json_encode(["error" => "Connection failed"]);
-    exit();
-}
+    $count = $db->querySingle("SELECT COUNT(*) FROM participants");
+    if ($count == 0) {
+        $db->exec("INSERT INTO participants (firstname, surname, tel, email, age, gender) 
+                   VALUES ('Tester', 'System', '000-000-0000', 'test@sqlite.com', 99, 'male')");
+    }
 
-// ดึงข้อมูล
-$sql = "SELECT * FROM participants ORDER BY id DESC";
-$result = $conn->query($sql);
-
-$data = array();
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
+    // 3. ดึงข้อมูล
+    $results = $db->query("SELECT * FROM participants ORDER BY id DESC");
+    
+    $data = [];
+    while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
         $data[] = $row;
     }
-}
+    
+    echo json_encode($data);
+    $db->close();
 
-echo json_encode($data); // ส่งค่ากลับเป็น JSON
-$conn->close();
+} catch (Exception $e) {
+    echo json_encode(["error" => $e->getMessage()]);
+}
 ?>
