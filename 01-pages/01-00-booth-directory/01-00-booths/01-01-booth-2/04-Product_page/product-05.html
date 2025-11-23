@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ร้านปาเป้ามหาสนุก</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../02-local-css/styles.css"> -->
+    <link rel="stylesheet" href="../../../../../11-resources/02-cs/02-03-booth-1-css/booth-1-for-product-css.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header">
+        <span class="header-name">Toy & Yummy Fest</span>
+
+        <nav class="nav-container">
+            <span class="menu-toggle">&#9776;</span>
+            <ul class="nav-menu">
+                <li><a href="../../../../../index.html">HOME</a></li>
+                <li><a href="../../../booth-directory.html">BOOTHDIRECTORY</a></li>
+                <li><a href="../../../../02-00-register-page/register-page.html">REGISTER</a></li>
+                <li><a href="../../../../03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        const toggle = document.querySelector("header .menu-toggle");
+        const menu = document.querySelector("header .nav-menu");
+
+        toggle.addEventListener("click", () => menu.classList.toggle("active"));
+    </script>
+    <div class="container my-5">
+        <div class="row align-items-start">
+
+            <!-- LEFT IMAGE -->
+            <div class="col-md-6 text-center">
+                <img src="../../../../../11-resources/01-images/booth-2-Img/Prize.jpg" class="img-fluid product-img" alt="Prize Darts Booth">
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="col-md-6 product-text">
+
+                <p class="text-muted mb-1">By <b>MisterDart</b></p>
+
+                <h1 class="product-title">
+                    ปาเป้าแจกของรางวัล <br> (Prize Darts Booth)
+                </h1>
+
+                <p class="price">3 ลูกดอก ฿100</p>
+                 <h3><b>วิธีการเล่น</b></h3>
+                <ul class="product-details">
+                <li>>เล็งไปที่จุดศูนย์กลางของเป้า</li>
+                <li>ใช้ลูกดอกปลายแหลมปาให้ปักที่จุดศูนย์กลางของเป้า</li>
+                <li>ได้รับของรางวัลตามตำแหน่งของลูกดอกที่ปักลงที่เป้า</li>
+                <li>ไม่โดนเป้า ไม่ได้รับรางวัล</li>
+                <li>ลูกดอกปักก่อนถึงวงนอกสุดของเป้า ได้รับรางวัล เป็น ดินสอ 1 แท่ง</li>
+                <li>ลูกดอกปักที่ก่อนถึงวงในของเป้า ได้รับรางวัล เป็น ปากกา 1 ด้าม</li>
+                <li>ลูกดอกปักที่จุดศูนย์กลางของเป้า ได้รับรางวัล เป็น ตุ๊กตา 1  ตัว</li>   
+                </ul>
+
+                
+            </div>
+
+        </div>
+    </div>
+    <a href="../booth-2.html" class="btn">
+        << ย้อนกลับ </a>
+
+            <script
+                src="/G8_OurFestival/01-pages/01-00-booth-directory/01-00-booths/01-00-booth-1/03-local-js/my-script.js"></script>
+
+            <footer class="footer-bottom" id="contact">
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <h1>CONTACT</h1><br>
+                        <p>
+                            Call : 0629365541
+                            Line : rain.kpn
+                            Gmail : rainznod@gmail.com
+                        </p>
+                        <hr>
+                    <ul class="HBRFC">
+                        <li><a href="../../../../../index.html">HOME</a></li>
+                        <li><a href="../../../booth-directory.html">BOOTHDIRECTORY</a></li>
+                        <li><a href="../../../../02-00-register-page/register-page.html">REGISTER</a></li>
+                        <li><a href="../../../../03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                        <span>Copyright @ 2025 G8_OurFestival. All right reserved</span>
+                    </div>
+                </div>
+            </footer>
+
+
+</body>
+
+</html>
