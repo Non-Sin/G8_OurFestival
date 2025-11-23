@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Mitr:wght@700&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -194,3 +199,246 @@ input {
     font-size: 16px;
 }
 
+.header {
+    display: flex;
+    background-color: #FFFACD;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    padding: 15px 25px;
+    z-index: 10;
+}
+
+/* LOGO */
+.header-name {
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: #e60000;
+    text-shadow: #e75b5b 1px 2px 3px 4px;
+}
+
+/* NAV */
+.nav-container {
+    font-family: "Share Tech", sans-serif;
+    font-size: 20px;
+}
+
+/* เมนูแนวนอน (Desktop) */
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container a {
+    color: #e60000;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.nav-container a:hover {
+    color: #ffffff;
+    background-color: #e60000;
+    box-shadow: #eb7878 1px 2px 4px 2px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+/*****************************************************
+   HAMBURGER (MOBILE)
+*****************************************************/
+.hamburger {
+    display: none;
+    font-size: 32px;
+    color: #e60000;
+    cursor: pointer;
+}
+
+/*****************************************************
+   MOBILE RESPONSIVE
+*****************************************************/
+@media (max-width: 768px) {
+    .nav-container ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #FFFACD;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        padding: 20px 0;
+        text-align: center;
+        display: none; /* ซ่อนเมนู */
+        border-bottom: 2px solid #e3e3e3;
+    }
+
+    .nav-container ul.active {
+        display: flex; /* เปิดเมื่อกด hamburger */
+    }
+
+    .hamburger {
+        display: block; /* แสดงเฉพาะ mobile */
+    }
+}
+.menu-toggle {
+    display: none;
+    cursor: pointer !important;
+    font-size: 32px;
+    color: #e60000;
+    padding: 8px 12px;
+    line-height: 1;
+}
+
+/* แสดงเฉพาะหน้าจอ <= 900px */
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: block !important;
+    }
+
+    .nav-container ul {
+        display: none !important;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+        background: #FFFACD;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 9999;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav-container ul.active {
+        display: flex !important;
+    }
+}
+
+.footer-bottom {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e43333;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    color: #fcf8f8;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-bottom h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.footer-bottom p {
+    margin: 5px 0 15px 0;
+}
+
+.footer-bottom hr {
+    border: none;
+    height: 2px;
+    background-color: black;
+    margin: 15px auto;
+    width: 80%;
+}
+
+.HBRFC {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.HBRFC a {
+    color: #fcf8f8;
+    text-decoration: none;
+}
+
+.HBRFC a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom span {
+    display: block;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+
+    .footer-bottom p,
+    .footer-bottom h1,
+    .footer-bottom span {
+        font-size: 0.8rem;
+    }
+
+    .HBRFC {
+        gap: 8px;
+    }
+}
+
+
+.HBRFC li {
+    list-style: none;
+}
+
+.HBRFC li a {
+    color: #fcf8f8;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+    text-align: center;
+    /* จัดตัวหนังสือตรงกลาง */
+}
+
+.HBRFC li a:hover {
+    color: #ffffff;
+    background-color: #e60000;
+    border-radius: 5px;
+}
+
+
+.footer-bottom span {
+
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Media Query โทสัพ */
+@media (max-width: 768px) {
+    .HBRFC {
+        gap: 8px;
+        /* ลดช่องว่าง */
+    }
+
+    .footer-bottom span {
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.grid-item {
+    justify-content: space-around;
+}

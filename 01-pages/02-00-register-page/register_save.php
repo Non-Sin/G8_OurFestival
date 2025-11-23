@@ -33,7 +33,7 @@ if (isset($_POST['firstname'])) {
         // 2. แก้ไขจุด Redirect: เปลี่ยนจาก participant-list.php เป็น index.html (หรือหน้าที่ต้องการ)
         echo "<script>
                 alert('ลงทะเบียนสำเร็จ!'); 
-                window.location.href='../../index.html'; 
+                window.location.href='participant-list.html'; 
               </script>";
     } else {
         echo "เกิดข้อผิดพลาด: " . $stmt->error;
