@@ -371,10 +371,11 @@ body {
     width: 100%;
     height: auto;
     z-index: 10;
+    padding: 15px 15px;
 }
 
 .header-name {
-    padding-left: 30px;
+    padding-left: 20px;
     font-family: "Bungee", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -393,7 +394,7 @@ body {
 
 .nav-container a {
     color: #e60000;
-    padding: 5px;
+    padding: 8px 15px;
     border-radius: 10px;
     text-decoration: none;
 }
@@ -406,7 +407,6 @@ body {
 }
 
 .nav-container ul {
-    padding: 30px;
     list-style: none;
     display: flex;
     gap: 30px;
@@ -1081,7 +1081,7 @@ a {
 /* =============== DEFAULT (Desktop) =============== */
 .nav-container ul {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     align-items: center;
 }
 

@@ -28,7 +28,7 @@ body {
     align-items: center;
     top: 0;
     width: 100%;
-    min-height: 60px; /* เปลี่ยนเป็น min-height */
+    min-height: 10px; /* เปลี่ยนเป็น min-height */
     z-index: 100;
     padding: 15px 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -38,6 +38,7 @@ body {
     font-family: "Bungee", sans-serif;
     font-size: 30px;
     color: #e60000;
+    padding-left: 15px;
     text-shadow: #e75b5b 1px 2px 3px 4px;
     /* Responsive adjustment handled in media query */
 }

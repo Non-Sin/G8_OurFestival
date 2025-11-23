@@ -33,6 +33,7 @@ body {
     font-family: "Bungee", sans-serif;
     font-size: 30px;
     color: #e60000;
+    padding-left: 15px;
     text-shadow: #e75b5b 1px 2px 3px 4px;
     /* Responsive adjustment handled in media query */
 }
