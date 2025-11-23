@@ -666,3 +666,25 @@ body {
     color: #ccc;
     cursor: not-allowed;
 }
+
+.btn-gradient {
+  background: linear-gradient(45deg, #ff6b6b, #f06595); /* ไล่เฉดสี */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px; /* มุมโค้งมน */
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(240, 101, 149, 0.4); /* เงาฟุ้งๆ */
+  transition: all 0.3s ease; /* เอฟเฟกต์สมูท */
+  margin-top: 30px;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-3px); /* ลอยขึ้นเมื่อชี้ */
+  box-shadow: 0 6px 20px rgba(240, 101, 149, 0.6);
+}
