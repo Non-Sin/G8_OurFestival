@@ -24,53 +24,124 @@ body {
 
 .header {
     display: flex;
-    background-color: #FFFACD;;
+    background-color: #FFFACD;
     position: sticky;
     justify-content: space-between;
     align-items: center;
     top: 0;
     width: 100%;
-    height: auto;
-    z-index: 10;
+    min-height: 60px; /* เปลี่ยนเป็น min-height */
+    z-index: 100;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .header-name {
-    padding-left: 30px;
     font-family: "Bungee", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     font-size: 30px;
     color: #e60000;
     text-shadow: #e75b5b 1px 2px 3px 4px;
+    /* Responsive adjustment handled in media query */
 }
-
 
 .nav-container {
     font-family: "Share Tech", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     font-size: 20px;
 }
+
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
 .nav-container a {
     color: #e60000;
-    padding: 5px;
+    padding: 8px 15px;
     border-radius: 10px;
-    text-decoration: none;
+    transition: 0.3s;
 }
+
 .nav-container a:hover {
     color: #ffffff;
     background-color: #e60000;
     box-shadow: #eb7878 1px 2px 4px 2px;
-    transition: 0.2s;
 }
 
-ul {
-    padding: 30px;
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin-bottom: 0 !important;
+/* ปุ่ม Hamburger (ซ่อนใน Desktop) */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: #e60000;
+    cursor: pointer;
 }
+
+/* Tablet & Mobile (ต่ำกว่า 900px) */
+@media screen and (max-width: 900px) {
+    /* Navbar Toggle */
+    .menu-toggle {
+        display: block; /* แสดงปุ่ม */
+    }
+
+    .nav-container ul.nav-menu {
+        display: none; /* ซ่อนเมนู */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* ต่อท้าย Header */
+        left: 0;
+        width: 100%;
+        background-color: #FFFACD;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    
+    .nav-container ul.nav-menu.active {
+        display: flex; /* แสดงเมื่อมี class active */
+    }
+
+    /* About Section แนวตั้ง */
+    .about-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .about-container .about-img {
+        position: absolute;
+        min-height: 250px;
+        order: -1; /* เอารูปขึ้นก่อนข้อความ */
+    }
+}
+
+/* Mobile Small (ต่ำกว่า 600px) */
+@media screen and (max-width: 600px) {
+    .header-name {
+        font-size: 1.2rem;
+        margin-left: 0;
+    }
+    
+    .about-container .about-text {
+        padding: 20px;
+    }
+    
+    .member-name {
+        font-size: 1.5rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+
+
 
 .categories-name {
     padding-top: 2rem;
@@ -81,17 +152,6 @@ ul {
     font-family: "Share Tech", sans-serif;
     color: red;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -450,92 +510,34 @@ a {
     box-shadow: #eb7878 1px 2px 2px 2px;
 }
 
-.mobile-menu-container {
-    display: none;
+.menu-toggle {
+    background: transparent;    /* เอาพื้นหลังออก */
+    border: none;               /* เอาขอบออก */
+    padding: 6px 10px;          /* กำหนด padding ให้พอเหมาะ */
+    cursor: pointer;
+    font-size: 1.8rem;
+    line-height: 1;
+    -webkit-appearance: none;   /* สำหรับ Safari/Chrome */
+    appearance: none;
+    box-shadow: none;           /* ลบเงาเริ่มต้น */
 }
 
+/* กรณีมี style ของ bootstrap ที่ใส่ .btn หรือ :active ให้เจาะจงมากขึ้น */
+header .menu-toggle,
+header .menu-toggle:active,
+header .menu-toggle:focus {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
 
-/* ---------------- Responsive Mobile ---------------- */
-@media (max-width: 768px) {
+/* ให้ focus-visible เป็นเส้นเน้นที่สวยและเข้ากับธีม (อย่าลบ focus ทั้งหมด) */
+.menu-toggle:focus-visible {
+    outline: 3px solid rgba(230, 0, 0, 0.2); /* สีแดงอ่อนเข้ากับธีม */
+    border-radius: 6px;
+}
 
-    /* ซ่อน nav เดิมบนมือถือ */
-    .nav-container {
-        display: none;
-    }
-
-    /* ปรับ header ให้เรียงบน-ล่าง */
-    .header {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px 0;
-        gap: 10px;
-    }
-
-    /* โลโก้ */
-    .header-name {
-        font-size: 30px;  /* ใหญ่ขึ้นจากเดิม 24px */
-        padding-left: 0;
-    }
-
-    /* แสดงเมนูมือถือ */
-    .mobile-menu-container {
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    /* ปุ่มกดเปิดเมนู */
-    .mobile-menu-btn {
-        background-color: #e60000;
-        color: white;
-        font-family: "Share Tech", sans-serif;
-        border: none;
-        padding: 10px 14px;
-        font-size: 14px;
-        border-radius: 10px;
-        cursor: pointer;
-    }
-
-    /* ลูกศรในปุ่มกด */
-    .mobile-menu-btn .arrow {
-        display: inline-block;
-        transition: transform 0.2s ease;
-    }
-
-    .arrow.rotate {
-        transform: rotate(180deg);
-    }
-
-    /* กล่องเมนู dropdown */
-    .mobile-menu {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: none;
-        background: white;
-        border-radius: 10px;
-        margin-top: 10px;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-    }
-
-    .mobile-menu li {
-        border-bottom: 1px solid #eee;
-    }
-
-    .mobile-menu li:last-child {
-        border-bottom: none;
-    }
-
-    .mobile-menu li a {
-        display: block;
-        padding: 12px;
-        color: #e60000;
-        text-decoration: none;
-        font-size: 16px;
-    }
-
-    .mobile-menu li a:hover {
-        background-color: #ffefef;
-    }
+/* ถ้ายังกระพริบกรอบขณะกดบนมือถือ ให้ปิด tap highlight ของเว็บบนมือถือ */
+.menu-toggle {
+    -webkit-tap-highlight-color: transparent;
 }

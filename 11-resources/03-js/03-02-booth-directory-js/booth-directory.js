@@ -60,11 +60,17 @@
         setTimeout(carousel4, 3000);
     }
 
-    const btn = document.querySelector(".mobile-menu-btn");
-    const menu = document.querySelector(".mobile-menu");
-    const arrow = document.querySelector(".mobile-menu-btn .arrow");
+    document.addEventListener("DOMContentLoaded", function() {
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".nav-menu");
 
-    btn.addEventListener("click", () => {
-        menu.style.display = menu.style.display === "block" ? "none" : "block";
-        arrow.classList.toggle("rotate");
+    if (!toggle || !menu) return;
+
+    // เริ่มต้น aria
+    toggle.setAttribute("aria-expanded", "false");
+
+    toggle.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("active");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
+});
