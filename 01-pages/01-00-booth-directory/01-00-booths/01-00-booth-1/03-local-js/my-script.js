@@ -11,3 +11,9 @@ btnDecrease.addEventListener("click", () => {
     qtyInput.value = parseInt(qtyInput.value) - 1;
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector("header .menu-toggle");
+    const menu = document.querySelector("header .nav-menu");
+
+    toggle.addEventListener("click", () => menu.classList.toggle("active"));
+});
