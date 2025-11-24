@@ -27,38 +27,40 @@ body {
     align-items: center;
     top: 0;
     width: 100%;
-    padding: 15px 25px;
-    z-index: 10;
+    min-height: 10px; /* เปลี่ยนเป็น min-height */
+    z-index: 100;
+    padding: 15px 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* LOGO */
 .header-name {
     font-family: "Bungee", sans-serif;
-    font-weight: 400;
-    font-size: 28px;
+    font-size: 30px;
     color: #e60000;
+    padding-left: 15px;
     text-shadow: #e75b5b 1px 2px 3px 4px;
+    /* Responsive adjustment handled in media query */
 }
 
-/* NAV */
 .nav-container {
     font-family: "Share Tech", sans-serif;
     font-size: 20px;
 }
 
-/* เมนูแนวนอน (Desktop) */
 .nav-container ul {
     list-style: none;
     display: flex;
     gap: 30px;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
 
 .nav-container a {
     color: #e60000;
-    padding: 5px 10px;
+    padding: 8px 15px;
     border-radius: 10px;
+    transition: 0.3s;
     text-decoration: none;
 }
 
@@ -66,87 +68,71 @@ body {
     color: #ffffff;
     background-color: #e60000;
     box-shadow: #eb7878 1px 2px 4px 2px;
-    transition: 0.2s;
-    text-decoration: none;
 }
 
-/*****************************************************
-   HAMBURGER (MOBILE)
-*****************************************************/
-.hamburger {
-    display: none;
-    font-size: 32px;
-    color: #e60000;
-    cursor: pointer;
-}
-
-/*****************************************************
-   MOBILE RESPONSIVE
-*****************************************************/
-@media (max-width: 768px) {
-    .nav-container ul {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: #FFFACD;
-        flex-direction: column;
-        width: 100%;
-        gap: 15px;
-        padding: 20px 0;
-        text-align: center;
-        display: none; /* ซ่อนเมนู */
-        border-bottom: 2px solid #e3e3e3;
-    }
-
-    .nav-container ul.active {
-        display: flex; /* เปิดเมื่อกด hamburger */
-    }
-
-    .hamburger {
-        display: block; /* แสดงเฉพาะ mobile */
-    }
-}
+/* ปุ่ม Hamburger (ซ่อนใน Desktop) */
 .menu-toggle {
     display: none;
-    cursor: pointer !important;
-    font-size: 32px;
+    font-size: 1.8rem;
     color: #e60000;
-    padding: 8px 12px;
-    line-height: 1;
+    cursor: pointer;
+    padding-right: 10px;
 }
 
-/* แสดงเฉพาะหน้าจอ <= 900px */
-@media (max-width: 900px) {
+/* Tablet & Mobile (ต่ำกว่า 900px) */
+@media screen and (max-width: 900px) {
+    /* Navbar Toggle */
     .menu-toggle {
-        display: block !important;
+        display: block; /* แสดงปุ่ม */
     }
 
-    .nav-container ul {
-        display: none !important;
+    .nav-container ul.nav-menu {
+        display: none; /* ซ่อนเมนู */
         flex-direction: column;
-        width: 100%;
-        padding: 10px 0;
-        background: #FFFACD;
         position: absolute;
-        top: 60px;
+        top: 100%; /* ต่อท้าย Header */
         left: 0;
-        z-index: 9999;
-        gap: 10px;
-        text-align: center;
+        width: 100%;
+        background-color: #FFFACD;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    
+    .nav-container ul.nav-menu.active {
+        display: flex; /* แสดงเมื่อมี class active */
     }
 
-    .nav-container ul.active {
-        display: flex !important;
+    /* About Section แนวตั้ง */
+    .about-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .about-container .about-img {
+        position: absolute;
+        min-height: 250px;
+        order: -1; /* เอารูปขึ้นก่อนข้อความ */
     }
 }
- 
 
-ul {
-    padding: 30px;
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin-bottom: 0 !important;
+/* Mobile Small (ต่ำกว่า 600px) */
+@media screen and (max-width: 600px) {
+    .header-name {
+        font-size: 1.2rem;
+        margin-left: 0;
+    }
+    
+    .about-container .about-text {
+        padding: 20px;
+    }
+    
+    .member-name {
+        font-size: 1.5rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.9rem;
+    }
 }
 
 
@@ -400,7 +386,7 @@ a {
 }
 
  
- .product-image img {
+.product-image img {
     width: 500px;
     height: 500px;
     border-radius: 20px;
@@ -515,26 +501,6 @@ a {
 
 @media screen and (max-width: 600px) {
 
-    .header {
-        padding: 10px 20px;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .header-name {
-        font-size: 22px;
-    }
-
-    .nav-container ul {
-        flex-direction: column;
-        gap: 10px;
-        padding: 0;
-    }
-
-    .nav-container a {
-        font-size: 16px;
-    }
-
     .promo-header h1 {
         font-size: 40px;
     }
@@ -569,17 +535,6 @@ a {
 /* Tablet  601–1024px */
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
-    .header {
-        padding: 15px 30px;
-    }
-
-    .header-name {
-        font-size: 26px;
-    }
-
-    .nav-container a {
-        font-size: 18px;
-    }
 
     .promo-header h1 {
         font-size: 55px;
@@ -629,7 +584,7 @@ a {
 
 /*footer*/
 .footer-bottom {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Share Tech", sans-serif;
     background-color: #e43333;
     width: 100%;
     box-sizing: border-box;
@@ -644,8 +599,14 @@ a {
     margin-bottom: 20px;
 }
 
-.footer-bottom p {
-    margin: 5px 0 15px 0;
+.footer-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
 }
 
 .footer-bottom hr {
@@ -668,16 +629,79 @@ a {
 
 .HBRFC a {
     color: #fcf8f8;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .HBRFC a:hover {
-    text-decoration: underline;
+    color: #e60000;
+    background-color: #ffffff;
+    box-shadow: #eb7878 1px 2px 4px 2px;
 }
 
 .footer-bottom span {
     display: block;
     margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+
+    .footer-bottom h1 {
+        font-size: 1.2rem;
+    }
+
+    .footer-contact,
+    .footer-bottom span {
+        font-size: 0.8rem;
+    }
+
+    .HBRFC {
+        gap: 8px;
+        font-size: 1rem;
+    }
+}
+
+
+.HBRFC li {
+    list-style: none;
+}
+
+.HBRFC li a {
+    color: #fcf8f8;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+    text-align: center;
+    /* จัดตัวหนังสือตรงกลาง */
+}
+
+.HBRFC li a:hover {
+    color: #ffffff;
+    background-color: #e60000;
+    border-radius: 5px;
+}
+
+
+.footer-bottom span {
+
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Media Query โทสัพ */
+@media (max-width: 768px) {
+    .HBRFC {
+        gap: 8px;
+        /* ลดช่องว่าง */
+    }
+
+    .footer-bottom span {
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
 }
 
 /* --- Tablet (จอ 768px ลงมา) --- */
@@ -744,4 +768,31 @@ a {
     .footer-bottom li {
         font-size: 14px;
     }
+}
+
+/* ปรับเฉพาะ element ที่มักมี margin/spacing */
+.footer-bottom h1,
+.footer-bottom p,
+.footer-bottom li,
+.footer-bottom span,
+.footer-contact li,
+.HBRFC li {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.footer-bottom h1 {
+    padding-bottom: 0.5rem;
+}
+
+/* ถ้ารายการใน footer เป็น list ให้ลด gap */
+.footer-contact {
+  gap: 12px;                /* ลดช่องว่างระหว่างไอเท็ม */
+  padding: 0;
+  margin: 6px 0;
+}
+
+.HBRFC {
+  gap: 10px;               /* ลดช่องว่างระหว่างเมนูลิงก์ */
+  margin: 6px 0;
 }

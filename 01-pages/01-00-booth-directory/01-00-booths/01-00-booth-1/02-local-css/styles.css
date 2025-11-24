@@ -455,7 +455,7 @@ body {
 /**************************************************/
 /*footer*/
 .footer-bottom {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Share Tech", sans-serif;
     background-color: #e43333;
     width: 100%;
     box-sizing: border-box;
@@ -470,8 +470,14 @@ body {
     margin-bottom: 20px;
 }
 
-.footer-bottom p {
-    margin: 5px 0 15px 0;
+.footer-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
 }
 
 .footer-bottom hr {
@@ -494,11 +500,13 @@ body {
 
 .HBRFC a {
     color: #fcf8f8;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .HBRFC a:hover {
-    text-decoration: underline;
+    color: #e60000;
+    background-color: #ffffff;
+    box-shadow: #eb7878 1px 2px 4px 2px;
 }
 
 .footer-bottom span {
@@ -508,14 +516,18 @@ body {
 
 @media (max-width: 768px) {
 
-    .footer-bottom p,
-    .footer-bottom h1,
+    .footer-bottom h1 {
+        font-size: 1.2rem;
+    }
+
+    .footer-contact,
     .footer-bottom span {
         font-size: 0.8rem;
     }
 
     .HBRFC {
         gap: 8px;
+        font-size: 1rem;
     }
 }
 
@@ -562,6 +574,7 @@ body {
         font-size: 0.8rem;
     }
 }
+
 
 
 .grid-container {
@@ -1043,3 +1056,5 @@ body {
     background-color: #e60000 !important;
     color: #ffffff !important;
 }
+
+

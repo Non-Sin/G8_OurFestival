@@ -39,38 +39,40 @@ body {
     align-items: center;
     top: 0;
     width: 100%;
-    padding: 15px 25px;
-    z-index: 10;
+    min-height: 10px; /* เปลี่ยนเป็น min-height */
+    z-index: 100;
+    padding: 15px 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* LOGO */
 .header-name {
     font-family: "Bungee", sans-serif;
-    font-weight: 400;
-    font-size: 28px;
+    font-size: 30px;
     color: #e60000;
+    padding-left: 15px;
     text-shadow: #e75b5b 1px 2px 3px 4px;
+    /* Responsive adjustment handled in media query */
 }
 
-/* NAV */
 .nav-container {
     font-family: "Share Tech", sans-serif;
     font-size: 20px;
 }
 
-/* เมนูแนวนอน (Desktop) */
 .nav-container ul {
     list-style: none;
     display: flex;
     gap: 30px;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
 
 .nav-container a {
     color: #e60000;
-    padding: 5px 10px;
+    padding: 8px 15px;
     border-radius: 10px;
+    transition: 0.3s;
     text-decoration: none;
 }
 
@@ -78,86 +80,71 @@ body {
     color: #ffffff;
     background-color: #e60000;
     box-shadow: #eb7878 1px 2px 4px 2px;
-    transition: 0.2s;
-    text-decoration: none;
 }
 
-/*****************************************************
-   HAMBURGER (MOBILE)
-*****************************************************/
-.hamburger {
-    display: none;
-    font-size: 32px;
-    color: #e60000;
-    cursor: pointer;
-}
-
-/*****************************************************
-   MOBILE RESPONSIVE
-*****************************************************/
-@media (max-width: 768px) {
-    .nav-container ul {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: #FFFACD;
-        flex-direction: column;
-        width: 100%;
-        gap: 15px;
-        padding: 20px 0;
-        text-align: center;
-        display: none; /* ซ่อนเมนู */
-        border-bottom: 2px solid #e3e3e3;
-    }
-
-    .nav-container ul.active {
-        display: flex; /* เปิดเมื่อกด hamburger */
-    }
-
-    .hamburger {
-        display: block; /* แสดงเฉพาะ mobile */
-    }
-}
+/* ปุ่ม Hamburger (ซ่อนใน Desktop) */
 .menu-toggle {
     display: none;
-    cursor: pointer !important;
-    font-size: 32px;
+    font-size: 1.8rem;
     color: #e60000;
-    padding: 8px 12px;
-    line-height: 1;
+    cursor: pointer;
+    padding-right: 10px;
 }
 
-/* แสดงเฉพาะหน้าจอ <= 900px */
-@media (max-width: 900px) {
+/* Tablet & Mobile (ต่ำกว่า 900px) */
+@media screen and (max-width: 900px) {
+    /* Navbar Toggle */
     .menu-toggle {
-        display: block !important;
+        display: block; /* แสดงปุ่ม */
     }
 
-    .nav-container ul {
-        display: none !important;
+    .nav-container ul.nav-menu {
+        display: none; /* ซ่อนเมนู */
         flex-direction: column;
-        width: 100%;
-        padding: 10px 0;
-        background: #FFFACD;
         position: absolute;
-        top: 60px;
+        top: 100%; /* ต่อท้าย Header */
         left: 0;
-        z-index: 9999;
-        gap: 10px;
-        text-align: center;
+        width: 100%;
+        background-color: #FFFACD;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    
+    .nav-container ul.nav-menu.active {
+        display: flex; /* แสดงเมื่อมี class active */
     }
 
-    .nav-container ul.active {
-        display: flex !important;
+    /* About Section แนวตั้ง */
+    .about-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .about-container .about-img {
+        position: absolute;
+        min-height: 250px;
+        order: -1; /* เอารูปขึ้นก่อนข้อความ */
     }
 }
 
-ul {
-    padding: 30px;
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin-bottom: 0 !important;
+/* Mobile Small (ต่ำกว่า 600px) */
+@media screen and (max-width: 600px) {
+    .header-name {
+        font-size: 1.2rem;
+        margin-left: 0;
+    }
+    
+    .about-container .about-text {
+        padding: 20px;
+    }
+    
+    .member-name {
+        font-size: 1.5rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.9rem;
+    }
 }
 
 .promo-header {

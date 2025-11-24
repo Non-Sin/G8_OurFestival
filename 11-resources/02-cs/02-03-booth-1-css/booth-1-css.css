@@ -375,7 +375,7 @@ body {
 }
 
 .header-name {
-    padding-left: 20px;
+    padding-left: 15px;
     font-family: "Bungee", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -434,7 +434,7 @@ body {
 
 /*footer*/
 .footer-bottom {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Share Tech", sans-serif;
     background-color: #e43333;
     width: 100%;
     box-sizing: border-box;
@@ -449,8 +449,14 @@ body {
     margin-bottom: 20px;
 }
 
-.footer-bottom p {
-    margin: 5px 0 15px 0;
+.footer-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
 }
 
 .footer-bottom hr {
@@ -473,11 +479,13 @@ body {
 
 .HBRFC a {
     color: #fcf8f8;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .HBRFC a:hover {
-    text-decoration: underline;
+    color: #e60000;
+    background-color: #ffffff;
+    box-shadow: #eb7878 1px 2px 4px 2px;
 }
 
 .footer-bottom span {
@@ -487,14 +495,18 @@ body {
 
 @media (max-width: 768px) {
 
-    .footer-bottom p,
-    .footer-bottom h1,
+    .footer-bottom h1 {
+        font-size: 1.2rem;
+    }
+
+    .footer-contact,
     .footer-bottom span {
         font-size: 0.8rem;
     }
 
     .HBRFC {
         gap: 8px;
+        font-size: 1rem;
     }
 }
 
@@ -541,6 +553,7 @@ body {
         font-size: 0.8rem;
     }
 }
+
 
 
 .grid-container {
@@ -763,6 +776,7 @@ a {
     color: #e60000;
     cursor: pointer;
     padding: 10px;
+    padding-right: 25px;
 }
 
 /*************************900*************************/
@@ -832,36 +846,6 @@ a {
     }
 
     /*  */
-
-
-    .nav-container ul.nav-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #FFFACD;
-        padding: 20px 0;
-        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-        gap: 15px;
-        text-align: center;
-    }
-
-    .nav-container ul.nav-menu li {
-        width: 100%;
-    }
-
-    .nav-container ul.nav-menu li a {
-        display: block;
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .nav-container ul.nav-menu.active {
-        display: flex;
-    }
 }
 
 /******************************************************/
@@ -1057,8 +1041,7 @@ a {
     }
 
     .header-name {
-        font-size: 22px;
-        margin-left: 20px;
+        padding-left: 30px;
     }
 }
 
@@ -1086,47 +1069,57 @@ a {
 }
 
 /* ================= MOBILE ================= */
-@media (max-width: 900px) {
-
-    /* ซ่อน menu เดสก์ท็อป */
-    .nav-container ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    /* ปุ่ม hamburger */
+@media screen and (max-width: 900px) {
+    /* Navbar Toggle */
     .menu-toggle {
-        display: block !important;
-        font-size: 32px;
-        margin-right: 20px;
-        color: #e60000;
-        cursor: pointer;
+        display: block; /* แสดงปุ่ม */
     }
 
-    /* เมื่อกด เปิดเมนู */
-    .nav-container ul.active {
-        display: flex !important;
-        background: #FFFACD;
+    .nav-container ul.nav-menu {
+        display: none; /* ซ่อนเมนู */
+        flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: 100%; /* ต่อท้าย Header */
         left: 0;
+        width: 100%;
+        background-color: #FFFACD;
         padding: 20px 0;
-        gap: 20px;
-        width: 100%;
-        z-index: 9999;
-        text-align: center;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    
+    .nav-container ul.nav-menu.active {
+        display: flex; /* แสดงเมื่อมี class active */
     }
 
-    /* ลิงก์แต่ละอันในมือถือ */
-    .nav-container ul li {
-        width: 100%;
+    /* About Section แนวตั้ง */
+    .about-container {
+        flex-direction: column;
+        height: auto;
     }
+    
+    .about-container .about-img {
+        position: absolute;
+        min-height: 250px;
+        order: -1; /* เอารูปขึ้นก่อนข้อความ */
+    }
+}
 
-    .nav-container ul li a {
-        font-size: 20px;
-        padding: 10px 0;
-        display: block;
+@media screen and (max-width: 600px) {
+    .header-name {
+        font-size: 1.2rem;
+        margin-left: 0;
+    }
+    
+    .about-container .about-text {
+        padding: 20px;
+    }
+    
+    .member-name {
+        font-size: 1.5rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.9rem;
     }
 }
 

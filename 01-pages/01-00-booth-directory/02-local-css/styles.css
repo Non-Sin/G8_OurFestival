@@ -8,13 +8,11 @@
 
 body {
 
-    background-image: url(/11-resources/01-images/12345.png);
+    background-image: url(../../01-images/Background.png);
     
-    /* Prevents image from repeating */
     background-repeat: no-repeat;
-    background-size: cover; 
-    /* Scales the image to cover the entire element */
-    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .header {
@@ -27,7 +25,7 @@ body {
     width: 100%;
     min-height: 10px; /* เปลี่ยนเป็น min-height */
     z-index: 100;
-    padding: 10px 20px;
+    padding: 15px 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -35,6 +33,7 @@ body {
     font-family: "Bungee", sans-serif;
     font-size: 30px;
     color: #e60000;
+    padding-left: 15px;
     text-shadow: #e75b5b 1px 2px 3px 4px;
     /* Responsive adjustment handled in media query */
 }
@@ -150,6 +149,7 @@ body {
 
 .products-item {
     background-color: #f0f0f0;
+    font-family: "Share Tech", sans-serif;
     padding: 1rem;
     border-radius: 10px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
