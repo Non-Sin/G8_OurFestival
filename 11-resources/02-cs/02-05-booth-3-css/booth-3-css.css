@@ -18,8 +18,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-image: url(../../01-images/Background.png);
-    background-repeat: no-repeat;
+    background-image: url('../../01-images/Background.png');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -469,8 +468,8 @@ a {
 /*footer*/
 .footer-bottom {
     font-family: "Share Tech", sans-serif;
-    background-color: #e43333;
-    width: 100vw;
+    background-color: white;
+    width: 100%;
     box-sizing: border-box;
     padding: 20px;
     color: #fcf8f8;

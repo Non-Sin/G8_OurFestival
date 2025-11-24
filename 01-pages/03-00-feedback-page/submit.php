@@ -144,7 +144,5 @@ file_put_contents($jsonFile, json_encode($old, JSON_PRETTY_PRINT | JSON_UNESCAPE
         </div>
         </footer>
 
-<script src="../../11-resources/03-js/03-02-booth-directory-js/booth-directory.js"></script>
-
 </body>
 </html>
