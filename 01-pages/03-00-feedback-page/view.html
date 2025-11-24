@@ -36,6 +36,9 @@
                 padding-left: 0;
             }
         }
+        .container {
+        margin-top: 40px; /* ปรับตามที่ต้องการ */
+        }
     </style>
 </head>
 <body>
@@ -44,10 +47,11 @@
         <span class="header-name">Toy & Yummy Fest</span>
 
         <nav class="nav-container">
-            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+            <span class="menu-toggle">&#9776;</span>
             <ul class="nav-menu">
                 <li><a href="../../index.html">HOME</a></li>
-                <li><a href="../01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
+                <li><a href="../01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a>
+                </li>
                 <li><a href="../02-00-register-page/register-page.html">REGISTER</a></li>
                 <li><a href="../03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
                 <li><a href="#contact">CONTACT</a></li>
@@ -56,7 +60,7 @@
     </header>
 
     <!-- MAIN CONTENT -->
-    <div class="container py-5">
+    <div class="container d-flex justify-content-center align-items-center min-vh-100 px-3">
         <div class="card p-4 mx-auto" style="max-width:800px;">
             <div class="text-center mb-4">
                 <h2 class="text-center mb-3" style="color: red;">All Reviews</h2>
@@ -73,28 +77,28 @@
         </div>
     </div>
 
-    <footer class="footer-bottom" id="contact">
-                <div class="box-container">
-                    <div class="box-item">
-                        <h1>CONTACT</h1>
-                        <ul class="footer-contact">
-                            <li>IG : Toy&YummyFest</li>
-                            <li>Line : Toy&YummyFest</li>
-                            <li>Gmail : Toy&YummyFest@gmail.com</li>
-                        </ul>
-                        <hr>
-                        <ul class="HBRFC">
-                            <li><a href="../../index.html">HOME</a></li>
-                            <li><a href="../01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
-                            <li><a href="../02-00-register-page/register-page.html">REGISTER</a></li>
-                            <li><a href="../03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
-                            <li><a href="#contact">CONTACT</a></li>
-                        </ul>
-                        <hr>
-                        <span>Copyright @ 2025 G8_OurFestival. All right reserved</span>
-                    </div>
-                </div>
-            </footer>
+        <footer class="footer-bottom" id="contact">
+        <div class="box-container">
+            <div class="box-item">
+                <h1>CONTACT</h1>
+                    <ul class="footer-contact">
+                        <li>IG : Toy&YummyFest</li>
+                        <li>Line : Toy&YummyFest</li>
+                        <li>Gmail : Toy&YummyFest@gmail.com</li>
+                    </ul>
+                    <hr>
+                    <ul class="HBRFC">
+                        <li><a href="../../index.html">HOME</a></li>
+                        <li><a href="../01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
+                        <li><a href="../02-00-register-page/register-page.html">REGISTER</a></li>
+                        <li><a href="../03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                    <hr>
+                <span>Copyright @ 2025 G8_OurFestival. All right reserved</span>
+            </div>
+        </div>
+        </footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
