@@ -46,6 +46,16 @@ body{
     .stars { font-size: 34px; gap:6px; }
 }
 
+@media (max-width: 1024px) {
+    .header {
+        padding: 10px 15px;
+        padding-top: 15px;
+    }
+        .container {
+        margin-top: 40px; /* ปรับตามที่ต้องการ */
+    }
+}
+
 .input-field {
     background: #e2e1e1;
     border-radius: 5px;

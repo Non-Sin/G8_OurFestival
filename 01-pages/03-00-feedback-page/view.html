@@ -10,116 +10,119 @@
     <!-- CSS ของหน้านี้ -->
     <link rel="stylesheet" href="../03-00-feedback-page/02-local-css/styles.css">
     <link rel="stylesheet" href="../../11-resources/02-cs/02-02-booth-directory-css/booth-directory-css.css">
+    <link rel="stylesheet" href="/01-pages/03-00-feedback-page/02-local-css/view.css">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
-
-
-    <style>
-        .p-4 {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-
-        /* ปรับ responsive ของภายใน card */
-        @media (max-width: 768px) {
-            .card {
-                padding: 20px !important;
-            }
-        }
-
-        /* Footer responsive */
-        @media (max-width: 768px) {
-            .box-item {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .menu-footer ul {
-                padding-left: 0;
-            }
-        }
-    </style>
+    
 </head>
 <body>
 
-<header class="header">
-    <span class="header-name">G8_Ourfestival</span>
+    <header class="header">
+        <span class="header-name">Toy & Yummy Fest</span>
 
-    <!-- Desktop Menu -->
-    <nav class="nav-container">
-        <ul>
-            <li><a href="../../index.html">HOME</a></li>
-            <li><a href="../01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
-            <li><a href="../02-00-register-page/register-page.html">REGISTER</a></li>
-            <li><a href="../03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
-    </nav>
+        <nav class="nav-container">
+            <span class="menu-toggle">&#9776;</span>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">HOME</a></li>
+                <li><a href="../01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a>
+                </li>
+                <li><a href="../02-00-register-page/register-page.html">REGISTER</a></li>
+                <li><a href="../03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu-container">
-        <button class="mobile-menu-btn">
-            Menu <span class="arrow">▼</span>
-        </button>
+    <script>
+        const toggle = document.querySelector("header .menu-toggle");
+        const menu = document.querySelector("header .nav-menu");
 
-        <ul class="mobile-menu">
-            <li><a href="../../index.html">HOME</a></li>
-            <li><a href="../01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
-            <li><a href="../02-00-register-page/register-page.html">REGISTER</a></li>
-            <li><a href="../03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
-    </div>
-</header>
+        toggle.addEventListener("click", () => menu.classList.toggle("active"));
+    </script>
 
-<!-- MAIN CONTENT -->
-<div class="container py-5">
-    <div class="card p-4 mx-auto" style="max-width:800px;">
-        <div class="text-center mb-4">
-            <h2 class="text-center mb-3" style="color: red;">All Reviews</h2>
-            <p class="text-muted">ด้านล่างเป็น feedback ที่เราเก็บไว้ (อัปเดตอัตโนมัติเมื่อรีเฟรช)</p>
+    <!-- MAIN CONTENT -->
+    <div class="container d-flex justify-content-center align-items-center min-vh-100 px-3">
+        <div class="card p-4 mx-auto" style="max-width:800px;">
+            <div class="text-center mb-4">
+                <h2 class="text-center mb-3" style="color: red;">All Reviews</h2>
+                <p class="text-muted">ด้านล่างเป็น feedback ที่เราเก็บไว้ (อัปเดตอัตโนมัติเมื่อรีเฟรช)</p>
 
-            <a href="feedback-page.html" class="btn btn-sm btn-primary">ส่งความคิดเห็นอีกครั้ง</a>
-        </div>
+                <a href="feedback-page.html" class="btn btn-sm btn-primary">ส่งความคิดเห็นอีกครั้ง</a>
+            </div>
 
-        <div class="p-3">
-            <div id="feedbackList" class="d-flex flex-column align-items-center gap-3">
-                <!-- feedback จาก JS -->
+            <div class="p-3">
+                <div id="feedbackList" class="d-flex flex-column align-items-center gap-3">
+                    <!-- feedback จาก JS -->
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- FOOTER -->
-<footer class="footer-bottom" id="contact">
-    <div class="box-cont">
-        <div class="box-item">
-            <div>
-                <h1>CARNIVAL</h1><br>
-                <p class="footer-cont">
-                    เว็บไซต์นี้ถูกสร้างขึ้นภายใต้แนวคิด “Carnival of Joy”
-                    เพื่อถ่ายทอดความรื่นเริงและพลังแห่งความสุข...
-                </p>
-                <br>
-                <hr style="border: none; height: 2px; background-color: white;">
-            </div>
-
-            <div class="menu-footer">
-                <ul>
-                    <li><a href="../../index.html">HOME</a></li>
-                    <li><a href="../01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
-                    <li><a href="../02-00-register-page/register-page.html">REGISTER</a></li>
-                    <li><a href="../03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-            </div>
-
-            <div>
+        <footer class="footer-bottom" id="contact">
+        <div class="box-container">
+            <div class="box-item">
+                <h1>CONTACT</h1>
+                    <ul class="footer-contact">
+                        <li>IG : Toy&YummyFest</li>
+                        <li>Line : Toy&YummyFest</li>
+                        <li>Gmail : Toy&YummyFest@gmail.com</li>
+                    </ul>
+                    <hr>
+                    <ul class="HBRFC">
+                        <li><a href="../../index.html">HOME</a></li>
+                        <li><a href="../01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
+                        <li><a href="../02-00-register-page/register-page.html">REGISTER</a></li>
+                        <li><a href="../03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                    <hr>
                 <span>Copyright @ 2025 G8_OurFestival. All right reserved</span>
             </div>
         </div>
-    </div>
-</footer>
+        </footer>
 
-<script src="../03-00-feedback-page/03-local-js/view.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const container = document.getElementById('feedbackList');
+
+    function fetchAndRender() {
+        fetch('feedback.json', { cache: 'no-store' })
+            .then(resp => {
+                if (!resp.ok) throw new Error('ไม่สามารถโหลดข้อมูลได้');
+                return resp.json();
+            })
+            .then(data => {
+                container.innerHTML = '';
+
+                if (!Array.isArray(data) || data.length === 0) {
+                    container.innerHTML = '<div class="text-center mt-4">"ยังไม่มีความคิดเห็น"</div>';
+                    return;
+                }
+
+                data.slice().reverse().forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'card shadow-sm';
+                    card.style.maxWidth = '720px';
+                    card.style.width = '100%';
+
+                    card.innerHTML = `
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>${'⭐'.repeat(item.stars)}</div>
+                                <small class="text-muted">${item.time}</small>
+                            </div>
+                            <p class="mt-3 mb-1">${item.message}</p>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            })
+            .catch(err => console.error(err));
+    }
+
+    fetchAndRender();
+});
+</script>
+
 <script src="../../11-resources/03-js/03-02-booth-directory-js/booth-directory.js"></script>
 
 </body>
