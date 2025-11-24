@@ -62,6 +62,7 @@ body {
     padding: 8px 15px;
     border-radius: 10px;
     transition: 0.3s;
+    text-decoration: none;
 }
 
 .nav-container a:hover {
@@ -76,6 +77,7 @@ body {
     font-size: 1.8rem;
     color: #e60000;
     cursor: pointer;
+    padding-right: 10px;
 }
 
 /* ================= BANNER / SLIDER ================= */
@@ -253,12 +255,13 @@ body {
 
 .booth-container .booth-title {
     font-family: "Bungee", sans-serif;
-    font-size: clamp(1.5rem, 3vw, 2.5rem); /* Responsive Font */
+    font-size: clamp(2.2rem, 6vw, 4rem); /* เล็กสุด 2.2rem, ปรับตามหน้าจอ, มากสุด 4rem */
     color: #e60000;
     text-shadow: 2px 2px 8px #eb7878;
     margin-bottom: 40px;
-    /* ยกเลิก Position Absolute เพื่อไม่ให้ลอยทับ */
-    position: static; 
+    position: static;
+    letter-spacing: 1px;
+    line-height: 1.05;
 }
 
 .booth-container .booth-card {
@@ -394,40 +397,124 @@ body {
 
 /* ================= FOOTER ================= */
 .footer-bottom {
+    font-family: "Share Tech", sans-serif;
     background-color: #e43333;
-    color: white;
-    padding: 50px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    color: #fcf8f8;
     text-align: center;
-    font-family: Arial, sans-serif;
-}
-
-.footer-bottom .grid-item {
-    max-width: 800px;
-    margin: 0 auto;
+    margin-top: 50px;
 }
 
 .footer-bottom h1 {
-    font-family: "Bungee", sans-serif;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
-.footer-bottom p {
-    line-height: 1.6;
-    margin-bottom: 30px;
+.footer-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.footer-bottom hr {
+    border: none;
+    height: 2px;
+    background-color: black;
+    margin: 15px auto;
+    width: 80%;
 }
 
 .HBRFC {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     list-style: none;
-    padding: 20px 0;
+    padding: 0;
+    margin: 15px 0;
 }
 
 .HBRFC a {
-    color: white;
-    font-weight: bold;
+    color: #fcf8f8;
+    text-decoration: none !important;
+}
+
+.HBRFC a:hover {
+    color: #e60000;
+    background-color: #ffffff;
+    box-shadow: #eb7878 1px 2px 4px 2px;
+}
+
+.footer-bottom span {
+    display: block;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+
+    .footer-bottom h1 {
+        font-size: 1.2rem;
+    }
+
+    .footer-contact,
+    .footer-bottom span {
+        font-size: 0.8rem;
+    }
+
+    .HBRFC {
+        gap: 8px;
+        font-size: 1rem;
+    }
+}
+
+
+.HBRFC li {
+    list-style: none;
+}
+
+.HBRFC li a {
+    color: #fcf8f8;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+    text-align: center;
+    /* จัดตัวหนังสือตรงกลาง */
+}
+
+.HBRFC li a:hover {
+    color: #ffffff;
+    background-color: #e60000;
+    border-radius: 5px;
+}
+
+
+.footer-bottom span {
+
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Media Query โทสัพ */
+@media (max-width: 768px) {
+    .HBRFC {
+        gap: 8px;
+        /* ลดช่องว่าง */
+    }
+
+    .footer-bottom span {
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
 }
 
 /* ================= RESPONSIVE (MEDIA QUERIES) ================= */
@@ -668,3 +755,15 @@ body {
     cursor: not-allowed;
 }
 
+.member-container table th {
+  text-align: center;      /* กึ่งกลางแนวนอน */
+  vertical-align: middle;  /* กึ่งกลางแนวตั้ง */
+  padding: 12px;           /* ปรับ padding ตามชอบ */
+}
+
+/* ถ้าใช้ .member-name เป็น span ให้แน่ใจว่าเป็นบล็อกและไม่ดันไปซ้าย */
+.member-name {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}

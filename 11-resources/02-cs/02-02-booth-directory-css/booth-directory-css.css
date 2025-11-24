@@ -149,6 +149,7 @@ body {
 
 .products-item {
     background-color: #f0f0f0;
+    font-family: "Share Tech", sans-serif;
     padding: 1rem;
     border-radius: 10px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
