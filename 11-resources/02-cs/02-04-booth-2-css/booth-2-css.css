@@ -9,6 +9,11 @@
 /* พื้นหลัง */
 body {
     font-family: 'Kanit', sans-serif;
+    background-color: #FFE3E3;  
+    margin: 0;
+    padding: 0;
+    color: #333;    
+    /*background-image: url(../../01-images/Background.png);*/
     background-image: url(/11-resources/01-images/Background.png);
     
     background-repeat: no-repeat;
@@ -95,6 +100,7 @@ body {
     /* Navbar Toggle */
     .menu-toggle {
         display: block; /* แสดงปุ่ม */
+        padding-right: 10px;
     }
 
     .nav-container ul.nav-menu {
