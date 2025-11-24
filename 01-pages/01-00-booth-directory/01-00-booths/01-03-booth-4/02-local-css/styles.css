@@ -8,15 +8,14 @@
 
 /* พื้นหลัง */
 body {
-    font-family: 'Kanit', sans-serif;
-    background-color: #FFE3E3;  
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-image: url(../../01-images/Background.png);
+
+    background-image: url(../../../../../11-resources/01-images/Background.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-color: #ffe6e6;
+
+
 }
 
 /* หัว */
