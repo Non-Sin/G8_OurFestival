@@ -52,16 +52,22 @@ file_put_contents($jsonFile, json_encode($old, JSON_PRETTY_PRINT | JSON_UNESCAPE
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
 
     <style>
-        .result-card {
-            max-width: 420px;
-            width: 90%;
-            margin: 8vh auto;
-            padding: 28px;
-            border-radius: 14px;
-            background: #fff;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            text-align: center;
-        }
+            .result-card {
+                max-width: 420px;
+                width: 90%;
+                margin: 8vh auto;
+                padding: 28px;
+                border-radius: 14px;
+                background: #fff;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+                /* ทำให้รูปอยู่กลางทั้ง vertical + horizontal */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;  /* กลางแนวตั้ง */
+                align-items: center;      /* กลางแนวนอน */
+            }
+
 
         /* ปรับ footer ให้ responsive */
         @media (max-width: 768px) {
@@ -77,74 +83,54 @@ file_put_contents($jsonFile, json_encode($old, JSON_PRETTY_PRINT | JSON_UNESCAPE
 </head>
 <body>
 
-<header class="header">
-    <span class="header-name">G8_Ourfestival</span>
+    <header class="header">
+        <span class="header-name">Toy & Yummy Fest</span>
 
-    <!-- Desktop Menu -->
-    <nav class="nav-container">
-        <ul>
-            <li><a href="../../index.html">HOME</a></li>
-            <li><a href="../01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
-            <li><a href="../02-00-register-page/register-page.html">REGISTER</a></li>
-            <li><a href="../03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
-    </nav>
+        <nav class="nav-container">
+            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">HOME</a></li>
+                <li><a href="../01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
+                <li><a href="../02-00-register-page/register-page.html">REGISTER</a></li>
+                <li><a href="../03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu-container">
-        <button class="mobile-menu-btn">
-            Menu <span class="arrow">▼</span>
-        </button>
+    <div class="result-card">
+        <img src="01-images/check.png" width="70" height="70" style="margin-bottom: 20px;">
+        <h3 class="text-success">ส่งสำเร็จแล้ว 🎉</h3>
+        <p class="mb-3">ขอบคุณสำหรับความคิดเห็นของคุณ</p>
 
-        <ul class="mobile-menu">
-            <li><a href="../../index.html">HOME</a></li>
-            <li><a href="../01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
-            <li><a href="../02-00-register-page/register-page.html">REGISTER</a></li>
-            <li><a href="../03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
-    </div>
-</header>
-
-<div class="result-card">
-    <h3 class="text-success">ส่งสำเร็จแล้ว 🎉</h3>
-    <p class="mb-3">ขอบคุณสำหรับความคิดเห็นของคุณ</p>
-
-    <div class="d-flex justify-content-center gap-2 flex-wrap">
-        <a href="view.html" class="btn btn-primary">ดูความคิดเห็นทั้งหมด</a>
-        <a href="feedback-page.html" class="btn btn-outline-secondary">ส่งเพิ่มเติม</a>
-    </div>
-</div>
-
-<footer class="footer-bottom" id="contact">
-    <div class="box-cont">
-        <div class="box-item">
-            <div>
-                <h1>CARNIVAL</h1><br>
-                <p class="footer-cont">
-                    เว็บไซต์นี้ถูกสร้างขึ้นภายใต้แนวคิด “Carnival of Joy”
-                    เพื่อถ่ายทอดความรื่นเริงและพลังแห่งความสุข...
-                </p>
-                <br><hr style="border: none; height: 2px; background-color: white;">
-            </div>
-
-            <div class="menu-footer">
-                <ul>
-                    <li><a href="../../index.html">HOME</a></li>
-                    <li><a href="../01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
-                    <li><a href="../02-00-register-page/register-page.html">REGISTER</a></li>
-                    <li><a href="../03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <span>Copyright © 2025 G8_OurFestival. All rights reserved</span>
-            </div>
+        <div class="d-flex justify-content-center gap-2 flex-wrap">
+            <a href="view.html" class="btn btn-primary">ดูความคิดเห็นทั้งหมด</a>
+            <a href="feedback-page.html" class="btn btn-outline-secondary">ส่งเพิ่มเติม</a>
         </div>
     </div>
-</footer>
+
+    <footer class="footer-bottom" id="contact">
+                <div class="box-container">
+                    <div class="box-item">
+                        <h1>CONTACT</h1>
+                        <ul class="footer-contact">
+                            <li>IG : Toy&YummyFest</li>
+                            <li>Line : Toy&YummyFest</li>
+                            <li>Gmail : Toy&YummyFest@gmail.com</li>
+                        </ul>
+                        <hr>
+                        <ul class="HBRFC">
+                            <li><a href="../../index.html">HOME</a></li>
+                            <li><a href="../01-00-booth-directory/booth-directory.html">BOOTHDIRECTORY</a></li>
+                            <li><a href="../02-00-register-page/register-page.html">REGISTER</a></li>
+                            <li><a href="../03-00-feedback-page/feedback-page.html">FEEDBACK</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                        </ul>
+                        <hr>
+                        <span>Copyright @ 2025 G8_OurFestival. All right reserved</span>
+                    </div>
+                </div>
+            </footer>
 
 <script src="../../11-resources/03-js/03-02-booth-directory-js/booth-directory.js"></script>
 
