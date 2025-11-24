@@ -10,36 +10,9 @@
     <!-- CSS ของหน้านี้ -->
     <link rel="stylesheet" href="../03-00-feedback-page/02-local-css/styles.css">
     <link rel="stylesheet" href="../../11-resources/02-cs/02-02-booth-directory-css/booth-directory-css.css">
+    <link rel="stylesheet" href="/01-pages/03-00-feedback-page/02-local-css/view.css">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
-
-
-    <style>
-        .p-4 {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-
-        /* ปรับ responsive ของภายใน card */
-        @media (max-width: 768px) {
-            .card {
-                padding: 20px !important;
-            }
-        }
-
-        /* Footer responsive */
-        @media (max-width: 768px) {
-            .box-item {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .menu-footer ul {
-                padding-left: 0;
-            }
-        }
-        .container {
-        margin-top: 40px; /* ปรับตามที่ต้องการ */
-        }
-    </style>
+    
 </head>
 <body>
 
@@ -58,6 +31,13 @@
             </ul>
         </nav>
     </header>
+
+    <script>
+        const toggle = document.querySelector("header .menu-toggle");
+        const menu = document.querySelector("header .nav-menu");
+
+        toggle.addEventListener("click", () => menu.classList.toggle("active"));
+    </script>
 
     <!-- MAIN CONTENT -->
     <div class="container d-flex justify-content-center align-items-center min-vh-100 px-3">

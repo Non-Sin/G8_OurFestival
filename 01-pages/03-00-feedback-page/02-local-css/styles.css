@@ -48,13 +48,11 @@ body{
 
 @media (max-width: 1024px) {
     .header {
-        padding: 10px 20px;
-    }
-    .header-name {
-        font-size: 22px;
+        padding: 10px 15px;
+        padding-top: 15px;
     }
         .container {
-    margin-top: 40px; /* ปรับตามที่ต้องการ */
+        margin-top: 40px; /* ปรับตามที่ต้องการ */
     }
 }
 
