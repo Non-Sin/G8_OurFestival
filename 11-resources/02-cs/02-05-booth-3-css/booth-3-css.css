@@ -58,7 +58,7 @@ body {
     font-family: "Bungee", sans-serif;
     font-size: 30px;
     color: #e60000;
-    padding-left: 15px;
+    padding-left: 20px;
     text-shadow: #e75b5b 1px 2px 3px 4px;
     /* Responsive adjustment handled in media query */
 }
@@ -75,6 +75,7 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
+    padding-right: 5px;
 }
 
 .nav-container a {
@@ -324,6 +325,7 @@ a {
     justify-content: center;
     gap: 40px;
     padding: 50px 20px;
+    
 }
 
 .product-image img {
@@ -331,12 +333,15 @@ a {
     height: 500px;
     border-radius: 20px;
     object-fit: cover;
+    text-align: start;
 }
 
 .product-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 
 }
 
