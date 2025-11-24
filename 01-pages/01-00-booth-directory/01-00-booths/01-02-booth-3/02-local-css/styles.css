@@ -18,7 +18,8 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-image: url('/11-resources/01-images/12345.png');
+    background-image: url('/G8_OurFestival/11-resources/01-images/12345.png');
+    background-attachment: fixed;
     background-size: cover;
 }
 
@@ -322,6 +323,7 @@ a {
     justify-content: center;
     gap: 40px;
     padding: 50px 20px;
+    
 }
 
 .product-image img {
@@ -329,12 +331,15 @@ a {
     height: 500px;
     border-radius: 20px;
     object-fit: cover;
+    text-align: start;
 }
 
 .product-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 
 }
 
