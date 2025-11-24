@@ -12,17 +12,11 @@ body {
     background-color: #FFE3E3;  
     margin: 0;
     padding: 0;
-<<<<<<< HEAD
-    color: #333;
-    /*background-image: url('/11-resources/01-images/12345.png');*/
-    background-image: url('../01-images/12345.png');
-=======
     color: #333;    
     /*background-image: url(../../01-images/Background.png);*/
     background-image: url(/11-resources/01-images/Background.png);
     
     background-repeat: no-repeat;
->>>>>>> 8484cdea6e30adfae1c482f560086276472afb91
     background-size: cover;
     background-attachment: fixed;
 }
