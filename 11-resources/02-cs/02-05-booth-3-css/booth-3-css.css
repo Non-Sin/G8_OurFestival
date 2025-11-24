@@ -18,7 +18,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-image: url('/G8_OurFestival/11-resources/01-images/12345.png');
+    background-image: url('../../01-images/Background.png');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -468,7 +468,7 @@ a {
 /*footer*/
 .footer-bottom {
     font-family: "Share Tech", sans-serif;
-    background-color: white
+    background-color: white;
     width: 100%;
     box-sizing: border-box;
     padding: 20px;
