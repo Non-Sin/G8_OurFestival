@@ -9,13 +9,11 @@
 /* พื้นหลัง */
 body {
     font-family: 'Kanit', sans-serif;
-    background-color: #FFE3E3;  
-    margin: 0;
-    padding: 0;
-    color: #333;    
-    background-image: url(../../01-images/Background.png);
-    /*background-image: url('/11-resources/01-images/12345.png');*/
+    background-image: url(/11-resources/01-images/Background.png);
+    
+    background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .shopname {
@@ -622,4 +620,31 @@ a {
     .footer-bottom p {
         font-size: 0.8rem;
     }
+}
+
+/* ปรับเฉพาะ element ที่มักมี margin/spacing */
+.footer-bottom h1,
+.footer-bottom p,
+.footer-bottom li,
+.footer-bottom span,
+.footer-contact li,
+.HBRFC li {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.footer-bottom h1 {
+    padding-bottom: 0.5rem;
+}
+
+/* ถ้ารายการใน footer เป็น list ให้ลด gap */
+.footer-contact {
+  gap: 12px;                /* ลดช่องว่างระหว่างไอเท็ม */
+  padding: 0;
+  margin: 6px 0;
+}
+
+.HBRFC {
+  gap: 10px;               /* ลดช่องว่างระหว่างเมนูลิงก์ */
+  margin: 6px 0;
 }
